@@ -11,6 +11,7 @@
 	<link rel="icon" href="images/favicon.png">
 
 	<!--build:css css/styles.min.css-->
+	<link rel="stylesheet" href="images/icon/icoomoon/style.css">
 	<link rel="stylesheet" href="css/libs/bootstrap.min.css">
 	<link rel="stylesheet" href="css/global.min.css">
 	<!--endbuild-->
@@ -22,36 +23,39 @@
 
 <body>
 	<header class="header">
-		<div class="container">
-			<div class="row">
-				<nav class="navigation">
-					<div class="navigation__burger-menu col col-sm">
-					</div>
-					<h1 class="navigation__title col col-sm col-lg">PetsHotel</h1>
-					<a href="#" class="logo">
-						<svg class="icon">
-							<use xlink:href="images/icon/vector.svg#Vector"></use>
-						</svg>
-					</a>
-					<ul class="menu">
-						<li class="menu__item col-lg"><a href="#main" class="menu__link">Головна</a></li>
-						<li class="menu__item col-lg"><a href="#order" class="menu__link">Замовити послугу</a></li>
-						<li class="menu__item col-lg"><a href="#reviews" class="menu__link">Відгуки</a></li>
-						<li class="menu__item col-lg"><a href="#foto" class="menu__link">Наші фото</a></li>
-						<li class="menu__item col col-sm col-lg"><a href="#" class="menu__link"></a></li>
-					</ul>
-					<svg class="icon">
-						<use xlink:href="images/icon/registered.svg#pattern0"></use>
-					</svg>
-				</nav>
+		<nav class="navigation">
+			<div class="dropdown navigation__burger-menu">
+				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="#">Головна</a>
+					<a class="dropdown-item" href="#">Замовити послугу</a>
+					<a class="dropdown-item" href="#">Відгуки</a>
+					<a class="dropdown-item" href="#">Наші фото</a>
+				</div>
 			</div>
+			<h1 class="navigation__title">PetsHotel</h1>
+			<a href="#" class="logo"><i class="icon-house"></i>
+			</a>
+			<ul class="menu col-lg-7">
+				<li class="menu__item"><a href="#main" class="menu__link">Головна</a></li>
+				<li class="menu__item"><a href="#order" class="menu__link">Замовити послугу</a></li>
+				<li class="menu__item"><a href="#reviews" class="menu__link">Відгуки</a></li>
+				<li class="menu__item"><a href="#foto" class="menu__link">Наші фото</a></li>
+				<li class="menu__item"><a href="#" class="menu__link"><i class="icon-mask"></i></a></li>
+			</ul>
+		</nav>
+		<div class="container">
 			<div class="row form">
 				<h1 class="form__title col-12">Ми потурбуємося про ваших улюбленців</h1>
 				<div class="form__control">
 					<div class="row">
 						<div class="col-10">
 							<select name="text" class="form__input form__input--select">
-								<option value="" disabled="disabled" selected="selected" hidden>Оберіть Ваше місто
+								<option value="" disabled="disabled" selected="selected" hidden>
+									Оберіть Ваше
+									місто
 								</option>
 								<option value="poltava">Полтава</option>
 								<option value="kyiv">Київ</option>
@@ -62,6 +66,12 @@
 			</div>
 		</div>
 	</header>
+
+	<!-- <i class="icon-mask"></i>
+	<i class="icon-linkedin"></i>
+	<i class="icon-twitter"></i>
+	<i class="icon-google"></i>
+	<i class="icon-house">-->
 
 
 	<!--build:js js/main.min.js -->

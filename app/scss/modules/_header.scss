@@ -1,6 +1,6 @@
 .header{
     .navigation{
-        background: #018786;  
+       background: #018786;  
        &__burger-menu {
         @mixin line($top: 0) {
             @include size(100%, 5px);

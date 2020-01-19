@@ -2,7 +2,7 @@
   "name": "start",
   "version": "1.0.0",
   "description": "Start",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
     "build": "gulp build"
