@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="description" content="Starter">
@@ -18,7 +19,47 @@
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
+
 <body>
+	<header class="header">
+		<div class="container">
+			<nav class="navigation row">
+				<div class="navigation__burger-menu col col-sm">
+				</div>
+				<h1 class="navigation__title col col-sm col-lg">PetsHotel</h1>
+				<a href="#" class="logo">
+					<svg class="icon">
+						<use xlink:href="images/icon/vector.svg#Vector"></use>
+					</svg>
+				</a>
+				<ul class="menu">
+					<li class="menu__item col-lg"><a href="#main" class="menu__link">Головна</a></li>
+					<li class="menu__item col-lg"><a href="#order" class="menu__link">Замовити послугу</a></li>
+					<li class="menu__item col-lg"><a href="#reviews" class="menu__link">Відгуки</a></li>
+					<li class="menu__item col-lg"><a href="#foto" class="menu__link">Наші фото</a></li>
+					<li class="menu__item col col-sm col-lg"><a href="#" class="menu__link"></a></li>
+				</ul>
+				<svg class="icon">
+					<use xlink:href="images/icon/registered.svg#pattern0"></use>
+				</svg>
+			</nav>
+			<div class="row form">
+				<h1 class="form__title col-12">Ми потурбуємося про ваших улюбленців</h1>
+				<div class="form__control">
+					<div class="row">
+						<div class="col-10">
+							<select name="text" class="form__input form__input--select">
+								<option value="" disabled="disabled" selected="selected" hidden>Оберіть Ваше місто
+								</option>
+								<option value="poltava">Полтава</option>
+								<option value="kyiv">Київ</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 
 
 	<!--build:js js/main.min.js -->
@@ -27,4 +68,5 @@
 	<script src="js/main.js"></script>
 	<!--endbuild-->
 </body>
+
 </html>
