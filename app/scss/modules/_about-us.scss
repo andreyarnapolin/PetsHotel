@@ -1,0 +1,14 @@
+.about-us {
+  @media (min-width: $desktop) {
+    display: none;
+  }
+  &__wrap {
+    margin-top: 45px;
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__info {
+    margin-bottom: 25px;
+  }
+}

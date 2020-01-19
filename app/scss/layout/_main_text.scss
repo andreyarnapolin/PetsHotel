@@ -1,0 +1,20 @@
+.main {
+  &-title {
+    font: 300 20px/23px $roboto;
+    color: $title;
+    letter-spacing: 0.15px;
+    @media (min-width: $desktop) {
+      font: 300 96px/112px $roboto;
+      letter-spacing: -1.5px;
+    }
+  }
+  &-subtitle {
+    font: normal 18px/28px $roboto;
+    color: $title;
+    letter-spacing: 0.5px;
+  }
+  &-info {
+    font: normal 14px/20px $roboto;
+    letter-spacing: 0.25px;
+  }
+}

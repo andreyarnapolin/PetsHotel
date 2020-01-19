@@ -1,0 +1,11 @@
+.mobile-dog {
+  margin-bottom: 25px;
+
+  &__image {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}

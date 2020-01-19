@@ -1,0 +1,22 @@
+.living {
+  @media (min-width: $desktop) {
+    margin-bottom: 75px;
+  }
+  &__text {
+    margin-bottom: 10px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    @media (min-width: $desktop) {
+      margin-bottom: 80px;
+    }
+  }
+  &__info {
+    margin-bottom: 20px;
+  }
+  &__dog {
+    @media (max-width: $desktop) {
+      display: none;
+    }
+  }
+}

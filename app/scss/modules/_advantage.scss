@@ -1,0 +1,21 @@
+.advantage {
+  margin-bottom: 10px;
+  @media (min-width: $desktop) {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  &__wrap {
+  }
+  &__title {
+    margin-bottom: 25px;
+    @media (min-width: $desktop) {
+      margin-bottom: 80px;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+  &__info {
+    margin-bottom: 35px;
+  }
+}

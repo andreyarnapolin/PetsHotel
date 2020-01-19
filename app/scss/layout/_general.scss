@@ -1,31 +1,36 @@
 * {
-	padding: 0;
-	margin: 0;
-	border: 0;
-	outline: none;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
 }
 
 html {
-	height: 100%;
-	scroll-behavior: smooth;
+  height: 100%;
+  scroll-behavior: smooth;
 }
 
-body, html {
-	min-height: 100%;
-	width: 100%;
+body,
+html {
+  min-height: 100%;
+  width: 100%;
 }
 
-.clear::after, .clear::before {
-	content: " ";
-	display: table;
+.clear::after,
+.clear::before {
+  content: " ";
+  display: table;
 }
 
 .clear::after {
-	clear: both;
+  clear: both;
 }
 
 //Fonts
 
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
+body {
+  background-color: $bg-color;
+}
