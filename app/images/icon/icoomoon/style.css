@@ -35,7 +35,7 @@
 }
 .icon-house:before {
   content: "\e902";
-  /* color: #fff; */
+  color: #fff;
 }
 .icon-twitter:before {
   content: "\e903";

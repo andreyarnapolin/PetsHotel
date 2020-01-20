@@ -1,17 +1,22 @@
 .header{
     .navigation{
        background: #018786;  
-       &__burger-menu {
-        @mixin line($top: 0) {
-            @include size(100%, 5px);
-            background: #DADADA;
-            border-radius: 3px;
-            position: absolute;
-            top: $top;
-            transition: all .3s;
-        }
+       display: flex;
+       text-decoration: none; 
+       @media (max-width: $mobile) {
+        padding: 16px 5%;
+        justify-content: space-between;
+       } 
+
     
-        @include size(50px, 40px);
+       
+    &__burger-menu {
+        @mixin line($top: 0) {
+            @include size(100%, 2px);
+            background: #DADADA;
+            position: absolute;
+        }
+        @include size(18px, 12px);
         display: block;
         position: relative;
     
@@ -22,26 +27,46 @@
         &::before {
             @include line();
             content: '';
-            transform-origin: 0 0;
+            
         }
-        
-            &::after {
-            @include line(calc(100% - 5px));
+    
+        &::after {
+            @include line(calc(100% - 3px));
             content: '';
-            transform-origin: 0 100%;
+           
         }
-            span {
-            @include line(50%);
-            display: block;
-            transform: translateY(-50%);
-        }
+           
+    }
+   
+    .menu{
+        @media (max-width: $mobile) {
+            display: none;
+        }  
+        @media (min-width: $desktop) {
+             display: flex;
+        }   
     }
 
     }
-    .form{
-        background: ur('../images/header-dog.png');
-        
+    &__down{
+        @media (max-width: $mobile){
+        background: url('/app/images/header_dog__mobile.png') no-repeat top;
+        background-size: cover;  
+    }
+    @media (min-width: $desktop){
+        background: url('/app/images/header_dog.png');
+        background-size: cover;   
+    }
+
     }
   
+    .form{
+        &__control{
+            @media (max-width: $mobile){
+                padding: 510px 0 40px;  
+            }
+        }
+    }
+
 
 }
