@@ -7,9 +7,7 @@
         padding: 16px 5%;
         justify-content: space-between;
        } 
-
-    
-       
+         
     &__burger-menu {
         @mixin line($top: 0) {
             @include size(100%, 2px);
@@ -27,13 +25,12 @@
         &::before {
             @include line();
             content: '';
-            
+           
         }
     
         &::after {
             @include line(calc(100% - 3px));
-            content: '';
-           
+            content: ''; 
         }
            
     }
@@ -54,13 +51,12 @@
         background-size: cover;  
     }
     @media (min-width: $desktop){
-        background: url('/app/images/header_dog.png');
+        background: url('/app/images/header_dog.png') no-repeat top;
         background-size: cover;   
     }
-
     }
-  
-    .form{
+
+      .form{
         &__control{
             @media (max-width: $mobile){
                 padding: 510px 0 40px;  
