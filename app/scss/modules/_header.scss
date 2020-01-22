@@ -7,6 +7,40 @@
         padding: 16px 5%;
         justify-content: space-between;
        } 
+       &__title{
+        @media (max-width: $desktop) {
+          font: 300 20px/23px $roboto;
+          color: #fff;
+          letter-spacing: 0.15px;
+        }
+        @media (min-width: $desktop) {
+          font: normal 48px/56px $roboto;
+          color: #fff;
+          letter-spacing: 0.15px;
+          mix-blend-mode: normal;
+        }
+        }
+        .form{
+            &__title{
+              @media (max-width: $desktop) {
+                font: normal 34px/40px $roboto;
+                color: #fff;
+                letter-spacing: 0.25px;
+                padding: 4% 20px;
+                margin-left: 4%;
+              }
+          
+              @media (min-width: $desktop) {
+                font: 300 60px/70px $roboto;
+                color: #fff;
+                letter-spacing: -0.5px;
+                text-align: center;
+                align-items: center;
+              }
+            }
+         
+        }
+       
          
     &__burger-menu {
         @mixin line($top: 0) {
@@ -34,33 +68,52 @@
         }
            
     }
+    
+
+
    
     .menu{
-        @media (max-width: $mobile) {
+       
+
+        @media (max-width: $desktop) {
             display: none;
         }  
         @media (min-width: $desktop) {
              display: flex;
-        }   
+        }  
+        
+        &__link { 
+        font: 300 20px/23px $roboto;
+        color: #fff;
+        letter-spacing: 0.15px;
+        text-decoration: none;
+        }
+         
     }
 
     }
     &__down{
-        @media (max-width: $mobile){
-        background: url('/app/images/header_dog__mobile.png') no-repeat top;
+        @media (max-width: $desktop){
+        background: url('../images/header_dog__mobile.jpg') no-repeat top;
         background-size: cover;  
     }
     @media (min-width: $desktop){
-        background: url('/app/images/header_dog.png') no-repeat top;
+        background: url('../images/header_dog.jpg') no-repeat top;
         background-size: cover;   
     }
     }
 
       .form{
+          display: flex;
         &__control{
-            @media (max-width: $mobile){
-                padding: 510px 0 40px;  
+            @media (max-width: $desktop) {
+                padding: 510px 0 40px; 
+                
             }
+        }
+        &__input{
+            width: 90%; 
+
         }
     }
 

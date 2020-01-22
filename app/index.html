@@ -24,9 +24,9 @@
 <body>
 	<header class="header">
 		<nav class="navigation">
-			<div class="dropdown navigation__burger-menu">
-				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+			<div class="dropdown ">
+				<button class="btn btn-secondary dropdown-toggle navigation__burger-menu" type="button"
+					id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 					<a class="dropdown-item" href="#">Головна</a>
 					<a class="dropdown-item" href="#">Замовити послугу</a>
@@ -60,18 +60,15 @@
 					<h1 class="form__title">
 						Ми потурбуємося про ваших улюбленців
 					</h1>
-					<div class="form__control">
-						<div class="col-12">
-							<select name="text" class="form__input form__input--select">
-								<option value="" disabled="disabled" selected="selected" hidden>
-									Оберіть Ваше місто
-								</option>
-								<option value="poltava">Полтава</option>
-								<option value="kyiv">Київ</option>
-							</select>
-						</div>
+					<div class="form__control col-12">
+						<select name="text" class="form__input form__input--select">
+							<option value="" disabled="disabled" selected="selected" hidden>
+								Оберіть Ваше місто
+							</option>
+							<option value="poltava">Полтава</option>
+							<option value="kyiv">Київ</option>
+						</select>
 					</div>
-
 				</div>
 			</div>
 		</div>
