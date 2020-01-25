@@ -7,9 +7,7 @@
 	<meta name="author" content="Admin" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 	<title>Starter</title>
-
 	<link rel="icon" href="images/favicon.png" />
-
 	<!--build:css css/styles.min.css-->
 	<link rel="stylesheet" href="images/icon/icoomoon/style.css" />
 	<link rel="stylesheet" href="css/libs/bootstrap.min.css" />
@@ -23,51 +21,64 @@
 
 <body>
 	<header class="header">
-		<nav class="navigation">
-			<div class="dropdown ">
-				<button class="btn btn-secondary dropdown-toggle navigation__burger-menu" type="button"
-					id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<a class="dropdown-item" href="#">Головна</a>
-					<a class="dropdown-item" href="#">Замовити послугу</a>
-					<a class="dropdown-item" href="#">Відгуки</a>
-					<a class="dropdown-item" href="#">Наші фото</a>
+		<div class="container-fluit">
+			<nav class="navigation">
+				<div class="row">
+					<div class="col-6 navigation__left">
+						<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle navigation__burger-menu" type="button"
+								id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false"></button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item" href="#">Головна</a>
+								<a class="dropdown-item" href="#">Замовити послугу</a>
+								<a class="dropdown-item" href="#">Відгуки</a>
+								<a class="dropdown-item" href="#">Наші фото</a>
+							</div>
+						</div>
+						<h1 class="navigation__title">PetsHotel</h1>
+						<a href="#" class="logo"><i class="icon-house"></i></a>
+					</div>
 				</div>
-			</div>
-			<h1 class="navigation__title">PetsHotel</h1>
-			<a href="#" class="logo"><i class="icon-house"></i></a>
-			<ul class="menu">
-				<li class="menu__item">
-					<a href="#main" class="menu__link">Головна</a>
-				</li>
-				<li class="menu__item">
-					<a href="#order" class="menu__link">Замовити послугу</a>
-				</li>
-				<li class="menu__item">
-					<a href="#reviews" class="menu__link">Відгуки</a>
-				</li>
-				<li class="menu__item">
-					<a href="#foto" class="menu__link">Наші фото</a>
-				</li>
-			</ul>
-			<div class="registration">
-				<a href="#" class="menu__link"><i class="icon-mask"></i></a>
-			</div>
-		</nav>
-		<div class="header__down">
+				<div class="col-6 navigation__right">
+					<ul class="menu">
+						<li class="menu__item">
+							<a href="#main" class="menu__link">Головна</a>
+						</li>
+						<li class="menu__item">
+							<a href="#order" class="menu__link">Замовити послугу</a>
+						</li>
+						<li class="menu__item">
+							<a href="#reviews" class="menu__link">Відгуки</a>
+						</li>
+						<li class="menu__item">
+							<a href="#foto" class="menu__link">Наші фото</a>
+						</li>
+					</ul>
+					<div class="registration">
+						<a href="#" class="menu__link"><i class="icon-mask"></i></a>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div class="header__down ">
 			<div class="container">
 				<div class="row form">
-					<h1 class="form__title">
-						Ми потурбуємося про ваших улюбленців
-					</h1>
-					<div class="form__control col-12">
-						<select name="text" class="form__input form__input--select">
-							<option value="" disabled="disabled" selected="selected" hidden>
-								Оберіть Ваше місто
-							</option>
-							<option value="poltava">Полтава</option>
-							<option value="kyiv">Київ</option>
-						</select>
+					<div class="form__wrap col-12">
+						<h1 class="form__title">
+							Ми потурбуємося про ваших улюбленців
+						</h1>
+					</div>
+					<div class="container">
+						<div class="form__control col-12">
+							<select name="text" class="form__input form__input--select col-12">
+								<option value="" disabled="disabled" selected="selected" hidden>
+									Оберіть ваше місто
+								</option>
+								<option value="poltava">Полтава</option>
+								<option value="kyiv">Київ</option>
+							</select>
+						</div>
 					</div>
 				</div>
 			</div>
