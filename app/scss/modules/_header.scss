@@ -8,11 +8,11 @@
         background-size: cover;   
     }
     @media (min-width: $desktop){
-            background: url('../images/header_dog.jpg') no-repeat top;
+            background: url('../images/header_dog.jpg') no-repeat bottom;
             background-size: cover;   
         }
     .navigation{
-       background: #018786;  
+       background: $green;  
        display: flex;
        @media (max-width: $desktop) {
         padding: 16px 5%;
@@ -23,17 +23,17 @@
        }
        &__block {
            display: flex;
+           justify-content: space-between;
        }
        &__title{
         @media (max-width: $desktop) {
           font: 300 20px/23px $roboto;
-          color: #fff;
+          color: $white;
           letter-spacing: 0.15px;
-          margin: 0px 2%;
         }
         @media (min-width: $desktop) {
           font: normal 48px/56px $roboto;
-          color: #fff;
+          color: $white;
           letter-spacing: 0.15px;
           mix-blend-mode: normal;
         }
@@ -57,8 +57,9 @@
     &__burger-menu--item{
         background: #FAFAFA; 
         border-radius: 0px;
-        // transform: none;
-        // top: 50px;       
+        // transform: translateY(20%);
+        // // // top: 50px;   
+        // transform: none;    
     }
     .burger-item{
         color: rgba(0, 0, 0, 0.87);
@@ -68,7 +69,6 @@
     }
     .registration{
         display: flex;
-        
          .menu{
         display: flex;
         @media (max-width: $desktop) {
@@ -76,7 +76,7 @@
         } 
         &__link { 
         font: 300 20px/23px $roboto;
-        color: #fff;
+        color: $white;
         letter-spacing: 0.15px;
         text-decoration: none; 
         }
@@ -87,10 +87,7 @@
         .menu__right{
             justify-content: flex-end;
         }
-
     }
-  
-   
         }
       .form{
         &__control{
@@ -103,9 +100,9 @@
                 left: 50%;
             transform: translateX(-50%);
             }
-            @media (min-width: $desktop) {
-                display: none;
-            }
+            // @media (min-width: $desktop) {
+            //     display: none;
+            // }
         }
         &__input{
             font: normal 14px/20px $roboto;
@@ -122,18 +119,40 @@
         &__title{
             @media (max-width: $desktop) {
               font: normal 34px/40px $roboto;
-              color: #fff;
+              color: $white;
               letter-spacing: 0.25px;
               padding: 4% 20px;            
             }
             @media (min-width: $desktop) {
               font: 300 60px/70px $roboto;
-              color: #fff;
+              color: $white;
               letter-spacing: -0.5px;
               text-align: center;
               align-items: center;
+              margin-top: 45px;
             }
           }
+        &__info{
+            font: normal 14px/20px $roboto;
+            letter-spacing: 0.25px;
+            color: $white;
+            background: $green;
+            padding: 45px 35px;
+            margin-top: 165px;
+            @media (max-width: $desktop){
+                display: none;
+            }
+        }
+        &__social-icon{
+            display: flex;
+            justify-content: space-between;
+            li{
+                margin-left: 20%;
+            } 
+            @media (max-width: $desktop){
+                display: none;
+            }
+        }
     }
 }
 
