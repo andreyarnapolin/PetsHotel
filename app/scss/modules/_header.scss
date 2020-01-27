@@ -1,28 +1,35 @@
 .header{
+    height: 100vh;
+    a:hover, a:active{
+       text-decoration: none; 
+    }
+    @media (max-width: $desktop){
+        background: url('../images/header_dog__mobile.jpg') no-repeat top;
+        background-size: cover;   
+    }
+    @media (min-width: $desktop){
+            background: url('../images/header_dog.jpg') no-repeat top;
+            background-size: cover;   
+        }
     .navigation{
        background: #018786;  
        display: flex;
-       text-decoration: none; 
        @media (max-width: $desktop) {
         padding: 16px 5%;
-        justify-content: space-between;
         font-size:20px;
-      
        } 
-       &__left {
-           display: flex;
-           justify-content: space-between;
+       @media (min-width: $desktop){
+           font-size: 40px;
        }
-       &__right {
-        display: flex;
-        justify-content: flex-end;
-    }
-
+       &__block {
+           display: flex;
+       }
        &__title{
         @media (max-width: $desktop) {
           font: 300 20px/23px $roboto;
           color: #fff;
           letter-spacing: 0.15px;
+          margin: 0px 2%;
         }
         @media (min-width: $desktop) {
           font: normal 48px/56px $roboto;
@@ -32,65 +39,73 @@
         }
         }
     &__burger-menu {
-        @mixin line($top: 0) {
-          @include size(100%, 2px);
-          background: #DADADA;
-          position: absolute;
+        background: transparent;
+        border-color: transparent;
+        padding: 0px;
+         &::after{
+                content: '';
+                display: none;
+            }  
+        &:focus {
+            background: transparent;
+            border-color: transparent;  
+        }               
+         @media (min-width: $desktop) {
+            display: none;               
         }
-        @include size(18px, 12px);
-        display: block;
-        position: relative;
-    
-        @media (min-width: $desktop) {
-            display: none;
-        }
-        &::before {
-            @include line();
-            content: '';     
-        }
-        &::after {
-            @include line(calc(100% - 3px));
-            content: ''; 
-        }          
     } 
-    .menu{
+    &__burger-menu--item{
+        background: #FAFAFA; 
+        border-radius: 0px;
+        // transform: none;
+        // top: 50px;       
+    }
+    .burger-item{
+        color: rgba(0, 0, 0, 0.87);
+        mix-blend-mode: normal;
+        font: normal 14px/20px $roboto; 
+        letter-spacing: 0.25px;
+    }
+    .registration{
+        display: flex;
+        
+         .menu{
+        display: flex;
         @media (max-width: $desktop) {
             display: none;
-        }  
-        @media (min-width: $desktop) {
-             display: flex;
-        }     
+        } 
         &__link { 
         font: 300 20px/23px $roboto;
         color: #fff;
         letter-spacing: 0.15px;
-        text-decoration: none;
-        }        
+        text-decoration: none; 
+        }
+        }
+        .menu-registr{
+            display: flex;
+        }
+        .menu__right{
+            justify-content: flex-end;
+        }
+
     }
-    }
-    &__down{
-        @media (max-width: $desktop){
-        background: url('../images/header_dog__mobile.jpg') no-repeat top;
-        background-size: cover;   
-    }
-    @media (min-width: $desktop){
-        background: url('../images/header_dog.jpg') no-repeat top center;
-        background-size: cover;   
-    }
-    }
+  
+   
+        }
       .form{
-        //    display: flex;
         &__control{
             display: flex;
             width: 90%;
             margin: 25px auto;
             @media (max-width: $desktop) {
-                padding: 510px 0 40px; 
-                justify-content: center;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+            transform: translateX(-50%);
             }
             @media (min-width: $desktop) {
                 display: none;
-        }
+            }
         }
         &__input{
             font: normal 14px/20px $roboto;
@@ -121,3 +136,4 @@
           }
     }
 }
+
