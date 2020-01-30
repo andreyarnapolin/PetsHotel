@@ -1,0 +1,80 @@
+// @media (min-width: $desktop) {
+//
+// }
+
+.footer {
+  background: #004b4f;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__block {
+    //width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    @media (min-width: $desktop) {
+      margin-top: 55px;
+      margin-bottom: 50px;
+    }
+    &-first,
+    &-third {
+      width: 140px;
+      @media (min-width: $desktop) {
+        width: 15%;
+      }
+    }
+    &-second {
+      @media (max-width: $desktop) {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: $white-grey;
+    font: normal 14px/20px $roboto;
+    letter-spacing: 0.25px;
+    &:hover {
+      text-decoration: none;
+      color: $white-grey;
+    }
+  }
+  &__email-first {
+    display: block;
+    margin-bottom: 5px;
+    @media (min-width: $desktop) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__phone {
+    display: block;
+    margin-bottom: 5px;
+    @media (min-width: $desktop) {
+      margin-bottom: 25px;
+    }
+  }
+  &__socials {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    color: $white-grey;
+    text-decoration: none;
+    font: 300 60px/70px $roboto;
+    &:hover {
+      text-decoration: none;
+      color: $white-grey;
+    }
+  }
+  &__title {
+    display: block;
+    margin-right: 20px;
+  }
+}
