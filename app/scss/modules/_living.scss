@@ -3,7 +3,7 @@
     margin-bottom: 75px;
   }
   &__text {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   &__title {
     margin-bottom: 20px;
@@ -17,6 +17,27 @@
   &__dog {
     @media (max-width: $desktop) {
       display: none;
+    }
+  }
+  &__image {
+    width: 100%;
+  }
+  &__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $green;
+    font: 500 14px/16px $roboto;
+    letter-spacing: 0.75px;
+    text-align: center;
+    display: block;
+    margin: 0 auto 40px;
+
+    @media (min-width: calc(#{$desktop} - 30px)) {
+      display: none;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $green;
     }
   }
 }
