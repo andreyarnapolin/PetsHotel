@@ -24,8 +24,8 @@
     }
     &__wrap {
       display: flex;
-      a.logo{
-          color: $white;
+      a.logo {
+        color: $white;
       }
     }
     &__block {
@@ -37,7 +37,7 @@
         font: 300 20px/23px $roboto;
         color: $white;
         letter-spacing: 0.15px;
-        margin: 0 12px;
+        margin: 0 0 0 12px;
         display: inline-block;
       }
       @media (min-width: $desktop) {
@@ -69,13 +69,15 @@
     &__burger-menu--item {
       background: #fafafa;
       border-radius: 0px;
-      padding: 20px 7px;
+      padding: 10px 0px;
       position: absolute;
       top: -30px !important; 
       left: -20px !important;
     }
     .burger-item {
       color: rgba(0, 0, 0, 0.87);
+      padding-top: 5px;
+      padding-bottom: 5px;
       mix-blend-mode: normal;
       font: normal 14px/20px $roboto;
       letter-spacing: 0.25px;
@@ -95,30 +97,27 @@
           text-decoration: none;
           margin-right: 25px;
           position: relative;
-          transition: all .3s;
 
-        &:hover {
-            // color: #000;
           &::before {
-            bottom: -10px;
-          }
-          }
-          &::before{
-            content: '';
+            content: "";
             height: 2px;
             background: $white;
             position: absolute;
-            bottom: -27px;
-            transition: all .3s;
-            width: calc(100% + 4px);
-            transition: all .3s;
+            bottom: -28px;
+            transition: all 0.3s;
+            width: calc(100% + 2px);
           }
-        }
-        } 
-        .menu-registr {
-            display: flex;
-            align-items: center;
+          &:hover {
+            &::before {
+                bottom: -7px;
+            }
         }  
+        }
+      }
+      .menu-registr {
+        display: flex;
+        align-items: center;
+      }
     }
   }
   .form {
@@ -203,4 +202,3 @@
   }
   
 }
-
