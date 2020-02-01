@@ -101,7 +101,6 @@
           &::before {
             content: "";
             height: 2px;
-            background: $white;
             position: absolute;
             bottom: -28px;
             transition: all 0.3s;
@@ -110,6 +109,7 @@
           &:hover {
             &::before {
                 bottom: -7px;
+                background: $white;
             }
         }  
         }
