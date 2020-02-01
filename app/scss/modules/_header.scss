@@ -49,7 +49,6 @@
         margin: 15px 15px 15px 0;
       }
     }
-
     &__burger-menu {
       background: transparent;
       border-color: transparent;
@@ -101,15 +100,16 @@
           &::before {
             content: "";
             height: 2px;
-            background: $white;
             position: absolute;
             bottom: -28px;
             transition: all 0.3s;
             width: calc(100% + 2px);
+            background: transparent;
           }
           &:hover {
             &::before {
                 bottom: -7px;
+                background: $white;
             }
         }  
         }
@@ -173,7 +173,7 @@
       @media (max-width: $desktop) {
         background: none;
         font-size: 0;
-        margin-top: 80%;
+        margin-top: 300px;
       }
     }
 
@@ -183,11 +183,11 @@
       color: $white;
       background: $green;
       padding: 45px 35px;
-      margin-top: 165px;
+      margin-top: 150px;
     }
-    &__social{
-      margin-top: 20%;
-    }
+    // &__social{
+    //   margin-top: 20%;
+    // }
     &__social-icon {
       display: flex;
       justify-content: space-between;
