@@ -9,7 +9,7 @@
     background-size: cover;
   }
   @media (min-width: $desktop) {
-    background: url("../images/header_dog.jpg") no-repeat bottom;
+    background: url("../images/header_dog.jpg") no-repeat right;
     background-size: cover;
   }
   .navigation {
@@ -69,8 +69,10 @@
     &__burger-menu--item {
       background: #fafafa;
       border-radius: 0px;
+      padding: 20px 7px;
       position: absolute;
-      top: -20px; 
+      top: -30px !important; 
+      left: -20px !important;
     }
     .burger-item {
       color: rgba(0, 0, 0, 0.87);
@@ -83,7 +85,6 @@
       .menu {
         display: flex;
         align-items: center;
-     
         @media (max-width: $desktop) {
           display: none;
         }
@@ -94,20 +95,24 @@
           text-decoration: none;
           margin-right: 25px;
           position: relative;
+          transition: all .3s;
+
+        &:hover {
+            // color: #000;
+          &::before {
+            bottom: -10px;
+          }
+          }
           &::before{
             content: '';
             height: 2px;
             background: $white;
             position: absolute;
-            bottom: 10px;
+            bottom: -27px;
+            transition: all .3s;
+            width: calc(100% + 4px);
             transition: all .3s;
           }
-          .menu__link--active::before,
-          .menu__link:hover::before {
-            top: 10px;
-            width: calc(100% + 2px);
-          }
-
         }
         } 
         .menu-registr {
@@ -127,9 +132,6 @@
         left: 50%;
         transform: translateX(-50%);
       }
-      // @media (min-width: $desktop) {
-      //     display: none;
-      // }
     }
     &__input {
       font: normal 14px/20px $roboto;
@@ -163,6 +165,19 @@
         margin-top: 45px;
       }
     }
+    .left{
+      @media (max-width: $desktop) {
+        display: none;
+      }
+    }
+    .right{
+      @media (max-width: $desktop) {
+        background: none;
+        font-size: 0;
+        margin-top: 80%;
+      }
+    }
+
     &__info {
       font: normal 14px/20px $roboto;
       letter-spacing: 0.25px;
@@ -170,13 +185,14 @@
       background: $green;
       padding: 45px 35px;
       margin-top: 165px;
-      @media (max-width: $desktop) {
-        display: none;
-      }
+    }
+    &__social{
+      margin-top: 20%;
     }
     &__social-icon {
       display: flex;
       justify-content: space-between;
+
       li {
         margin-left: 20%;
       }
@@ -185,17 +201,6 @@
       }
     }
   }
- 
-  .menu__link--active::before,
-  .menu__link:hover::before {
-    top: -10px;
-    width: calc(100% + 6px);
-    left: -3px;
-  }
-
-
-
-
-
+  
 }
 
