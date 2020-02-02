@@ -46,7 +46,7 @@
         letter-spacing: 0.15px;
         mix-blend-mode: normal;
         display: inline-block;
-        margin: 15px 15px 15px 0;
+        margin: 10px 10px 10px 0;
       }
     }
     &__burger-menu {
@@ -96,6 +96,7 @@
           text-decoration: none;
           margin-right: 25px;
           position: relative;
+          bottom: 5px;
 
           &::before {
             content: "";
@@ -132,12 +133,14 @@
         transform: translateX(-50%);
       }
     }
+
     &__input {
       font: normal 14px/20px $roboto;
       letter-spacing: 0.25px;
       width: 90%;
       padding: 10px 15px;
     }
+
     &__wrap {
       @media (max-width: $desktop) {
         background: linear-gradient(
@@ -148,6 +151,7 @@
         margin-top: 25px;
       }
     }
+
     &__title {
       @media (max-width: $desktop) {
         font: normal 34px/40px $roboto;
@@ -164,11 +168,13 @@
         margin-top: 45px;
       }
     }
+
     .left{
       @media (max-width: $desktop) {
         display: none;
       }
     }
+
     .right{
       @media (max-width: $desktop) {
         background: none;
@@ -185,9 +191,11 @@
       padding: 45px 35px;
       margin-top: 150px;
     }
-    // &__social{
-    //   margin-top: 20%;
-    // }
+
+    &__social{
+      padding-top: 160px;
+    }
+
     &__social-icon {
       display: flex;
       justify-content: space-between;
@@ -195,6 +203,7 @@
       li {
         margin-left: 20%;
       }
+
       @media (max-width: $desktop) {
         display: none;
       }
