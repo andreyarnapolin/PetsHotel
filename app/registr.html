@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Starter" />
+    <meta name="author" content="Admin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <title>PetsHotel</title>
+    <link rel="icon" href="images/favicon.png" />
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="images/icon/icoomoon/style.css" />
+    <link rel="stylesheet" href="css/libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/libs/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/global.min.css" />
+    <!--endbuild-->
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 navigation__block">
+                        <div class="navigation__wrap">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle navigation__burger-menu" type="button"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <i class="icon-burger"></i>
+                                </button>
+                                <div class="dropdown-menu navigation__burger-menu--item"
+                                    aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item burger-item" href="index.html">Головна</a>
+                                    <a class="dropdown-item burger-item" href="#">Замовити послугу</a>
+                                    <a class="dropdown-item burger-item" href="#">Відгуки</a>
+                                    <a class="dropdown-item burger-item" href="gallery.html">Наші фото</a>
+                                </div>
+                            </div>
+                            <a href="#" class="logo">
+                                <p class="navigation__title">PetsHotel</p>
+                                <i class="icon-house"></i>
+                            </a>
+                        </div>
+                        <div class="registration">
+                            <ul class="menu">
+                                <li class="menu__item">
+                                    <a href="index.html" class="menu__link">Головна</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="registr.html" class="menu__link">Замовити послугу</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#reviews" class="menu__link">Відгуки</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="gallery.html" class="menu__link">Наші фото</a>
+                                </li>
+                            </ul>
+                            <ul class="menu-registr">
+                                <li class="menu__right">
+                                    <a href="#" class="menu__link-link"><i class="icon-mask"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="form container">
+        <div class="modal">
+            <div class="modal__panel">
+                <div class="tabs modal__tabs">
+                    <ul class="tabs__nav">
+                        <li class="tabs__item">
+                            <a href="#sign" class="tabs__link">Увійти</a>
+                        </li>
+                        <li class="tabs__item">
+                            <a href="#join" class="tabs__link tabs__link--active">Зареєструватися</a>
+                        </li>
+                        <li class="tabs__devider"></li>
+                    </ul>
+                    <div class="tabs__body">
+                        <div class="tabs__content" id="sign">
+                            <form action="#" method="get">
+                                <div class="form">
+                                    <div class="form__controls">
+                                        <label class="form__label" for="Username">Username</label>
+                                        <input class="form__input" minlength="3" type="text" name="Username"
+                                            id="Username">
+                                        <div class="form__error">error</div>
+                                    </div>
+                                    <div class="form__controls">
+                                        <label class="form__label" for="Password">Password</label>
+                                        <input class="form__input" required type="password" name="Password"
+                                            id="Password">
+                                        <div class="form__error">error</div>
+                                    </div>
+                                    <div class="form__controls form__controls--checkbox">
+                                        <input checked type="checkbox" name="keep" id="keep">
+                                        <label class="form__label form__label--checkbox" for="keep">
+                                            <span class="form__checkbox">&#10004;</span>
+                                            Keep me signed in
+                                        </label>
+                                    </div>
+                                    <div class="form__controls form__controls--submit">
+                                        <button type="submit" class="btn btn--primary">Sign in</button>
+                                    </div>
+                                    <div class="form__advanced d-flex justify-content-between">
+                                        <a href="javascript:void(0)" class="form__link">Forgot password</a>
+                                        <a href="#join" class="form__link">Create an account</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tabs__content" id="join">
+                            <form action="#" method="get">
+                                <div class="form">
+                                    <div class="form__controls">
+                                        <label class="form__label" for="Username">Username</label>
+                                        <input class="form__input" minlength="3" type="text" name="Username"
+                                            id="Username">
+                                        <div class="form__error">error</div>
+                                    </div>
+                                    <div class="form__controls">
+                                        <label class="form__label" for="Password">Password</label>
+                                        <input class="form__input" required type="password" name="Password"
+                                            id="Password">
+                                        <div class="form__error">error</div>
+                                    </div>
+                                    <div class="form__controls">
+                                        <label class="form__label" for="repeat_password">Repeat password</label>
+                                        <input class="form__input" required type="repeat_password"
+                                            name="repeat_password" id="repeat_password">
+                                        <div class="form__error">error</div>
+                                    </div>
+                                    <div class="form__controls form__controls--submit">
+                                        <button type="submit" class="btn btn--primary">Join in</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrap">
+                <div class="footer__block footer__block-first">
+                    <a href="mailto: petshotel@gmail.com"
+                        class="footer__link footer__email-first">petshotel@gmail.com</a>
+                    <a href="mailto: hotel@gmail.com" class="footer__link footer__email-second">hotel@gmail.com</a>
+                </div>
+                <div class="footer__block footer__block-second">
+                    <a href="#" class="footer__logo logo">
+                        <p class="footer__title">PetsHotel</p>
+                        <i class="icon-house"></i>
+                    </a>
+                </div>
+                <div class="footer__block footer__block-third">
+                    <a href="tel:+380953332216" class="footer__link footer__phone">+38 (095) 333 22 16</a>
+                    <div class="footer__socials">
+                        <a href="#"><i class="icon-twitter"></i></a>
+                        <a href="#"><i class="icon-linkedin"></i></a>
+                        <a href="#"><i class="icon-google"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--build:js js/main.min.js -->
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/bootstrap.bundle.min.js"></script>
+    <script src="js/libs/jquery.fancybox.min.js"></script>
+    <script src="js/main.js"></script>
+    <!--endbuild-->
+</body>
+
+</html>
