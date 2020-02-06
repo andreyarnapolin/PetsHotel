@@ -74,77 +74,35 @@
         </nav>
     </header>
 
-    <section class="form container">
-        <div class="modal">
-            <div class="modal__panel">
-                <div class="tabs modal__tabs">
-                    <ul class="tabs__nav">
-                        <li class="tabs__item">
-                            <a href="#sign" class="tabs__link">Увійти</a>
-                        </li>
-                        <li class="tabs__item">
-                            <a href="#join" class="tabs__link tabs__link--active">Зареєструватися</a>
-                        </li>
-                        <li class="tabs__devider"></li>
-                    </ul>
-                    <div class="tabs__body">
-                        <div class="tabs__content" id="sign">
-                            <form action="#" method="get">
-                                <div class="form">
-                                    <div class="form__controls">
-                                        <label class="form__label" for="Username">Ваше прізвище та ім’я</label>
-                                        <input class="form__input" minlength="3" type="text" name="Username"
-                                            id="Username">
-                                    </div>
-                                    <div class="form__controls">
-                                        <label class="form__label" for="Password">Ведіть пароль</label>
-                                        <input class="form__input" required type="password" name="Password"
-                                            id="Password">
-                                    </div>
-                                    <div class="form__controls form__controls--submit">
-                                        <button type="submit" class="btn btn--primary">Sign in</button>
-                                    </div>
-                                    <div class="form__advanced d-flex justify-content-between">
-                                        <a href="javascript:void(0)" class="form__link">Forgot password</a>
-                                        <a href="#join" class="form__link">Create an account</a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tabs__content" id="join">
-                            <form action="#" method="get">
-                                <div class="form">
-                                    <div class="form__controls">
-                                        <label class="form__label" for="Username">Username</label>
-                                        <input class="form__input" minlength="3" type="text" name="Username"
-                                            id="Username">
-                                        <div class="form__error">error</div>
-                                    </div>
-                                    <div class="form__controls">
-                                        <label class="form__label" for="Password">Password</label>
-                                        <input class="form__input" required type="password" name="Password"
-                                            id="Password">
-                                        <div class="form__error">error</div>
-                                    </div>
-                                    <div class="form__controls">
-                                        <label class="form__label" for="repeat_password">Repeat password</label>
-                                        <input class="form__input" required type="repeat_password"
-                                            name="repeat_password" id="repeat_password">
-                                        <div class="form__error">error</div>
-                                    </div>
-                                    <div class="form__controls form__controls--submit">
-                                        <button type="submit" class="btn btn--primary">Join in</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+    <div class="forms">
+        <ul class="tab-group">
+            <li class="tab active"><a href="#login">Log In</a></li>
+            <li class="tab"><a href="#signup">Sign Up</a></li>
+        </ul>
+        <form action="#" id="login">
+            <h1>Login on w3iscool</h1>
+            <div class="input-field">
+                <label for="email">Email</label>
+                <input type="email" name="email" required="email" />
+                <label for="password">Password</label>
+                <input type="password" name="password" required />
+                <input type="submit" value="Login" class="button" />
+                <p class="text-p"> <a href="#">Forgot password?</a> </p>
             </div>
-        </div>
-
-
-    </section>
+        </form>
+        <form action="#" id="signup">
+            <h1>Sign Up on w3iscool</h1>
+            <div class="input-field">
+                <label for="email">Email</label>
+                <input type="email" name="email" required="email" />
+                <label for="password">Password</label>
+                <input type="password" name="password" required />
+                <label for="password">Confirm Password</label>
+                <input type="password" name="password" required />
+                <input type="submit" value="Sign up" class="button" />
+            </div>
+        </form>
+    </div>
 
     <footer class="footer">
         <div class="container">
@@ -171,7 +129,6 @@
             </div>
         </div>
     </footer>
-
 
     <!--build:js js/main.min.js -->
     <script src="js/libs/jquery.min.js"></script>
