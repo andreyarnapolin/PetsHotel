@@ -5,12 +5,44 @@
 }
 
 .forms {
-	// box-shadow: 0 0 3px #000;
 	margin: 30px auto;
 	max-width: 500px;
 	overflow: hidden;
 	position: relative;
-	padding: 0;
+   
+    .field__button{
+        margin: 60px auto;
+        width: 96px;
+        height: 36px;
+    }
+
+    .sevices__button-registr{
+        width: 180px;
+        height: 36px;
+        margin: 55px auto;
+        
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 .forms h1 {
 	padding: 0 0 20px 0;
@@ -57,18 +89,13 @@
 	border-top: 3px solid #73cf41;
 }
 .forms input {
-	font-size: 16px;
+	font: normal 16px/24px $roboto; 
 	display: block;
 	width: 100%;
-	padding: 10px 20px;
-	border: 1px solid #ddd;
-	color: #666;
-	border-radius: 0;
+	padding: 18px 15px 14px 16px;
+	border: 2px solid #018786;;
+    color: rgba(0, 0, 0, 0.6);
 	margin-bottom: 10px;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
-	-webkit-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
 }
 .forms input:focus {
 	outline: 0;
