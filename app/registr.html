@@ -18,11 +18,12 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
 </head>
 
 <body>
 
-    <header class="header">
+    <header class="header header__page">
         <nav class="navigation">
             <div class="container">
                 <div class="row">
@@ -74,24 +75,23 @@
         </nav>
     </header>
 
-    <div class="forms">
-        <ul class="tab-group">
-            <li class="tab active"><a href="#login">Log In</a></li>
-            <li class="tab"><a href="#signup">Sign Up</a></li>
-        </ul>
+    <div class="forms container">
+        <div class="row">
+            <ul class="tab-group offset-5">
+                <li class="tab active col-1"><a href="#login">Увійти</a></li>
+                <li class="tab col-2"><a href="#signup">Зареєструватися</a></li>
+            </ul>
+        </div>
         <form action="#" id="login">
-            <h1>Login on w3iscool</h1>
             <div class="input-field">
-                <label for="email">Email</label>
-                <input type="email" name="email" required="email" />
-                <label for="password">Password</label>
+                <label for="tel">крок1</label>
+                <input type="tel" name="tel" required="tel" placeholder="Номер телефону" />
+                <label for="password">Пароль</label>
                 <input type="password" name="password" required />
                 <input type="submit" value="Login" class="button" />
-                <p class="text-p"> <a href="#">Forgot password?</a> </p>
             </div>
         </form>
         <form action="#" id="signup">
-            <h1>Sign Up on w3iscool</h1>
             <div class="input-field">
                 <label for="email">Email</label>
                 <input type="email" name="email" required="email" />

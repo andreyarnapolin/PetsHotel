@@ -1,33 +1,32 @@
 "use strict";
-
-(function($) {
-  $(document).ready(function() {
+//Form registration
+(function ($) {
+  $(document).ready(function () {
     // FORM LOGIN REGISTRATION
-    // $(".tab a").on("click", function(e) {
-    //   e.preventDefault();
+    $(".tab a").on("click", function (e) {
+      e.preventDefault();
+      $(this)
+        .parent()
+        .addClass("active");
+      $(this)
+        .parent()
+        .siblings()
+        .removeClass("active");
 
-    //   $(this)
-    //     .parent()
-    //     .addClass("active");
-    //   $(this)
-    //     .parent()
-    //     .siblings()
-    //     .removeClass("active");
-
-    //   let href = $(this).attr("href");
-    //   $(".forms > form").hide();
-    //   $(href).fadeIn(500);
-    // });
+      let href = $(this).attr("href");
+      $(".forms > form").hide();
+      $(href).fadeIn(500);
+    });
 
     //Fancybox
     $(".photo").fancybox({});
     //remove or add attribute when screen is different width
-    $(document).ready(function() {
+    $(document).ready(function () {
       if (window.innerWidth > 1024) {
         $(".gallery__show").removeAttr("data-fancybox");
       }
     });
-    $(window).on("resize", function() {
+    $(window).on("resize", function () {
       if ($(window).width() >= 1024) {
         $(".gallery__show").removeAttr("data-fancybox");
       } else {

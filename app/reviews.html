@@ -1,232 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Starter" />
-    <meta name="author" content="Admin" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-    />
-    <title>PetsHotel - Review</title>
-    <link rel="icon" href="images/favicon.png" />
-    <!--build:css css/styles.min.css-->
-    <link rel="stylesheet" href="images/icon/icoomoon/style.css" />
-    <link rel="stylesheet" href="css/libs/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/libs/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="css/global.min.css" />
-    <!--endbuild-->
 
-    <!--[if lt IE 9]>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Starter" />
+  <meta name="author" content="Admin" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <title>PetsHotel - Review</title>
+  <link rel="icon" href="images/favicon.png" />
+  <!--build:css css/styles.min.css-->
+  <link rel="stylesheet" href="images/icon/icoomoon/style.css" />
+  <link rel="stylesheet" href="css/libs/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/libs/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="css/global.min.css" />
+  <!--endbuild-->
+
+  <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body>
-    <header class="header gallery__header">
-      <nav class="navigation">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 navigation__block">
-              <div class="navigation__wrap">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-secondary dropdown-toggle navigation__burger-menu"
-                    type="button"
-                    id="dropdownMenuButton"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    <i class="icon-burger"></i>
-                  </button>
-                  <div
-                    class="dropdown-menu navigation__burger-menu--item"
-                    aria-labelledby="dropdownMenuButton"
-                  >
-                    <a class="dropdown-item burger-item" href="index.html"
-                      >Головна</a
-                    >
-                    <a class="dropdown-item burger-item" href="#"
-                      >Замовити послугу</a
-                    >
-                    <a class="dropdown-item burger-item" href="reviews.html"
-                      >Відгуки</a
-                    >
-                    <a class="dropdown-item burger-item" href="gallery.html"
-                      >Наші фото</a
-                    >
-                  </div>
-                </div>
-                <a href="#" class="logo">
-                  <p class="navigation__title">PetsHotel</p>
-                  <i class="icon-house"></i>
-                </a>
-              </div>
-              <div class="registration">
-                <ul class="menu">
-                  <li class="menu__item">
-                    <a href="index.html" class="menu__link">Головна</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#order" class="menu__link">Замовити послугу</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#reviews" class="menu__link">Відгуки</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#foto" class="menu__link">Наші фото</a>
-                  </li>
-                </ul>
-                <ul class="menu-registr">
-                  <li class="menu__right">
-                    <a href="#" class="menu__link-link"
-                      ><i class="icon-mask"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <section class="review container">
-      <div class="row">
-        <div class="col-6 col-lg-3 review__block">
-          <div class="review__wrap">
-            <div class="review__image">
-              <img
-                class="review__photo"
-                srcset="images/review/1m.jpg 1000w, images/review/1b.jpg 2000w"
-                alt="review photo"
-              />
-            </div>
-            <div class="review__date">
-              <p class="review__date-name">Таня</p>
-              <p class="review__date-date">11.08.2019</p>
-            </div>
-            <p class="review__name">Тимоша, 7 років</p>
-            <div class="review__info">
-              <p class="review__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-                atque esse voluptas ducimus voluptates assumenda reiciendis
-                veniam, placeat inventore deserunt?
-              </p>
-            </div>
-            <a class="review__link" href="#">Читати далі...</a>
-          </div>
-        </div>
-        <div class="col-6 col-lg-3 review__block">
-          <div class="review__wrap">
-            <div class="review__image">
-              <img
-                class="review__photo"
-                srcset="images/review/2m.jpg 1000w, images/review/2b.jpg 2000w"
-                alt="review photo"
-              />
-            </div>
-            <div class="review__date">
-              <p class="review__date-name">Ігор</p>
-              <p class="review__date-date">01.12.2019</p>
-            </div>
-            <p class="review__name">Вулф, 11 місяців</p>
-            <div class="review__info">
-              <p class="review__text">
-                Сервіс супер! Не знаю, щоб робили без вас, будемо з...
-              </p>
-            </div>
-            <a class="review__link" href="#">Читати далі...</a>
-          </div>
-        </div>
-        <div class="col-6 col-lg-3 review__block">
-          <div class="review__wrap">
-            <div class="review__image">
-              <img
-                class="review__photo"
-                srcset="images/review/3m.jpg 1000w, images/review/3b.jpg 2000w"
-                alt="review photo"
-              />
-            </div>
-            <div class="review__date">
-              <p class="review__date-name">Марина</p>
-              <p class="review__date-date">12.07.2019</p>
-            </div>
-            <p class="review__name">Оскар, 2 роки</p>
-            <div class="review__info">
-              <p class="review__text">
-                Дякую, що ви є. Оскар і ми безмежно вам вд...
-              </p>
-            </div>
-            <a class="review__link" href="#">Читати далі...</a>
-          </div>
-        </div>
-        <div class="col-6 col-lg-3 review__block">
-          <div class="review__wrap">
-            <div class="review__image">
-              <img
-                class="review__photo"
-                srcset="images/review/4m.jpg 1000w, images/review/4b.jpg 2000w"
-                alt="review photo"
-              />
-            </div>
-            <div class="review__date">
-              <p class="review__date-name">Людмила</p>
-              <p class="review__date-date">30.05.2019</p>
-            </div>
-            <p class="review__name">Цезарь, 5 років</p>
-            <div class="review__info">
-              <p class="review__text">
-                Кваліфікований, уважний персонал, дружня атмосфер...
-              </p>
-            </div>
-            <a class="review__link" href="#">Читати далі...</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
+<body>
+  <header class="header">
+    <nav class="navigation">
       <div class="container">
-        <div class="footer__wrap">
-          <div class="footer__block footer__block-first">
-            <a
-              href="mailto: petshotel@gmail.com"
-              class="footer__link footer__email-first"
-              >petshotel@gmail.com</a
-            >
-            <a
-              href="mailto: hotel@gmail.com"
-              class="footer__link footer__email-second"
-              >hotel@gmail.com</a
-            >
-          </div>
-          <div class="footer__block footer__block-second">
-            <a href="#" class="footer__logo logo">
-              <p class="footer__title">PetsHotel</p>
-              <i class="icon-house"></i>
-            </a>
-          </div>
-          <div class="footer__block footer__block-third">
-            <a href="tel:+380953332216" class="footer__link footer__phone"
-              >+38 (095) 333 22 16</a
-            >
-            <div class="footer__socials">
-              <a href="#"><i class="icon-twitter"></i></a>
-              <a href="#"><i class="icon-linkedin"></i></a>
-              <a href="#"><i class="icon-google"></i></a>
+        <div class="row">
+          <div class="col-12 navigation__block">
+            <div class="navigation__wrap">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle navigation__burger-menu" type="button"
+                  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="icon-burger"></i>
+                </button>
+                <div class="dropdown-menu navigation__burger-menu--item" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item burger-item" href="index.html">Головна</a>
+                  <a class="dropdown-item burger-item" href="#">Замовити послугу</a>
+                  <a class="dropdown-item burger-item" href="reviews.html">Відгуки</a>
+                  <a class="dropdown-item burger-item" href="gallery.html">Наші фото</a>
+                </div>
+              </div>
+              <a href="#" class="logo">
+                <p class="navigation__title">PetsHotel</p>
+                <i class="icon-house"></i>
+              </a>
+            </div>
+            <div class="registration">
+              <ul class="menu">
+                <li class="menu__item">
+                  <a href="index.html" class="menu__link">Головна</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#order" class="menu__link">Замовити послугу</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#reviews" class="menu__link">Відгуки</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#foto" class="menu__link">Наші фото</a>
+                </li>
+              </ul>
+              <ul class="menu-registr">
+                <li class="menu__right">
+                  <a href="#" class="menu__link-link"><i class="icon-mask"></i></a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </footer>
+    </nav>
+  </header>
 
-    <!--build:js js/main.min.js -->
-    <script src="js/libs/jquery.min.js"></script>
-    <script src="js/libs/bootstrap.bundle.min.js"></script>
-    <script src="js/libs/jquery.fancybox.min.js"></script>
-    <script src="js/main.js"></script>
-    <!--endbuild-->
-  </body>
+  <section class="review container">
+    <div class="row">
+      <div class="col-6 col-lg-3 review__block">
+        <div class="review__wrap">
+          <div class="review__image">
+            <img class="review__photo" srcset="images/review/1m.jpg 1000w, images/review/1b.jpg 2000w"
+              alt="review photo" />
+          </div>
+          <div class="review__date">
+            <p class="review__date-name">Таня</p>
+            <p class="review__date-date">11.08.2019</p>
+          </div>
+          <p class="review__name">Тимоша, 7 років</p>
+          <div class="review__info">
+            <p class="review__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+              atque esse voluptas ducimus voluptates assumenda reiciendis
+              veniam, placeat inventore deserunt?
+            </p>
+          </div>
+          <a class="review__link" href="#">Читати далі...</a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 review__block">
+        <div class="review__wrap">
+          <div class="review__image">
+            <img class="review__photo" srcset="images/review/2m.jpg 1000w, images/review/2b.jpg 2000w"
+              alt="review photo" />
+          </div>
+          <div class="review__date">
+            <p class="review__date-name">Ігор</p>
+            <p class="review__date-date">01.12.2019</p>
+          </div>
+          <p class="review__name">Вулф, 11 місяців</p>
+          <div class="review__info">
+            <p class="review__text">
+              Сервіс супер! Не знаю, щоб робили без вас, будемо з...
+            </p>
+          </div>
+          <a class="review__link" href="#">Читати далі...</a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 review__block">
+        <div class="review__wrap">
+          <div class="review__image">
+            <img class="review__photo" srcset="images/review/3m.jpg 1000w, images/review/3b.jpg 2000w"
+              alt="review photo" />
+          </div>
+          <div class="review__date">
+            <p class="review__date-name">Марина</p>
+            <p class="review__date-date">12.07.2019</p>
+          </div>
+          <p class="review__name">Оскар, 2 роки</p>
+          <div class="review__info">
+            <p class="review__text">
+              Дякую, що ви є. Оскар і ми безмежно вам вд...
+            </p>
+          </div>
+          <a class="review__link" href="#">Читати далі...</a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 review__block">
+        <div class="review__wrap">
+          <div class="review__image">
+            <img class="review__photo" srcset="images/review/4m.jpg 1000w, images/review/4b.jpg 2000w"
+              alt="review photo" />
+          </div>
+          <div class="review__date">
+            <p class="review__date-name">Людмила</p>
+            <p class="review__date-date">30.05.2019</p>
+          </div>
+          <p class="review__name">Цезарь, 5 років</p>
+          <div class="review__info">
+            <p class="review__text">
+              Кваліфікований, уважний персонал, дружня атмосфер...
+            </p>
+          </div>
+          <a class="review__link" href="#">Читати далі...</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrap">
+        <div class="footer__block footer__block-first">
+          <a href="mailto: petshotel@gmail.com" class="footer__link footer__email-first">petshotel@gmail.com</a>
+          <a href="mailto: hotel@gmail.com" class="footer__link footer__email-second">hotel@gmail.com</a>
+        </div>
+        <div class="footer__block footer__block-second">
+          <a href="#" class="footer__logo logo">
+            <p class="footer__title">PetsHotel</p>
+            <i class="icon-house"></i>
+          </a>
+        </div>
+        <div class="footer__block footer__block-third">
+          <a href="tel:+380953332216" class="footer__link footer__phone">+38 (095) 333 22 16</a>
+          <div class="footer__socials">
+            <a href="#"><i class="icon-twitter"></i></a>
+            <a href="#"><i class="icon-linkedin"></i></a>
+            <a href="#"><i class="icon-google"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--build:js js/main.min.js -->
+  <script src="js/libs/jquery.min.js"></script>
+  <script src="js/libs/bootstrap.bundle.min.js"></script>
+  <script src="js/libs/jquery.fancybox.min.js"></script>
+  <script src="js/main.js"></script>
+  <!--endbuild-->
+</body>
+
 </html>
