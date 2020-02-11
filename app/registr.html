@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Starter" />
     <meta name="author" content="Admin" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
     <title>PetsHotel</title>
     <link rel="icon" href="images/favicon.png" />
     <!--build:css css/styles.min.css-->
@@ -18,70 +20,94 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <header class="header header__page">
-        <nav class="navigation">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 navigation__block">
-                        <div class="navigation__wrap">
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle navigation__burger-menu" type="button"
-                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    <i class="icon-burger"></i>
-                                </button>
-                                <div class="dropdown-menu navigation__burger-menu--item"
-                                    aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item burger-item" href="index.html">Головна</a>
-                                    <a class="dropdown-item burger-item" href="#">Замовити послугу</a>
-                                    <a class="dropdown-item burger-item" href="#">Відгуки</a>
-                                    <a class="dropdown-item burger-item" href="gallery.html">Наші фото</a>
-                                </div>
-                            </div>
-                            <a href="#" class="logo">
-                                <p class="navigation__title">PetsHotel</p>
-                                <i class="icon-house"></i>
-                            </a>
-                        </div>
-                        <div class="registration">
-                            <ul class="menu">
-                                <li class="menu__item">
-                                    <a href="index.html" class="menu__link">Головна</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="registr.html" class="menu__link">Замовити послугу</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#reviews" class="menu__link">Відгуки</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="gallery.html" class="menu__link">Наші фото</a>
-                                </li>
-                            </ul>
-                            <ul class="menu-registr">
-                                <li class="menu__right">
-                                    <a href="#" class="menu__link-link"><i class="icon-mask"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+      <nav class="navigation">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 navigation__block">
+              <div class="navigation__wrap">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle navigation__burger-menu"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i class="icon-burger"></i>
+                  </button>
+                  <div
+                    class="dropdown-menu navigation__burger-menu--item"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a class="dropdown-item burger-item" href="index.html"
+                      >Головна</a
+                    >
+                    <a class="dropdown-item burger-item" href="#"
+                      >Замовити послугу</a
+                    >
+                    <a class="dropdown-item burger-item" href="#">Відгуки</a>
+                    <a class="dropdown-item burger-item" href="gallery.html"
+                      >Наші фото</a
+                    >
+                  </div>
                 </div>
+                <a href="#" class="logo">
+                  <p class="navigation__title">PetsHotel</p>
+                  <i class="icon-house"></i>
+                </a>
+              </div>
+              <div class="registration">
+                <ul class="menu">
+                  <li class="menu__item">
+                    <a href="index.html" class="menu__link">Головна</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="registr.html" class="menu__link"
+                      >Замовити послугу</a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a href="#reviews" class="menu__link">Відгуки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="gallery.html" class="menu__link">Наші фото</a>
+                  </li>
+                </ul>
+                <ul class="menu-registr">
+                  <li class="menu__right">
+                    <a href="#" class="menu__link-link"
+                      ><i class="icon-mask"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <div class="forms container">
-        <div class="row">
-            <ul class="tab-group offset-5">
-                <li class="tab active col-1"><a href="#login">Увійти</a></li>
-                <li class="tab col-2"><a href="#signup">Зареєструватися</a></li>
-            </ul>
+    <div class="forms">
+      <ul class="tab-group">
+        <li class="tab active"><a href="#login">Log In</a></li>
+        <li class="tab"><a href="#signup">Sign Up</a></li>
+      </ul>
+      <form action="#" id="login">
+        <h1>Login on w3iscool</h1>
+        <div class="input-field">
+          <label for="email">Email</label>
+          <input type="email" name="email" required="email" />
+          <label for="password">Password</label>
+          <input type="password" name="password" required />
+          <input type="submit" value="Login" class="button" />
+          <p class="text-p"><a href="#">Forgot password?</a></p>
         </div>
+<<<<<<< HEAD
         <form action="#" id="login">
             <div class="input-field">
                 <input type="tel" name="tel" required="tel" placeholder="Номер телефону" />
@@ -107,31 +133,56 @@
                 </div>
             </div>
         </form>
-    </div>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__wrap">
-                <div class="footer__block footer__block-first">
-                    <a href="mailto: petshotel@gmail.com"
-                        class="footer__link footer__email-first">petshotel@gmail.com</a>
-                    <a href="mailto: hotel@gmail.com" class="footer__link footer__email-second">hotel@gmail.com</a>
-                </div>
-                <div class="footer__block footer__block-second">
-                    <a href="#" class="footer__logo logo">
-                        <p class="footer__title">PetsHotel</p>
-                        <i class="icon-house"></i>
-                    </a>
-                </div>
-                <div class="footer__block footer__block-third">
-                    <a href="tel:+380953332216" class="footer__link footer__phone">+38 (095) 333 22 16</a>
-                    <div class="footer__socials">
-                        <a href="#"><i class="icon-twitter"></i></a>
-                        <a href="#"><i class="icon-linkedin"></i></a>
-                        <a href="#"><i class="icon-google"></i></a>
-                    </div>
-                </div>
-            </div>
+=======
+      </form>
+      <form action="#" id="signup">
+        <h1>Sign Up on w3iscool</h1>
+        <div class="input-field">
+          <label for="email">Email</label>
+          <input type="email" name="email" required="email" />
+          <label for="password">Password</label>
+          <input type="password" name="password" required />
+          <label for="password">Confirm Password</label>
+          <input type="password" name="password" required />
+          <input type="submit" value="Sign up" class="button" />
         </div>
+      </form>
+>>>>>>> a77d0a7d89370eb2df91ba3bdc6f7475c2a2c012
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrap">
+          <div class="footer__block footer__block-first">
+            <a
+              href="mailto: petshotel@gmail.com"
+              class="footer__link footer__email-first"
+              >petshotel@gmail.com</a
+            >
+            <a
+              href="mailto: hotel@gmail.com"
+              class="footer__link footer__email-second"
+              >hotel@gmail.com</a
+            >
+          </div>
+          <div class="footer__block footer__block-second">
+            <a href="#" class="footer__logo logo">
+              <p class="footer__title">PetsHotel</p>
+              <i class="icon-house"></i>
+            </a>
+          </div>
+          <div class="footer__block footer__block-third">
+            <a href="tel:+380953332216" class="footer__link footer__phone"
+              >+38 (095) 333 22 16</a
+            >
+            <div class="footer__socials">
+              <a href="#"><i class="icon-twitter"></i></a>
+              <a href="#"><i class="icon-linkedin"></i></a>
+              <a href="#"><i class="icon-google"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!--build:js js/main.min.js -->
@@ -140,6 +191,5 @@
     <script src="js/libs/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
     <!--endbuild-->
-</body>
-
+  </body>
 </html>
