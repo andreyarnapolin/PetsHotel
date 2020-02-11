@@ -41,12 +41,15 @@ let paths = {
 let sources = {
   css: [
     "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-    "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css"
+    "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css",
+    "./node_modules/bootstrap-daterangepicker/daterangepicker.css"
   ],
   js: [
     "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-    "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js"
+    "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
+    "./node_modules/bootstrap-daterangepicker/moment.min.js",
+    "./node_modules/bootstrap-daterangepicker/daterangepicker.js"
   ]
 };
 
