@@ -1,9 +1,9 @@
 "use strict";
 //Form registration
-(function ($) {
-  $(document).ready(function () {
+(function($) {
+  $(document).ready(function() {
     // FORM LOGIN REGISTRATION
-    $(".tab a").on("click", function (e) {
+    $(".tab a").on("click", function(e) {
       e.preventDefault();
       $(this)
         .parent()
@@ -21,12 +21,12 @@
     //Fancybox
     $(".photo").fancybox({});
     //remove or add attribute when screen is different width
-    $(document).ready(function () {
+    $(document).ready(function() {
       if (window.innerWidth > 1024) {
         $(".gallery__show").removeAttr("data-fancybox");
       }
     });
-    $(window).on("resize", function () {
+    $(window).on("resize", function() {
       if ($(window).width() >= 1024) {
         $(".gallery__show").removeAttr("data-fancybox");
       } else {
