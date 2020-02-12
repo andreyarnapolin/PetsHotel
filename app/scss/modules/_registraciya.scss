@@ -5,45 +5,52 @@
 } 
 
 .forms {
-	margin: 30px auto;
+	margin: 180px auto;
 	max-width: 500px;
 	overflow: hidden;
-	position: relative;
-   
+	position: relative;   
     .field__button{
         margin: 60px auto;
         width: 96px;
         height: 36px;
-    }
-
-    .sevices__button-registr{
+	}
+	
+	.sevices__button-registr{
         width: 180px;
         height: 36px;
         margin: 55px auto;
-        
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	}
+		
+		.forms .tab-group .active a {
+			background: #fff;
+			border-bottom: 2px solid #018786;
+	}
 }
+
+.forms .tab-group li a {
+	display: block;
+	text-decoration: none;
+	padding: 15px;
+	font: normal 14px/20px $roboto;
+	letter-spacing: 0.25px;
+	color: #018786;
+	float: left;
+	width: 50%;
+	margin-bottom: 60px;
+	text-align: center;
+	border-bottom: 3px solid transparent;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+
+.forms .tab-group li a:active, 
+.forms .tab-group li a:hover{
+	border-bottom: top 10px 3px solid $green;
+	color: #004B4F;
+}
+
 .forms h1 {
 	padding: 0 0 20px 0;
 	font-size: 26px;
@@ -58,36 +65,7 @@
 	padding: 0;
 	margin: 0;
 }
-.forms .tab-group:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-.forms .tab-group li a {
-	display: block;
-	text-decoration: none;
-	padding: 15px;
-	background: #e5e6e7;
-	color: #888;
-	font-size: 20px;
-	float: left;
-	width: 50%;
-	text-align: center;
-	border-top: 3px solid transparent;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
-	-webkit-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
-}
-.forms .tab-group li a:hover {
-	background: #dedfdf;
-	color: #666;
-}
-.forms .tab-group .active a {
-	background: #fff;
-	color: #444;
-	border-top: 3px solid #73cf41;
-}
+
 .forms input {
 	font: normal 16px/24px $roboto; 
 	display: block;
@@ -97,6 +75,7 @@
     color: rgba(0, 0, 0, 0.6);
 	margin-bottom: 10px;
 }
+
 .forms input:focus {
 	outline: 0;
 	border-color: #2e5ed7;
