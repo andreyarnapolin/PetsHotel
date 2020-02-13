@@ -95,51 +95,104 @@
 
     <section class="order container">
       <div class="row">
-        <h1 class="order__title">Форма для замовлення послуг</h1>
-        <div class="order__wrap col-12">
-          <h2 class="order__subtitle">1. Заповніть дані про бажані послуги</h2>
+        <div class="col-12">
+          <h1 class="order__title">Форма для замовлення послуг</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div
+          class="order__wrap col-12 offset-sm-4 col-sm-5 offset-md-0 col-md-4"
+        >
+          <h2 class="order__subtitle">
+            1. Заповніть дані про бажані послуги
+          </h2>
           <form action="#" class="order__form">
-            <select name="animal" id="order__animal">
-              <option value="Перетримка (собаки)">Перетримка (собаки)</option>
-              <option value="Перетримка (котики)">Перетримка (котики)</option>
-            </select>
-            <div class="order__date">
-              <h2 class="order__name">Дата</h2>
-              <input type="text" name="daterange" class="order__date-input" />
-              <i class="icon-fill"></i>
-            </div>
-            <p class="order__amount">грн</p>
-            <div class="order__options">
-              <h2 class="order__name">Грумінг</h2>
-              <div class="order_option">
-                <p class="order__subtitle">aaa</p>
-                <input type="checkbox" class="order__check" />
+            <fieldset class="">
+              <legend class="w-auto">
+                1. Заповніть дані про бажані послуги
+              </legend>
+              <div class="order__select-outerwrap">
+                <div class="order__select-wrap">
+                  <select
+                    name="animal"
+                    id="order__animal"
+                    class="order__select-animal"
+                  >
+                    <option value="Перетримка (собаки)"
+                      >Перетримка (собаки)</option
+                    >
+                    <option value="Перетримка (котики)"
+                      >Перетримка (котики)</option
+                    >
+                  </select>
+                </div>
               </div>
-              <div class="order_option">
-                <p class="order__subtitle">bbb</p>
-                <input type="checkbox" class="order__check" />
+
+              <div class="order__date">
+                <h2 class="order__name">Дата</h2>
+                <div class="order__date-wrap">
+                  <input
+                    type="text"
+                    name="daterange"
+                    class="order__date-input"
+                    placeholder="Обрати дату"
+                  />
+                  <i class="icon-fill order__date-icon"></i>
+                </div>
               </div>
-              <div class="order_option">
-                <p class="order__subtitle">ccc</p>
-                <input type="checkbox" class="order__check" />
+              <p class="order__amount">грн</p>
+              <div class="order__options">
+                <h2 class="order__name">Грумінг</h2>
+                <div class="order__option">
+                  <label class="order__checkname"
+                    >Two
+                    <input type="checkbox" class="order__check" />
+                    <span class="order__checkmark"></span>
+                  </label>
+                </div>
+                <div class="order__option">
+                  <label class="order__checkname"
+                    >Three
+                    <input type="checkbox" class="order__check" />
+                    <span class="order__checkmark"></span>
+                  </label>
+                </div>
+                <div class="order__option">
+                  <label class="order__checkname"
+                    >Four
+                    <input type="checkbox" class="order__check" />
+                    <span class="order__checkmark"></span>
+                  </label>
+                </div>
               </div>
-            </div>
-            <div class="order__doctor">
-              <h2 class="order__name">Огляд ветеринара</h2>
-              <div class="order_option">
-                <p class="order__subtitle">aaa</p>
-                <input type="checkbox" class="order__check" />
+              <div class="order__doctor">
+                <h2 class="order__name">Огляд ветеринара</h2>
+                <div class="order__option">
+                  <label class="order__checkname"
+                    >One
+                    <input type="checkbox" class="order__check" />
+                    <span class="order__checkmark"></span>
+                  </label>
+                </div>
+                <div class="order__option">
+                  <label class="order__checkname"
+                    >Two
+                    <input type="checkbox" class="order__check" />
+                    <span class="order__checkmark"></span>
+                  </label>
+                </div>
               </div>
-              <div class="order_option">
-                <p class="order__subtitle">bbb</p>
+              <p class="order__total"></p>
+              <div class="order__payment">
                 <input type="checkbox" class="order__check" />
+                <label class="order__checkname order__checkname-payment"
+                  >Сплатити онлайн
+                  <input type="checkbox" class="order__check" />
+                  <span class="order__checkmark"></span>
+                </label>
               </div>
-            </div>
-            <p class="order__total"></p>
-            <div class="order__payment">
-              <h2 class="order__name">Сплатити онлайн</h2>
-              <input type="checkbox" class="order__check" />
-            </div>
+            </fieldset>
           </form>
         </div>
       </div>

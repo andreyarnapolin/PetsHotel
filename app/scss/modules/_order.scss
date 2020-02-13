@@ -1,0 +1,206 @@
+.order {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  &__title {
+    font: 300 20px/23px $roboto;
+    letter-spacing: 0.15px;
+    margin-bottom: 25px;
+  }
+  &__subtitle {
+    display: block;
+    font: normal 14px/20px $roboto;
+    letter-spacing: 0.25px;
+    margin-bottom: 12px;
+    color: rgba(0, 0, 0, 0.6);
+    @media (min-width: $desktop) {
+      display: none;
+    }
+  }
+  &__select-animal {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 100%;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 40px;
+    font: normal 16px/24px $roboto;
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.87);
+  }
+  &__select-wrap {
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      right: 10px;
+      top: 12px;
+      text-align: center;
+      pointer-events: none;
+
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+
+      border-left: 8px solid rgba(0, 0, 0, 0.54);
+    }
+  }
+  &__date {
+    position: relative;
+    margin-bottom: 10px;
+    &-wrap {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-input {
+      width: auto;
+      padding: 5px;
+      background: transparent;
+    }
+    &-icon {
+      font-size: 20px;
+    }
+  }
+  &__amount {
+    text-align: right;
+  }
+  &__name {
+    font: normal 16px/24px $roboto;
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 15px;
+  }
+  &__option {
+    margin-bottom: 30px;
+  }
+  &__options,
+  &__payment,
+  &__doctor,
+  &__select-outerwrap {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  &__options::after,
+  &__payment::after,
+  &__doctor::after,
+  &__date::after,
+  &__select-outerwrap::after {
+    background-color: rgba(0, 0, 0, 0.12);
+    bottom: -10px;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 103%;
+
+    @media (min-width: $desktop) {
+      width: 107%;
+    }
+  }
+}
+fieldset {
+  padding: 45px 20px;
+  border: 1px solid $form;
+  @media (max-width: $desktop) {
+    padding: 0px;
+    border: none;
+  }
+  legend {
+    font: normal 14px/20px $roboto;
+    letter-spacing: 0.25px;
+    color: $form;
+    @media (max-width: $desktop) {
+      padding: 0px;
+      display: none;
+    }
+  }
+}
+
+//custom checkmark
+.order {
+  &__checkname {
+    display: block;
+    position: relative;
+    font: normal 14px/20px $roboto;
+    letter-spacing: 0.25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.6);
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &-payment {
+      font: normal 16px/24px $roboto;
+      letter-spacing: 0.15px;
+      color: rgba(0, 0, 0, 0.87);
+    }
+  }
+
+  /* Hide the browser's default checkbox */
+  &__check {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  &__checkmark {
+    position: absolute;
+    right: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 10%;
+    background-color: transparent;
+    border: 3px solid #dadada;
+  }
+
+  /* On mouse-over, add a grey background color */
+  &__checkname:hover input ~ &__checkmark {
+    background-color: #abe5f3;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  &__checkname input:checked ~ &__checkmark {
+    background-color: $green;
+    border: none;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  &__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  &__checkname input:checked ~ &__checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  &__checkname &__checkmark:after {
+    left: 7px;
+    top: 2px;
+    width: 7px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
