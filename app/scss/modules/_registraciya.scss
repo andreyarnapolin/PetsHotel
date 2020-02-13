@@ -9,8 +9,9 @@
 	max-width: 500px;
 	overflow: hidden;
 	position: relative;   
+
     .field__button{
-        margin: 60px auto;
+        margin: 60px auto 10px;
         width: 96px;
         height: 36px;
 	}
@@ -25,6 +26,26 @@
 			background: #fff;
 			border-bottom: 2px solid #018786;
 	}
+}
+
+
+.passw{
+	text-decoration: none;
+	font: normal 12px/14px $roboto;
+	text-align: center;
+	color: #02BEB2;	
+	&:hover{
+		text-decoration: none;
+		color: #02BEB2;
+	}
+}
+.registr{
+	text-transform: uppercase;
+	font: 500  font 14px/16px $roboto;
+	letter-spacing: 0.75px;
+	color: #018786;
+	padding-top: 20px;
+	margin-left: -100px;
 }
 
 .forms .tab-group li a {
@@ -71,7 +92,7 @@
 	display: block;
 	width: 100%;
 	padding: 18px 15px 14px 16px;
-	border: 2px solid #018786;;
+	border: 2px solid #018786;
     color: rgba(0, 0, 0, 0.6);
 	margin-bottom: 10px;
 }
