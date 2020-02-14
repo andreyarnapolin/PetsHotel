@@ -1,130 +1,191 @@
 /* styles goes here */
-.header__page{
-    background: none;
-    height: 100px;
-} 
+.header__page {
+  background: none;
+  height: 100px;
+}
 
 .forms {
-	margin: 180px auto;
-	max-width: 500px;
-	overflow: hidden;
-	position: relative;   
+  margin: 180px auto;
+  max-width: 500px;
+  overflow: hidden;
+  position: relative;
 
-    .field__button{
-        margin: 60px auto 10px;
-        width: 96px;
-        height: 36px;
-	}
-	
-	.sevices__button-registr{
-        width: 180px;
-        height: 36px;
-        margin: 55px auto;
-	}
-		
-		.forms .tab-group .active a {
-			background: #fff;
-			border-bottom: 2px solid #018786;
-	}
+  @media (max-width: $desktop) {
+    margin: 0 auto;
+  }
+
+  .field__button {
+    margin: 30px auto 10px;
+    width: 96px;
+    height: 36px;
+  }
+
+  .sevices__button-registr {
+    width: 180px;
+    height: 36px;
+    margin: 55px auto;
+  }
+
+  .forms .tab-group .active a {
+    background: #fff;
+    border-bottom: 2px solid #018786;
+  }
 }
 
-
-.passw{
-	text-decoration: none;
-	font: normal 12px/14px $roboto;
-	text-align: center;
-	color: #02BEB2;	
-	&:hover{
-		text-decoration: none;
-		color: #02BEB2;
-	}
+.password {
+  margin-top: 25px;
+  text-align: center;
 }
-.registr{
-	text-transform: uppercase;
-	font: 500  font 14px/16px $roboto;
-	letter-spacing: 0.75px;
-	color: #018786;
-	padding-top: 20px;
-	margin-left: -100px;
+
+.passw {
+  text-decoration: none;
+  font: normal 12px/14px $roboto;
+  text-align: center;
+  color: #02beb2;
+  &:hover {
+    text-decoration: none;
+    color: #02beb2;
+  }
+}
+.registr {
+  text-transform: uppercase;
+  font: 500 14px/16px $roboto;
+  letter-spacing: 0.75px;
+  color: #018786;
+  padding-top: 20px;
+  text-align: center;
+  a {
+    color: #018786;
+  }
+}
+
+.forms .tab-group .tab {
+  width: 125px;
+  text-align: center;
+}
+
+.forms .tab-group .active a {
+  border-bottom: top 10px 3px solid $green;
+  color: #004b4f;
 }
 
 .forms .tab-group li a {
-	display: block;
-	text-decoration: none;
-	padding: 15px;
-	font: normal 14px/20px $roboto;
-	letter-spacing: 0.25px;
-	color: #018786;
-	float: left;
-	width: 50%;
-	margin-bottom: 60px;
-	text-align: center;
-	border-bottom: 3px solid transparent;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
-	-webkit-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
+  text-decoration: none;
+  padding: 10px 5px;
+  font: normal 14px/20px $roboto;
+  letter-spacing: 0.25px;
+  color: #018786;
+  float: left;
+  text-align: center;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.12);
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.forms .tab-group li .enter {
+  width: 125px;
 }
 
-.forms .tab-group li a:active, 
-.forms .tab-group li a:hover{
-	border-bottom: top 10px 3px solid $green;
-	color: #004B4F;
+.forms .tab-group li a:active,
+.forms .tab-group li a:hover {
+  border-bottom: top 10px 3px solid $green;
+  color: #004b4f;
 }
 
 .forms h1 {
-	padding: 0 0 20px 0;
-	font-size: 26px;
-	color: #666;
-	font-weight: lighter;
-	text-align: center;
+  padding: 0 0 20px 0;
+  font-size: 26px;
+  color: #666;
+  font-weight: lighter;
+  text-align: center;
 }
-.forms form { padding: 30px; }
-#signup { display: none; }
+.forms form {
+  padding: 30px;
+}
+#signup {
+  display: none;
+}
 .forms .tab-group {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.forms .input-field {
+  position: relative;
+}
+
+.forms .input-field .show-pass {
+  @include pos($r: 10px, $t: 90px);
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.5);
+  }
 }
 
 .forms input {
-	font: normal 16px/24px $roboto; 
-	display: block;
-	width: 100%;
-	padding: 18px 15px 14px 16px;
-	border: 2px solid #018786;
-    color: rgba(0, 0, 0, 0.6);
-	margin-bottom: 10px;
+  font: normal 16px/24px $roboto;
+  display: block;
+  width: 100%;
+  padding: 18px 15px 14px 16px;
+  border: 2px solid #018786;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 10px;
 }
 
 .forms input:focus {
-	outline: 0;
-	border-color: #2e5ed7;
+  outline: 0;
+  border-color: #2e5ed7;
 }
 .forms label {
-	font-size: 16px;
-	font-weight: normal;
-	color: #666;
-	margin-bottom: 5px;
-	display: block;
+  font-size: 16px;
+  font-weight: normal;
+  color: #666;
+  margin-bottom: 5px;
+  display: block;
 }
 .forms .button {
-	border: 0;
-	outline: none;
-	border-radius: 0;
-	padding: 10px 0;
-	font-size: 18px;
-	font-weight: 300;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	background: #73cf41;
-	color: #ffffff;
-	cursor: pointer;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
-	-webkit-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: #73cf41;
+  color: #ffffff;
+  cursor: pointer;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
-.forms .button:hover, .button:focus { background: #56ae26; }
-.text-p { text-align: right; }
-.text-p a { color: #1383ea; }
+.forms .button:hover,
+.button:focus {
+  background: #56ae26;
+}
+.text-p {
+  text-align: right;
+}
+.text-p a {
+  color: #1383ea;
+}
+
+.account {
+  font: 300 12px/14px $roboto;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+
+  &__enter {
+    color: $form;
+  }
+}

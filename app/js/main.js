@@ -124,6 +124,7 @@
         callback();
       }
     );
+
     //FORM PRICE CALCULATION
     $(".order__check").click(function() {
       callback();
@@ -137,5 +138,18 @@
 
       $(".order__total").text("Всього " + (total += daysNumber) + " грн.");
     }
+
+    //SHOW PASS
+    $(".show-pass").click(function() {
+      let field = $(this)
+        .parents(".input-field")
+        .find(".input-pass");
+
+      field.attr("type", "text");
+
+      setTimeout(() => {
+        field.attr("type", "password");
+      }, 1000);
+    });
   });
 })(jQuery);
