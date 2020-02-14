@@ -1,125 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Starter" />
-    <meta name="author" content="Admin" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-    />
-    <title>PetsHotel</title>
-    <link rel="icon" href="images/favicon.png" />
-    <!--build:css css/styles.min.css-->
-    <link rel="stylesheet" href="images/icon/icoomoon/style.css" />
-    <link rel="stylesheet" href="css/libs/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/libs/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="css/libs/daterangepicker.css" />
-    <link rel="stylesheet" href="css/global.min.css" />
-    <!--endbuild-->
 
-    <!--[if lt IE 9]>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Starter" />
+  <meta name="author" content="Admin" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <title>PetsHotel</title>
+  <link rel="icon" href="images/favicon.png" />
+  <!--build:css css/styles.min.css-->
+  <link rel="stylesheet" href="images/icon/icoomoon/style.css" />
+  <link rel="stylesheet" href="css/libs/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/libs/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="css/libs/daterangepicker.css" />
+  <link rel="stylesheet" href="css/global.min.css" />
+  <!--endbuild-->
+
+  <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body>
-    <header class="header header__page">
-      <nav class="navigation">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 navigation__block">
-              <div class="navigation__wrap">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-secondary dropdown-toggle navigation__burger-menu"
-                    type="button"
-                    id="dropdownMenuButton"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    <i class="icon-burger"></i>
-                  </button>
-                  <div
-                    class="dropdown-menu navigation__burger-menu--item"
-                    aria-labelledby="dropdownMenuButton"
-                  >
-                    <a class="dropdown-item burger-item" href="index.html"
-                      >Головна</a
-                    >
-                    <a class="dropdown-item burger-item" href="#"
-                      >Замовити послугу</a
-                    >
-                    <a class="dropdown-item burger-item" href="#">Відгуки</a>
-                    <a class="dropdown-item burger-item" href="gallery.html"
-                      >Наші фото</a
-                    >
-                  </div>
+<body>
+  <header class="header header__page">
+    <nav class="navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 navigation__block">
+            <div class="navigation__wrap">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle navigation__burger-menu" type="button"
+                  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="icon-burger"></i>
+                </button>
+                <div class="dropdown-menu navigation__burger-menu--item" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item burger-item" href="index.html">Головна</a>
+                  <a class="dropdown-item burger-item" href="#">Замовити послугу</a>
+                  <a class="dropdown-item burger-item" href="#">Відгуки</a>
+                  <a class="dropdown-item burger-item" href="gallery.html">Наші фото</a>
                 </div>
-                <a href="#" class="logo">
-                  <p class="navigation__title">PetsHotel</p>
-                  <i class="icon-house"></i>
-                </a>
               </div>
-              <div class="registration">
-                <ul class="menu">
-                  <li class="menu__item">
-                    <a href="index.html" class="menu__link">Головна</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="registr.html" class="menu__link"
-                      >Замовити послугу</a
-                    >
-                  </li>
-                  <li class="menu__item">
-                    <a href="#reviews" class="menu__link">Відгуки</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="gallery.html" class="menu__link">Наші фото</a>
-                  </li>
-                </ul>
-                <ul class="menu-registr">
-                  <li class="menu__right">
-                    <a href="#" class="menu__link-link"
-                      ><i class="icon-mask"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
+              <a href="#" class="logo">
+                <p class="navigation__title">PetsHotel</p>
+                <i class="icon-house"></i>
+              </a>
+            </div>
+            <div class="registration">
+              <ul class="menu">
+                <li class="menu__item">
+                  <a href="index.html" class="menu__link">Головна</a>
+                </li>
+                <li class="menu__item">
+                  <a href="registr.html" class="menu__link">Замовити послугу</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#reviews" class="menu__link">Відгуки</a>
+                </li>
+                <li class="menu__item">
+                  <a href="gallery.html" class="menu__link">Наші фото</a>
+                </li>
+              </ul>
+              <ul class="menu-registr">
+                <li class="menu__right">
+                  <a href="#" class="menu__link-link"><i class="icon-mask"></i></a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
-    <div class="forms">
-      <ul class="tab-group">
-        <li class="tab active"><a href="#login" class="enter">Увійти</a></li>
-        <li class="tab"><a href="#signup">Зареєструватися</a></li>
-      </ul>
+  <div class="forms">
+    <ul class="tab-group">
+      <li class="tab active"><a href="#login" class="enter">Увійти</a></li>
+      <li class="tab"><a href="#signup">Зареєструватися</a></li>
+    </ul>
 
-      <form action="#" id="login">
-        <div class="input-field">
-          <input type="text" name="tel" required placeholder="Номер телефону" />
-          <input
-            class="input-pass"
-            type="password"
-            name="password"
-            required
-            placeholder="Пароль"
-          />
-          <i class="icon-heart show-pass"></i>
+    <form action="#" id="login">
+      <div class="input-field">
+        <input type="text" name="tel" required placeholder="Номер телефону" />
+        <input class="input-pass" type="password" name="password" required placeholder="Пароль" />
+        <i class="icon-eye show-pass"></i>
 
-          <div class="password">
-            <a href="#" class="passw">Забули пароль?</a>
-          </div>
+        <div class="forms__password">
+          <a href="#" class="forms__passw">Забули пароль?</a>
+        </div>
 
-          <div class="services__button field__button">
-            <a href="#" class="services__button-link">Увійти</a>
-          </div>
+        <div class="services__button forms__button">
+          <a href="#" class="services__button-link">Увійти</a>
+        </div>
 
-          <!--<div class="row">
+        <!--<div class="row">
             <p class="input offset-5">
               увійти швидко
               <a href="#" class="facebook"
@@ -132,96 +105,74 @@
             </p>
           </div>-->
 
-          <div class="registr">
-            <a href="#" class="registrac">Продовжити без реєстрації</a>
-          </div>
+        <div class="forms__registr">
+          <a href="#" class="forms__registrac">Продовжити без реєстрації</a>
         </div>
-      </form>
-      <form action="#" id="signup">
-        <div class="input-field">
-          <input
-            type="text"
-            name="email"
-            required
-            placeholder="Ваше прізвище та ім’я"
-          />
-          <input
-            type="email"
-            name="email"
-            required
-            placeholder="Ваш номер телефону"
-          />
-          <input type="email" name="email" required placeholder="Ваш e-mail" />
-          <input
-            type="password"
-            name="password"
-            required
-            placeholder="Введіть пароль"
-          />
-          <input
-            type="password"
-            name="password"
-            required
-            placeholder="Повторіть пароль"
-          />
-          <div class="services__button sevices__button-registr">
-            <a href="#" class="services__button-link">Зареєструватися</a>
-          </div>
-        </div>
-        <div class="account">
-          <p class="account__t">
-            Вже маєш аккаунт? <a href="#" class="account__enter">Увійти</a>
-          </p>
-        </div>
+      </div>
+    </form>
 
-        <div class="registr">
-          <a href="#" class="registrac">Продовжити без реєстрації</a>
-        </div>
-      </form>
-    </div>
+    <form action="#" id="signup">
+      <div class="input-field">
+        <input type="text" name="email" required placeholder="Ваше прізвище та ім’я" />
+        <input type="email" name="email" required placeholder="Ваш номер телефону" />
+        <input type="email" name="email" required placeholder="Ваш e-mail" />
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__wrap">
-          <div class="footer__block footer__block-first">
-            <a
-              href="mailto: petshotel@gmail.com"
-              class="footer__link footer__email-first"
-              >petshotel@gmail.com</a
-            >
-            <a
-              href="mailto: hotel@gmail.com"
-              class="footer__link footer__email-second"
-              >hotel@gmail.com</a
-            >
-          </div>
-          <div class="footer__block footer__block-second">
-            <a href="#" class="footer__logo logo">
-              <p class="footer__title">PetsHotel</p>
-              <i class="icon-house"></i>
-            </a>
-          </div>
-          <div class="footer__block footer__block-third">
-            <a href="tel:+380953332216" class="footer__link footer__phone"
-              >+38 (095) 333 22 16</a
-            >
-            <div class="footer__socials">
-              <a href="#"><i class="icon-twitter"></i></a>
-              <a href="#"><i class="icon-linkedin"></i></a>
-              <a href="#"><i class="icon-google"></i></a>
-            </div>
+        <input type="password" name="password" required placeholder="Введіть пароль" />
+
+        <i class="icon-eye show-pass"></i>
+
+        <input type="password" name="password" required placeholder="Повторіть пароль" />
+
+        <div class="services__button forms__button-registr">
+          <a href="#" class="services__button-link">Зареєструватися</a>
+        </div>
+      </div>
+
+      <div class="account">
+        <p class="account__t">
+          Вже маєш аккаунт? <a href="#" class="account__enter">Увійти</a>
+        </p>
+      </div>
+
+      <div class="registr">
+        <a href="#" class="registrac">Продовжити без реєстрації</a>
+      </div>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrap">
+        <div class="footer__block footer__block-first">
+          <a href="mailto: petshotel@gmail.com" class="footer__link footer__email-first">petshotel@gmail.com</a>
+          <a href="mailto: hotel@gmail.com" class="footer__link footer__email-second">hotel@gmail.com</a>
+        </div>
+        <div class="footer__block footer__block-second">
+          <a href="#" class="footer__logo logo">
+            <p class="footer__title">PetsHotel</p>
+            <i class="icon-house"></i>
+          </a>
+        </div>
+        <div class="footer__block footer__block-third">
+          <a href="tel:+380953332216" class="footer__link footer__phone">+38 (095) 333 22 16</a>
+          <div class="footer__socials">
+            <a href="#"><i class="icon-twitter"></i></a>
+            <a href="#"><i class="icon-linkedin"></i></a>
+            <a href="#"><i class="icon-google"></i></a>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!--build:js js/main.min.js -->
-    <script src="js/libs/jquery.min.js"></script>
-    <script src="js/libs/bootstrap.bundle.min.js"></script>
-    <script src="js/libs/jquery.fancybox.min.js"></script>
-    <script src="js/libs/moment.min.js"></script>
-    <script src="js/libs/daterangepicker.js"></script>
-    <script src="js/main.js"></script>
-    <!--endbuild-->
-  </body>
+  <!--build:js js/main.min.js -->
+  <script src="js/libs/jquery.min.js"></script>
+  <script src="js/libs/bootstrap.bundle.min.js"></script>
+  <script src="js/libs/jquery.fancybox.min.js"></script>
+  <script src="js/libs/moment.min.js"></script>
+  <script src="js/libs/daterangepicker.js"></script>
+  <script src="js/main.js"></script>
+  <!--endbuild-->
+</body>
+
 </html>

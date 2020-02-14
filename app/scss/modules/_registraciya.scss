@@ -14,13 +14,13 @@
     margin: 0 auto;
   }
 
-  .field__button {
+  &__button {
     margin: 30px auto 10px;
     width: 96px;
     height: 36px;
   }
 
-  .sevices__button-registr {
+  &__button-registr {
     width: 180px;
     height: 36px;
     margin: 55px auto;
@@ -30,24 +30,24 @@
     background: #fff;
     border-bottom: 2px solid #018786;
   }
-}
 
-.password {
+  &__password {
   margin-top: 25px;
   text-align: center;
 }
 
-.passw {
+  &__passw {
   text-decoration: none;
   font: normal 12px/14px $roboto;
   text-align: center;
   color: #02beb2;
-  &:hover {
+    &:hover {
     text-decoration: none;
     color: #02beb2;
-  }
-}
-.registr {
+    }
+  } 
+
+&__registr {
   text-transform: uppercase;
   font: 500 14px/16px $roboto;
   letter-spacing: 0.75px;
@@ -68,6 +68,7 @@
   border-bottom: top 10px 3px solid $green;
   color: #004b4f;
 }
+}
 
 .forms .tab-group li a {
   text-decoration: none;
@@ -78,11 +79,8 @@
   float: left;
   text-align: center;
   border-bottom: 3px solid rgba(0, 0, 0, 0.12);
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
 }
+
 .forms .tab-group li .enter {
   width: 125px;
 }
@@ -129,7 +127,6 @@
     color: rgba(255, 255, 255, 0.5);
   }
 }
-
 .forms input {
   font: normal 16px/24px $roboto;
   display: block;
@@ -139,45 +136,6 @@
   background: transparent;
   color: rgba(0, 0, 0, 0.6);
   margin-bottom: 10px;
-}
-
-.forms input:focus {
-  outline: 0;
-  border-color: #2e5ed7;
-}
-.forms label {
-  font-size: 16px;
-  font-weight: normal;
-  color: #666;
-  margin-bottom: 5px;
-  display: block;
-}
-.forms .button {
-  border: 0;
-  outline: none;
-  border-radius: 0;
-  padding: 10px 0;
-  font-size: 18px;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  background: #73cf41;
-  color: #ffffff;
-  cursor: pointer;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.forms .button:hover,
-.button:focus {
-  background: #56ae26;
-}
-.text-p {
-  text-align: right;
-}
-.text-p a {
-  color: #1383ea;
 }
 
 .account {
