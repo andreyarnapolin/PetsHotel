@@ -62,15 +62,20 @@
       justify-content: space-between;
     }
     &-input {
-      width: auto;
-      padding: 5px;
+      font: normal 14px/20px $roboto;
+      letter-spacing: 0.25px;
+      cursor: pointer;
+      color: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      padding-top: 5px;
       background: transparent;
     }
     &-icon {
       font-size: 20px;
     }
   }
-  &__amount {
+  &__amount,
+  &__total {
     text-align: right;
   }
   &__name {

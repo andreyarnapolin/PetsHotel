@@ -2,6 +2,7 @@
 //Form registration
 (function($) {
   $(document).ready(function() {
+    let daysNumber = 0;
     // FORM LOGIN REGISTRATION
     $(".tab a").on("click", function(e) {
       e.preventDefault();
@@ -81,5 +82,60 @@
         dialog.remove();
       });
     });
+
+    //DATE
+    $(".order__date-input").daterangepicker(
+      {
+        locale: {
+          format: "DD/MM/YYYY",
+          separator: " - ",
+          applyLabel: "Прийняти",
+          cancelLabel: "Відмінити",
+          fromLabel: "Від",
+          toLabel: "До",
+          customRangeLabel: "Custom",
+          weekLabel: "Н",
+          daysOfWeek: ["Не", "По", "Ві", "Се", "Че", "Пя", "Су"],
+          monthNames: [
+            "Січень",
+            "Лютий",
+            "Березень",
+            "Квітень",
+            "Травень",
+            "Червень",
+            "Липень",
+            "Серпень",
+            "Вересень",
+            "Жовтень",
+            "Листопад",
+            "Грудень"
+          ],
+          firstDay: 1
+        },
+        startDate: "14/02/2020",
+        endDate: "14/02/2020"
+      },
+      function(start, end) {
+        daysNumber =
+          (Math.abs(moment(start).diff(moment(end), "days")) + 1) * 150;
+        console.log(daysNumber);
+
+        $(".order__amount").text(daysNumber);
+        callback();
+      }
+    );
+    //FORM PRICE CALCULATION
+    $(".order__check").click(function() {
+      callback();
+    });
+
+    function callback() {
+      let total = 0;
+      $("input:checked").each(function() {
+        total += parseInt($(this).val());
+      });
+
+      $(".order__total").text("Всього " + (total += daysNumber) + " грн.");
+    }
   });
 })(jQuery);
