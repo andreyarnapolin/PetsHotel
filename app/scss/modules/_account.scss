@@ -1,0 +1,31 @@
+.account{
+    margin-top: 80px;
+
+    &__registr {
+        background:$white;
+    }
+    
+    &__name{
+        font: 300 20px/23px $roboto;
+        letter-spacing: 0.15px;
+        color: rgba(0, 0, 0, 0.87);
+        float: left;
+        padding-top: 35px;
+    }
+
+    &__city{
+        font: normal 14px/230px $roboto;
+        color: rgba(0, 0, 0, 0.87);
+        letter-spacing: 0.25px;
+        padding-top: 20px;
+        float: left;
+    }
+
+
+
+
+
+
+
+
+}
