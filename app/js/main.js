@@ -153,44 +153,64 @@
     });
     //PRICE LIST
     $("select.form__input").change(function() {
-      let cities = [
-          {
-            name: "poltava",
-            price1: "150 грн",
-            price2: "250 грн",
-            price3: "350 грн",
-            price4: "450 грн",
-            price5: "550 грн"
+      let cities = {
+          //name: "poltava",
+          service1: {
+            poltava: "150 грн",
+            kyiv: "300 грн",
+            title: "Перетримка (собаки)",
+            subtitle: "бокс/вольєр в окремій кімнаті"
           },
-          {
-            name: "kyiv",
-            price1: "100 грн",
-            price2: "200 грн",
-            price3: "300 грн",
-            price4: "400 грн",
-            price5: "500 грн"
+          service2: {
+            poltava: "250 грн",
+            kyiv: "400 грн",
+            title: "Перетримка (котики)",
+            subtitle: "бокс з відділеннями для сну і гігієни"
+          },
+          service3: {
+            poltava: "350 грн",
+            kyiv: "500 грн",
+            title: "Грумінг",
+            subtitle: "Миття"
+          },
+          service4: {
+            poltava: "450 грн",
+            kyiv: "600 грн",
+            title: "Грумінг",
+            subtitle: "Миття та стрижка"
+          },
+          service5: {
+            poltava: "550 грн",
+            kyiv: "700 грн",
+            title: "Огляд ветеринара",
+            subtitle: "Загальний"
           }
-        ],
+        },
         selectedCountry = $(this)
           .children("option:selected")
           .val();
-      console.log(selectedCountry);
 
-      switch (selectedCountry) {
-        case "poltava":
-          $(".services__number-1").text(cities[0].price1);
-          $(".services__number-2").text(cities[0].price2);
-          $(".services__number-3").text(cities[0].price3);
-          $(".services__number-4").text(cities[0].price4);
-          $(".services__number-5").text(cities[0].price5);
-          break;
-        case "kyiv":
-          $(".services__number-1").text(cities[1].price1);
-          $(".services__number-2").text(cities[1].price2);
-          $(".services__number-3").text(cities[1].price3);
-          $(".services__number-4").text(cities[1].price4);
-          $(".services__number-5").text(cities[1].price5);
-          break;
+      $(".services__section").remove();
+      for (let key in cities) {
+        let price;
+        switch (selectedCountry) {
+          case "poltava":
+            price = cities[key].poltava;
+            break;
+          case "kyiv":
+            price = cities[key].kyiv;
+            break;
+        }
+
+        let block = `<div class="services__section">
+            <div class="row services_row">
+              <p class="services__title-price col-9">${cities[key].title}</p>
+              <p class="services__number services__number-2 col-3">${price}</p>
+              <p class="services__subtitle col-12">${cities[key].subtitle}</p>
+            </div>
+          </div>`;
+
+        $(block).appendTo(".services__wrapper");
       }
     });
     //REGISTRATION

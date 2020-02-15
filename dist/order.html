@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Starter" />
+    <meta name="author" content="Admin" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <title>PetsHotel - Review</title>
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/styles.min.css">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <header class="header gallery__header">
+      <nav class="navigation">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 navigation__block">
+              <div class="navigation__wrap">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle navigation__burger-menu"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i class="icon-burger"></i>
+                  </button>
+                  <div
+                    class="dropdown-menu navigation__burger-menu--item"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a class="dropdown-item burger-item" href="index.html"
+                      >Головна</a
+                    >
+                    <a class="dropdown-item burger-item" href="#"
+                      >Замовити послугу</a
+                    >
+                    <a class="dropdown-item burger-item" href="reviews.html"
+                      >Відгуки</a
+                    >
+                    <a class="dropdown-item burger-item" href="gallery.html"
+                      >Наші фото</a
+                    >
+                  </div>
+                </div>
+                <a href="#" class="logo">
+                  <p class="navigation__title">PetsHotel</p>
+                  <i class="icon-house"></i>
+                </a>
+              </div>
+              <div class="registration">
+                <ul class="menu">
+                  <li class="menu__item">
+                    <a href="index.html" class="menu__link">Головна</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#order" class="menu__link">Замовити послугу</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#reviews" class="menu__link">Відгуки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#foto" class="menu__link">Наші фото</a>
+                  </li>
+                </ul>
+                <ul class="menu-registr">
+                  <li class="menu__right">
+                    <a href="#" class="menu__link-link"
+                      ><i class="icon-mask"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="order container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="order__title">Форма для замовлення послуг</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div
+          class="order__wrap col-12 offset-sm-4 col-sm-5 offset-md-0 col-md-4"
+        >
+          <h2 class="order__subtitle">
+            1. Заповніть дані про бажані послуги
+          </h2>
+          <form action="#" class="order__form">
+            <fieldset class="">
+              <legend class="w-auto">
+                1. Заповніть дані про бажані послуги
+              </legend>
+              <div class="order__select-outerwrap">
+                <div class="order__select-wrap">
+                  <select
+                    name="city"
+                    id="order__city"
+                    class="order__select-city"
+                  >
+                    <option value="poltava">Полтава</option>
+                    <option value="kyiv">Київ</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="order__date">
+                <h2 class="order__name">Дата</h2>
+                <div class="order__date-wrap">
+                  <input
+                    type="text"
+                    name="daterange"
+                    class="order__date-input"
+                    placeholder="Обрати дату"
+                  />
+                  <i class="icon-fill order__date-icon"></i>
+                </div>
+              </div>
+              <p class="order__amount">грн</p>
+              <div class="order__options">
+                <h2 class="order__name">Грумінг</h2>
+                <div class="order__option">
+                  <label class="order__checkname"
+                    >Two
+                    <input type="checkbox" value="2" class="order__check" />
+                    <span class="order__checkmark"></span>
+                  </label>
+                </div>
+                <div class="order__option">
+                  <label class="order__checkname"
+                    >Three
+                    <input type="checkbox" value="3" class="order__check" />
+                    <span class="order__checkmark"></span>
+                  </label>
+                </div>
+                <div class="order__option">
+                  <label class="order__checkname"
+                    >Four
+                    <input type="checkbox" value="4" class="order__check" />
+                    <span class="order__checkmark"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="order__doctor">
+                <h2 class="order__name">Огляд ветеринара</h2>
+                <div class="order__option">
+                  <label class="order__checkname"
+                    >One
+                    <input type="checkbox" value="1" class="order__check" />
+                    <span class="order__checkmark"></span>
+                  </label>
+                </div>
+                <div class="order__option">
+                  <label class="order__checkname"
+                    >Two
+                    <input type="checkbox" value="2" class="order__check" />
+                    <span class="order__checkmark"></span>
+                  </label>
+                </div>
+              </div>
+              <p class="order__total">грн</p>
+              <div class="order__payment">
+                <label class="order__checkname order__checkname-payment"
+                  >Сплатити онлайн
+                  <input type="checkbox" value="0" class="order__check" />
+                  <span class="order__checkmark"></span>
+                </label>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrap">
+          <div class="footer__block footer__block-first">
+            <a
+              href="mailto: petshotel@gmail.com"
+              class="footer__link footer__email-first"
+              >petshotel@gmail.com</a
+            >
+            <a
+              href="mailto: hotel@gmail.com"
+              class="footer__link footer__email-second"
+              >hotel@gmail.com</a
+            >
+          </div>
+          <div class="footer__block footer__block-second">
+            <a href="#" class="footer__logo logo">
+              <p class="footer__title">PetsHotel</p>
+              <i class="icon-house"></i>
+            </a>
+          </div>
+          <div class="footer__block footer__block-third">
+            <a href="tel:+380953332216" class="footer__link footer__phone"
+              >+38 (095) 333 22 16</a
+            >
+            <div class="footer__socials">
+              <a href="#"><i class="icon-twitter"></i></a>
+              <a href="#"><i class="icon-linkedin"></i></a>
+              <a href="#"><i class="icon-google"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
