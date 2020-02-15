@@ -1,8 +1,12 @@
 .account{
     margin-top: 80px;
+    text-align: left;
 
     &__registr {
-        background:$white;
+        background: $white;
+        // @media (min-width: $desktop) {
+        //     display: none;
+        //   }
     }
 
     &__client{
@@ -12,26 +16,102 @@
 
     &__name{
         font: 300 20px/23px $roboto;
-        letter-spacing: 0.15px;
         color: rgba(0, 0, 0, 0.87);
-        padding-left: 0px;
-        padding-top: 35px;
+        padding-top: 15px;
+       
     }
 
     &__city{
-        font: normal 14px/230px $roboto;
+        font: normal 14px/23px $roboto;
         color: rgba(0, 0, 0, 0.87);
         letter-spacing: 0.25px;
-        padding-top: 20px;
-        padding-left: 0px;
+        padding-top: 20px; 
+    }
+
+    &__info{
+        font: normal 14px/20px $roboto;
+        letter-spacing: 0.25px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    &__link{
+        display: flex;
+        font: 500 14px/16px $roboto;
+        letter-spacing: 0.75px;
+        text-transform: uppercase;
+        justify-content: space-between;
+        margin: 25px 0px;
+       a{
+        color: $green;
+        text-decoration: none; 
+        margin-right: 10px;
+       }
     }
 
     &__client-img{
         width: 100%;
     }
 
+    &__bottom{
+        margin-top: 45px;
+        display: flex;
+    }
 
+    &__animals{
+        background: $white;
+        display: flex;
+        height: 100%;
+        // @media (min-width: $desktop){
+        //     width: 100%;
+        // }
+    }
 
+    &__animals-bottom{
+        margin-top: -150px;
+    }
+
+    &__name {
+        font: normal 24px/28px $roboto;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    &__breed{
+        font: normal 14px/20px $roboto;
+        letter-spacing: 0.25px;
+        color: rgba(0, 0, 0, 0.6);
+        margin-top: 10px;
+        width: 130px;
+    }
+    &__anim{
+        margin-top: 100px;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    &__rey{
+      width: 100%;
+    }
+
+    &__dog{
+        margin-left: 147px;
+    }
+
+    &__plus{
+        font: normal 18px/28px $roboto;
+
+        a{
+        text-decoration: none;
+        color: $green;
+        }   
+    }
+
+    // &__cat{
+    //     width: 100%;
+    // }
+
+    .cat{
+        margin-left: 10px;
+    }
 
 
 

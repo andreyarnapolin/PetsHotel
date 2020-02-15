@@ -922,7 +922,8 @@ fieldset {
     transform: rotate(45deg); }
 
 .account {
-  margin-top: 80px; }
+  margin-top: 80px;
+  text-align: left; }
   .account__registr {
     background: #fff; }
   .account__client {
@@ -930,15 +931,66 @@ fieldset {
     margin-left: -15px; }
   .account__name {
     font: 300 20px/23px "Roboto", sans-serif;
-    letter-spacing: 0.15px;
     color: rgba(0, 0, 0, 0.87);
-    padding-left: 0px;
-    padding-top: 35px; }
+    padding-top: 15px; }
   .account__city {
-    font: normal 14px/230px "Roboto", sans-serif;
+    font: normal 14px/23px "Roboto", sans-serif;
     color: rgba(0, 0, 0, 0.87);
     letter-spacing: 0.25px;
-    padding-top: 20px;
-    padding-left: 0px; }
+    padding-top: 20px; }
+  .account__info {
+    font: normal 14px/20px "Roboto", sans-serif;
+    letter-spacing: 0.25px;
+    color: rgba(0, 0, 0, 0.6); }
+  .account__link {
+    display: -webkit-box;
+    display: flex;
+    font: 500 14px/16px "Roboto", sans-serif;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    margin: 25px 0px; }
+    .account__link a {
+      color: #018786;
+      text-decoration: none;
+      margin-right: 10px; }
   .account__client-img {
     width: 100%; }
+  .account__bottom {
+    margin-top: 45px;
+    display: -webkit-box;
+    display: flex; }
+  .account__animals {
+    background: #fff;
+    display: -webkit-box;
+    display: flex;
+    height: 100%; }
+  .account__animals-bottom {
+    margin-top: -150px; }
+  .account__name {
+    font: normal 24px/28px "Roboto", sans-serif;
+    color: rgba(0, 0, 0, 0.87); }
+  .account__breed {
+    font: normal 14px/20px "Roboto", sans-serif;
+    letter-spacing: 0.25px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 10px;
+    width: 130px; }
+  .account__anim {
+    margin-top: 100px;
+    -webkit-box-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: start;
+            justify-content: flex-start; }
+  .account__rey {
+    width: 100%; }
+  .account__dog {
+    margin-left: 147px; }
+  .account__plus {
+    font: normal 18px/28px "Roboto", sans-serif; }
+    .account__plus a {
+      text-decoration: none;
+      color: #018786; }
+  .account .cat {
+    margin-left: 10px; }
