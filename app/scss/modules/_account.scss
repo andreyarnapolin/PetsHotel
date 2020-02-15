@@ -4,12 +4,17 @@
     &__registr {
         background:$white;
     }
-    
+
+    &__client{
+        width: calc(100% + 30px);
+        margin-left: -15px;
+    }
+
     &__name{
         font: 300 20px/23px $roboto;
         letter-spacing: 0.15px;
         color: rgba(0, 0, 0, 0.87);
-        float: left;
+        padding-left: 0px;
         padding-top: 35px;
     }
 
@@ -18,10 +23,12 @@
         color: rgba(0, 0, 0, 0.87);
         letter-spacing: 0.25px;
         padding-top: 20px;
-        float: left;
+        padding-left: 0px;
     }
 
-
+    &__client-img{
+        width: 100%;
+    }
 
 
 
