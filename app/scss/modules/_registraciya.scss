@@ -32,42 +32,42 @@
   }
 
   &__password {
-  margin-top: 25px;
-  text-align: center;
-}
+    margin-top: 25px;
+    text-align: center;
+  }
 
   &__passw {
-  text-decoration: none;
-  font: normal 12px/14px $roboto;
-  text-align: center;
-  color: #02beb2;
-    &:hover {
     text-decoration: none;
+    font: normal 12px/14px $roboto;
+    text-align: center;
     color: #02beb2;
+    &:hover {
+      text-decoration: none;
+      color: #02beb2;
     }
-  } 
-
-&__registr {
-  text-transform: uppercase;
-  font: 500 14px/16px $roboto;
-  letter-spacing: 0.75px;
-  color: #018786;
-  padding-top: 20px;
-  text-align: center;
-  a {
-    color: #018786;
   }
-}
 
-.forms .tab-group .tab {
-  width: 125px;
-  text-align: center;
-}
+  &__registr {
+    text-transform: uppercase;
+    font: 500 14px/16px $roboto;
+    letter-spacing: 0.75px;
+    color: #018786;
+    padding-top: 20px;
+    text-align: center;
+    a {
+      color: #018786;
+    }
+  }
 
-.forms .tab-group .active a {
-  border-bottom: top 10px 3px solid $green;
-  color: #004b4f;
-}
+  .forms .tab-group .tab {
+    width: 125px;
+    text-align: center;
+  }
+
+  .forms .tab-group .active a {
+    border-bottom: top 10px 3px solid $green;
+    color: #004b4f;
+  }
 }
 
 .forms .tab-group li a {
@@ -117,7 +117,12 @@
   position: relative;
 }
 
-.forms .input-field .show-pass {
+.show-pass {
+  display: none;
+}
+
+.forms .input-field-login .show-pass {
+  display: block;
   @include pos($r: 10px, $t: 90px);
   font-size: 18px;
   cursor: pointer;

@@ -151,5 +151,66 @@
         field.attr("type", "password");
       }, 1000);
     });
+    //PRICE LIST
+    $("select.form__input").change(function() {
+      let cities = [
+          {
+            name: "poltava",
+            price1: "150 грн",
+            price2: "250 грн",
+            price3: "350 грн",
+            price4: "450 грн",
+            price5: "550 грн"
+          },
+          {
+            name: "kyiv",
+            price1: "100 грн",
+            price2: "200 грн",
+            price3: "300 грн",
+            price4: "400 грн",
+            price5: "500 грн"
+          }
+        ],
+        selectedCountry = $(this)
+          .children("option:selected")
+          .val();
+      console.log(selectedCountry);
+
+      switch (selectedCountry) {
+        case "poltava":
+          $(".services__number-1").text(cities[0].price1);
+          $(".services__number-2").text(cities[0].price2);
+          $(".services__number-3").text(cities[0].price3);
+          $(".services__number-4").text(cities[0].price4);
+          $(".services__number-5").text(cities[0].price5);
+          break;
+        case "kyiv":
+          $(".services__number-1").text(cities[1].price1);
+          $(".services__number-2").text(cities[1].price2);
+          $(".services__number-3").text(cities[1].price3);
+          $(".services__number-4").text(cities[1].price4);
+          $(".services__number-5").text(cities[1].price5);
+          break;
+      }
+    });
+    //REGISTRATION
+    $(".services__button-reg").click(function() {
+      localStorage.setItem("phone", $(".input-phone-reg").val());
+      localStorage.setItem("pass", $(".input-pass-reg").val());
+    });
+    //LOGIN
+    $(".services__button-log").click(function() {
+      let storedPhone = localStorage.getItem("phone");
+      let storedPass = localStorage.getItem("pass");
+
+      let userPhone = $(".input-phone").val();
+      let userPass = $(".input-pass").val();
+
+      if (userPhone == storedPhone && userPass == storedPass) {
+        alert("You are loged in.");
+      } else {
+        alert("ERROR.");
+      }
+    });
   });
 })(jQuery);
