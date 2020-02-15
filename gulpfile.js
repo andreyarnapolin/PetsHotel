@@ -5,12 +5,11 @@ const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
-const cssnano = require("cssnano");
 const imagemin = require("gulp-imagemin");
 const cache = require("gulp-cache");
 const del = require("del");
 const useref = require("gulp-useref");
-const uglify = require("gulp-uglify");
+const terser = require("gulp-terser");
 const gulpIf = require("gulp-if");
 const wait = require("gulp-wait");
 const notify = require("gulp-notify");
@@ -103,7 +102,7 @@ function styles() {
     .pipe(plumbError())
     .pipe(sass())
     .pipe(rename({ suffix: ".min" }))
-    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(postcss([autoprefixer()]))
     .pipe(gulp.dest(paths.css.dest))
     .pipe(browsersync.stream());
 }
@@ -111,8 +110,22 @@ function styles() {
 // Optimize Images
 function images() {
   return gulp
-    .src(`${paths.images.src}.+(png|jpg|jpeg|gif|svg)`)
-    .pipe(cache(imagemin({ interlaced: true })))
+    .src(`${paths.images.src}.+(png|jpg|jpeg|gif)`)
+    .pipe(
+      cache(
+        imagemin([
+          imagemin.mozjpeg({ quality: 75, progressive: true }),
+          imagemin.optipng({ optimizationLevel: 5 }),
+          imagemin.gifsicle({ interlaced: true })
+        ])
+      )
+    )
+    .pipe(gulp.dest(paths.images.dest));
+}
+
+function imagesSVG() {
+  return gulp
+    .src(`${paths.images.src}.+(svg)`)
     .pipe(gulp.dest(paths.images.dest));
 }
 
@@ -130,7 +143,7 @@ function distFiles() {
   return gulp
     .src(paths.html.src)
     .pipe(useref())
-    .pipe(gulpIf("*.js", uglify()))
+    .pipe(gulpIf("*.js", terser()))
     .pipe(gulp.src("*.css"))
     .pipe(gulp.dest(paths.html.dest));
 }
@@ -141,6 +154,7 @@ function watchFiles() {
   gulp.watch(paths.html.src, browserSyncReload);
   gulp.watch(paths.js.src, browserSyncReload);
   gulp.watch(paths.images.src, images);
+  gulp.watch(paths.images.src, imagesSVG);
 }
 
 // define complex tasks
@@ -149,12 +163,13 @@ const build = gulp.series(
   clean,
   modules,
   styles,
-  gulp.parallel(distFiles, images, fonts)
+  gulp.parallel(distFiles, images, imagesSVG, fonts)
 );
 const watch = gulp.series(modules, gulp.parallel(watchFiles, browserSync));
 
 // export tasks
 exports.images = images;
+exports.imagesSVG = imagesSVG;
 exports.styles = styles;
 exports.clean = clean;
 exports.fonts = fonts;
