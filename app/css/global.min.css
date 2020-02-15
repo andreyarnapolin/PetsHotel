@@ -255,7 +255,8 @@ body {
     background: #018786;
     padding: 45px 35px;
     margin-top: 10%;
-    margin-bottom: 40px; }
+    -webkit-box-pack: center;
+            justify-content: center; }
   .header .form__social-wrap {
     -webkit-box-pack: end;
             justify-content: flex-end; }
@@ -987,6 +988,10 @@ fieldset {
     width: 100%; }
   .account__dog {
     margin-left: 147px; }
+    @media (max-width: 992px) {
+      .account__dog {
+        display: none;
+        background: url("../images/rey__mobile.jpg") top center left; } }
   .account__plus {
     font: normal 18px/28px "Roboto", sans-serif; }
     .account__plus a {

@@ -94,6 +94,10 @@
 
     &__dog{
         margin-left: 147px;
+        @media (max-width:$desktop){
+            display: none;
+            background: url('../images/rey__mobile.jpg') top center left;  
+        }
     }
 
     &__plus{
@@ -109,7 +113,7 @@
     //     width: 100%;
     // }
 
-    .cat{
+    .cat {
         margin-left: 10px;
     }
 
