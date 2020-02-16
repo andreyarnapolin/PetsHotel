@@ -1,16 +1,17 @@
 .account{
     margin-top: 80px;
     text-align: left;
+    vertical-align: none;
 
     &__registr {
         background: $white;
         width: 98%;
-        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);      
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);    
         @media(max-width: $desktop){
             margin-top: -60px;
         };
     } 
-
+    
     &__client{
         width: calc(100% + 30px);
         margin-left: -15px;
@@ -42,6 +43,7 @@
         text-transform: uppercase;
         justify-content: space-between;
         margin: 25px 0px;
+
        a{
         color: $green;
         text-decoration: none; 
@@ -63,6 +65,7 @@
     }
 
     &__animals{
+        display: flex;
         background: $white;
         display: flex;
         height: 100%;
@@ -147,42 +150,83 @@
 
        }  
     }
-
     &__cat{
         width: 100%;
     }
-
     .cat {
         @media (min-width:$desktop){
                   margin-left: 6px;
           }
     }
-
     &__bottom{
         display: flex;
         justify-content: space-between;
         margin-top: 45px;
         margin-left: 20px;
+        @media (max-width: $desktop){
+            display: none;
+        }
     }
-
+    &__bottom-mobile{
+        display: flex;
+        @media (min-width:$desktop){
+            display: none;         
+        }  
+    }
     &__text{
         font: normal 16px/24px $roboto;
         letter-spacing: 0.15px;
-
-        @media (max-width: $desktop){
-            margin-left: 25px;
-        }
+        display: inline-block;
     }
 
-    // &__plus-link{
-    //     padding: 50px 0px;
-    // }
+    &__plus-link{
+        margin: 50px 0px;
+        @media(max-width: $desktop){
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+    }
 
     &__link-bottom{
         font: normal 12px/16px $roboto;
         letter-spacing: 0.4px;
         color: $green;
         margin-left: 160px;
+
+        &:hover{
+            text-decoration: none;
+            color: $green;
+        }
+    }
+
+    &__buttom {
+        @media(min-width: $desktop){
+            display: none;
+        }
+        display: flex;
+        justify-content: space-between;
+        font: 500 14px/16px $roboto;
+        letter-spacing: 0.75px;
+        text-transform: uppercase;
+        color: $green;
+        margin: 45px 0 15px 0;
+        position: relative;
+        text-decoration: none;
+        &:before{
+            content: '';
+            height: 1px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.12);
+            position: absolute;
+            top: -15px;
+        }
+        a:hover , a:active{
+            text-decoration: none;
+            color: $green;
+        }
+        a{
+            color: $green;
+        }
     }
 
 }

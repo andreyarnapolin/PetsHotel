@@ -190,25 +190,21 @@
       background: $green;
       padding: 45px 35px;
       margin-top: 10%;
-      // margin-bottom: 40px;
       justify-content: center;
       // margin-top: 160px;
+      // align-items: center;
     }
-
-    // &__social{
-    //   padding-top: 160px;
-    // }
 
     &__social{
       &-wrap{
         justify-content: flex-end;
-        // margin-top: 40px;
       }
     }
 
     &__social-icon {
       display: flex;
       justify-content: space-between;
+      margin-top: 30%;
 
       li {
         margin-left: 20%;
