@@ -926,7 +926,12 @@ fieldset {
   margin-top: 80px;
   text-align: left; }
   .account__registr {
-    background: #fff; }
+    background: #fff;
+    width: 98%;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14); }
+    @media (max-width: 992px) {
+      .account__registr {
+        margin-top: -60px; } }
   .account__client {
     width: calc(100% + 30px);
     margin-left: -15px; }
@@ -956,6 +961,8 @@ fieldset {
       color: #018786;
       text-decoration: none;
       margin-right: 10px; }
+  .account__link-right {
+    margin-top: 20px; }
   .account__client-img {
     width: 100%; }
   .account__bottom {
@@ -966,9 +973,17 @@ fieldset {
     background: #fff;
     display: -webkit-box;
     display: flex;
-    height: 100%; }
+    height: 100%;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14); }
+    @media (max-width: 992px) {
+      .account__animals {
+        margin-top: 15px; } }
   .account__animals-bottom {
-    margin-top: -150px; }
+    margin-top: -190px; }
+    @media (max-width: 992px) {
+      .account__animals-bottom {
+        margin-top: 15px;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14); } }
   .account__name {
     font: normal 24px/28px "Roboto", sans-serif;
     color: rgba(0, 0, 0, 0.87); }
@@ -984,18 +999,59 @@ fieldset {
             align-items: flex-end;
     -webkit-box-pack: start;
             justify-content: flex-start; }
+    @media (max-width: 992px) {
+      .account__anim {
+        margin: 5px;
+        padding: 10px; } }
   .account__rey {
     width: 100%; }
   .account__dog {
     margin-left: 147px; }
     @media (max-width: 992px) {
       .account__dog {
-        display: none;
-        background: url("../images/rey__mobile.jpg") top center left; } }
+        display: none; } }
+  @media (max-width: 992px) {
+    .account__mobile {
+      margin: 20px 15px 15px 40px; } }
+  @media (min-width: 992px) {
+    .account__mobile {
+      display: none; } }
+  @media (max-width: 992px) {
+    .account__mobile__cat {
+      margin: 20px 15px 15px 40px; } }
   .account__plus {
     font: normal 18px/28px "Roboto", sans-serif; }
     .account__plus a {
       text-decoration: none;
       color: #018786; }
-  .account .cat {
-    margin-left: 10px; }
+      @media (min-width: 992px) {
+        .account__plus a {
+          margin-left: 42%;
+          padding: 50px 0px; } }
+      @media (max-width: 992px) {
+        .account__plus a {
+          margin-left: 30px;
+          margin-top: 50px; } }
+  .account__cat {
+    width: 100%; }
+  @media (min-width: 992px) {
+    .account .cat {
+      margin-left: 6px; } }
+  .account__bottom {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    margin-top: 45px;
+    margin-left: 20px; }
+  .account__text {
+    font: normal 16px/24px "Roboto", sans-serif;
+    letter-spacing: 0.15px; }
+    @media (max-width: 992px) {
+      .account__text {
+        margin-left: 25px; } }
+  .account__link-bottom {
+    font: normal 12px/16px "Roboto", sans-serif;
+    letter-spacing: 0.4px;
+    color: #018786;
+    margin-left: 160px; }

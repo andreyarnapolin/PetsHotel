@@ -4,10 +4,12 @@
 
     &__registr {
         background: $white;
-        // @media (min-width: $desktop) {
-        //     display: none;
-        //   }
-    }
+        width: 98%;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);      
+        @media(max-width: $desktop){
+            margin-top: -60px;
+        };
+    } 
 
     &__client{
         width: calc(100% + 30px);
@@ -17,8 +19,7 @@
     &__name{
         font: 300 20px/23px $roboto;
         color: rgba(0, 0, 0, 0.87);
-        padding-top: 15px;
-       
+        padding-top: 15px;   
     }
 
     &__city{
@@ -48,6 +49,10 @@
        }
     }
 
+    &__link-right{
+        margin-top: 20px;
+    }    
+
     &__client-img{
         width: 100%;
     }
@@ -61,13 +66,18 @@
         background: $white;
         display: flex;
         height: 100%;
-        // @media (min-width: $desktop){
-        //     width: 100%;
-        // }
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);      
+        @media(max-width: $desktop){
+            margin-top: 15px; 
+        }
     }
 
     &__animals-bottom{
-        margin-top: -150px;
+        margin-top: -190px;
+        @media(max-width: $desktop){
+        margin-top: 15px; 
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);           
+        }
     }
 
     &__name {
@@ -75,17 +85,22 @@
         color: rgba(0, 0, 0, 0.87);
     }
 
-    &__breed{
+    &__breed {
         font: normal 14px/20px $roboto;
         letter-spacing: 0.25px;
         color: rgba(0, 0, 0, 0.6);
         margin-top: 10px;
         width: 130px;
     }
-    &__anim{
+
+    &__anim {
         margin-top: 100px;
         align-items: flex-end;
         justify-content: flex-start;
+        @media(max-width: $desktop){
+            margin: 5px;
+            padding: 10px;
+        }
     }
 
     &__rey{
@@ -95,9 +110,23 @@
     &__dog{
         margin-left: 147px;
         @media (max-width:$desktop){
-            display: none;
-            background: url('../images/rey__mobile.jpg') top center left;  
+            display: none;   
         }
+    }
+
+    &__mobile{
+        @media (max-width:$desktop){
+          margin: 20px 15px 15px 40px;
+        }
+        @media (min-width:$desktop){
+            display: none;  
+        }
+    }
+
+    &__mobile__cat{
+    @media (max-width:$desktop){
+        margin: 20px 15px 15px 40px;
+      } 
     }
 
     &__plus{
@@ -106,17 +135,54 @@
         a{
         text-decoration: none;
         color: $green;
-        }   
+        @media (min-width:$desktop){
+            margin-left: 42%;
+            padding: 50px 0px;
+        }
+
+         @media (max-width:$desktop) {
+            margin-left: 30px;
+            margin-top: 50px;
+        }  
+
+       }  
     }
 
-    // &__cat{
-    //     width: 100%;
-    // }
+    &__cat{
+        width: 100%;
+    }
 
     .cat {
-        margin-left: 10px;
+        @media (min-width:$desktop){
+                  margin-left: 6px;
+          }
     }
 
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 45px;
+        margin-left: 20px;
+    }
 
+    &__text{
+        font: normal 16px/24px $roboto;
+        letter-spacing: 0.15px;
+
+        @media (max-width: $desktop){
+            margin-left: 25px;
+        }
+    }
+
+    // &__plus-link{
+    //     padding: 50px 0px;
+    // }
+
+    &__link-bottom{
+        font: normal 12px/16px $roboto;
+        letter-spacing: 0.4px;
+        color: $green;
+        margin-left: 160px;
+    }
 
 }
