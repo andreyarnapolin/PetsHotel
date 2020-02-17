@@ -13,6 +13,7 @@
   @media (max-width: $desktop) {
     margin: 0 auto;
   }
+  
   &__wrap {
     flex: 1 0 auto;
   }
@@ -101,16 +102,18 @@
   font-weight: lighter;
   text-align: center;
 }
+
 .forms form {
   padding: 30px;
 }
+
 #signup {
   display: none;
 }
+
 .forms .tab-group {
   list-style: none;
   padding: 0;
-
   display: flex;
   justify-content: center;
   margin-bottom: 60px;
@@ -154,14 +157,34 @@
 
 .account {
   font: 300 12px/14px $roboto;
-  color: rgba(0, 0, 0, 0.6);
-  text-align: center;
-
+   color: rgba(0, 0, 0, 0.6);
   &__enter {
     color: $form;
   }
+  .account__t{
+    text-align: center;
+  }
+
 }
 
+.registr{
+  text-align: center;
+  padding-top: 20px;
+  .registrac {
+  font: 500 14px/16px $roboto;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  color: $green;
+   text-decoration: none;
+}
+
+}
 .registr__hidden {
   display: none !important;
+}
+
+.services__icon{
+  display: flex;
+ justify-content: center;
+  margin-top: 10px;
 }

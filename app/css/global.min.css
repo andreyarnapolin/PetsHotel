@@ -765,13 +765,31 @@ body {
 
 .account {
   font: 300 12px/14px "Roboto", sans-serif;
-  color: rgba(0, 0, 0, 0.6);
-  text-align: center; }
+  color: rgba(0, 0, 0, 0.6); }
   .account__enter {
     color: #02beb2; }
+  .account .account__t {
+    text-align: center; }
+
+.registr {
+  text-align: center;
+  padding-top: 20px; }
+  .registr .registrac {
+    font: 500 14px/16px "Roboto", sans-serif;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    color: #018786;
+    text-decoration: none; }
 
 .registr__hidden {
   display: none !important; }
+
+.services__icon {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin-top: 10px; }
 
 .order {
   margin-top: 20px;
