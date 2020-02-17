@@ -152,9 +152,8 @@
       }, 1000);
     });
     //PRICE LIST
-    $("select.form__input").change(function() {
+    $("select.form__input, select.services__input").change(function() {
       let cities = {
-          //name: "poltava",
           service1: {
             poltava: "150 грн",
             kyiv: "300 грн",
@@ -214,9 +213,25 @@
       }
     });
     //REGISTRATION
-    $(".services__button-reg").click(function() {
+    $(".services__button-reg").click(function(e) {
+      let passOne = $(".input-pass-reg"),
+        passTwo = $(".input-pass_again-reg");
+
+      $(passTwo).removeClass("error-val");
+
+      if (passTwo.val() == passOne.val()) {
+        $(passTwo).removeClass("error-val");
+      } else {
+        $(passTwo).addClass("error-val");
+        return;
+      }
+
+      $(".registr__hidden").click();
+
       localStorage.setItem("phone", $(".input-phone-reg").val());
       localStorage.setItem("pass", $(".input-pass-reg").val());
+
+      //$(".forms__tab-login").click();
     });
     //LOGIN
     $(".services__button-log").click(function() {
@@ -226,10 +241,18 @@
       let userPhone = $(".input-phone").val();
       let userPass = $(".input-pass").val();
 
+      $(".input-phone").removeClass("error-val");
+      $(".input-pass").removeClass("error-val");
+
       if (userPhone == storedPhone && userPass == storedPass) {
-        alert("You are loged in.");
-      } else {
-        alert("ERROR.");
+        window.location.href = "account.html";
+      } else if (userPhone != storedPhone && userPass != storedPass) {
+        $(".input-phone").addClass("error-val");
+        $(".input-pass").addClass("error-val");
+      } else if (userPhone != storedPhone) {
+        $(".input-phone").addClass("error-val");
+      } else if (userPass != storedPass) {
+        $(".input-pass").addClass("error-val");
       }
     });
   });

@@ -1,6 +1,11 @@
 .order {
   margin-top: 20px;
   margin-bottom: 20px;
+  flex: 1 0 auto;
+
+  &__form {
+    height: 100%;
+  }
 
   &__title {
     font: 300 20px/23px $roboto;
@@ -116,6 +121,7 @@
 fieldset {
   padding: 45px 20px;
   border: 1px solid $form;
+  height: 100%;
   @media (max-width: $desktop) {
     padding: 0px;
     border: none;

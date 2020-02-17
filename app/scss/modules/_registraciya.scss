@@ -13,6 +13,9 @@
   @media (max-width: $desktop) {
     margin: 0 auto;
   }
+  &__wrap {
+    flex: 1 0 auto;
+  }
 
   &__button {
     margin: 30px auto 10px;
@@ -143,6 +146,12 @@
   margin-bottom: 10px;
 }
 
+.forms {
+  .error-val {
+    border: 2px solid #c20606;
+  }
+}
+
 .account {
   font: 300 12px/14px $roboto;
   color: rgba(0, 0, 0, 0.6);
@@ -151,4 +160,8 @@
   &__enter {
     color: $form;
   }
+}
+
+.registr__hidden {
+  display: none !important;
 }

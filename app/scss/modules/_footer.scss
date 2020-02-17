@@ -4,7 +4,7 @@
 
 .footer {
   background: #004b4f;
-
+  flex-shrink: 0;
   &__wrap {
     display: flex;
     justify-content: space-between;

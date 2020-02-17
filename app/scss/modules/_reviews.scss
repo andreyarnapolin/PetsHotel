@@ -1,4 +1,5 @@
 .review {
+  flex: 1 0 auto;
   &__image {
     display: flex;
     width: calc(100% + 26px); // twice the value of the parent's padding

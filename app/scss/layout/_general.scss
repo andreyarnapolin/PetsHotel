@@ -33,4 +33,6 @@ html {
 
 body {
   background-color: $bg-color;
+  display: flex;
+  flex-direction: column;
 }
