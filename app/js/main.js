@@ -126,7 +126,7 @@
     );
 
     //FORM PRICE CALCULATION
-    $(".order__check").click(function() {
+    $(".order__form").on("click", ".order__check", function() {
       callback();
     });
 
@@ -155,34 +155,34 @@
     $("select.form__input, select.services__input").change(function() {
       let cities = {
           service1: {
-            poltava: "150 грн",
-            kyiv: "300 грн",
-            title: "Перетримка (собаки)",
-            subtitle: "бокс/вольєр в окремій кімнаті"
-          },
-          service2: {
-            poltava: "250 грн",
-            kyiv: "400 грн",
-            title: "Перетримка (котики)",
-            subtitle: "бокс з відділеннями для сну і гігієни"
-          },
-          service3: {
             poltava: "350 грн",
             kyiv: "500 грн",
             title: "Грумінг",
             subtitle: "Миття"
           },
-          service4: {
+          service2: {
             poltava: "450 грн",
             kyiv: "600 грн",
             title: "Грумінг",
-            subtitle: "Миття та стрижка"
+            subtitle: "Стрижка"
           },
-          service5: {
+          service3: {
+            poltava: "250 грн",
+            kyiv: "300 грн",
+            title: "Грумінг",
+            subtitle: "Чистка зубів"
+          },
+          service4: {
             poltava: "550 грн",
             kyiv: "700 грн",
             title: "Огляд ветеринара",
             subtitle: "Загальний"
+          },
+          service5: {
+            poltava: "650 грн",
+            kyiv: "800 грн",
+            title: "Огляд ветеринара",
+            subtitle: "Детальний"
           }
         },
         selectedCountry = $(this)
@@ -253,6 +253,90 @@
         $(".input-phone").addClass("error-val");
       } else if (userPass != storedPass) {
         $(".input-pass").addClass("error-val");
+      }
+    });
+    //ORDER FORM CITY SELECTION
+    $("#order__city").change(function() {
+      let groom = {
+          service1: {
+            poltava: "350",
+            kyiv: "500",
+            title: "Грумінг",
+            subtitle: "Миття"
+          },
+          service2: {
+            poltava: "450",
+            kyiv: "600",
+            title: "Грумінг",
+            subtitle: "Стрижка"
+          },
+          service3: {
+            poltava: "250",
+            kyiv: "300",
+            title: "Грумінг",
+            subtitle: "Чистка зубів"
+          }
+        },
+        doctor = {
+          service1: {
+            poltava: "550",
+            kyiv: "700",
+            title: "Огляд ветеринара",
+            subtitle: "Загальний"
+          },
+          service2: {
+            poltava: "650",
+            kyiv: "800",
+            title: "Огляд ветеринара",
+            subtitle: "Детальний"
+          }
+        },
+        selectedCity = $(this)
+          .children("option:selected")
+          .val();
+
+      $(".order__option-remove").remove();
+      $(".order__total").text("грн");
+      for (let key in groom) {
+        let priceGroom;
+        switch (selectedCity) {
+          case "poltava":
+            priceGroom = groom[key].poltava;
+            break;
+          case "kyiv":
+            priceGroom = groom[key].kyiv;
+            break;
+        }
+
+        let blockGroom = `<div class="order__option order__option-remove">
+          <label class="order__checkname"
+            >${groom[key].subtitle}
+            <input type="checkbox" value="${priceGroom}" class="order__check" />
+            <span class="order__checkmark"></span>
+          </label>
+        </div>`;
+
+        $(blockGroom).appendTo(".order__options");
+      }
+      for (let key in doctor) {
+        let priceDoctor;
+        switch (selectedCity) {
+          case "poltava":
+            priceDoctor = doctor[key].poltava;
+            break;
+          case "kyiv":
+            priceDoctor = doctor[key].kyiv;
+            break;
+        }
+        let blockDoctor = `<div class="order__option order__option-remove">
+        <label class="order__checkname"
+          >${doctor[key].subtitle}
+          <input type="checkbox" value="${priceDoctor}" class="order__check" />
+          <span class="order__checkmark"></span>
+        </label>
+      </div>`;
+
+        $(blockDoctor).appendTo(".order__doctor");
       }
     });
   });

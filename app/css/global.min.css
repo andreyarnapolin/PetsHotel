@@ -662,9 +662,9 @@ body {
     width: 180px;
     height: 36px;
     margin: 55px auto; }
-  .forms .forms .tab-group .active a {
-    background: #fff;
-    border-bottom: 2px solid #018786; }
+  .forms .tab-group .active a {
+    background: none;
+    border-bottom: 3px solid #018786; }
   .forms__password {
     margin-top: 25px;
     text-align: center; }
@@ -858,7 +858,13 @@ body {
     .order__date-icon {
       font-size: 20px; }
   .order__amount, .order__total {
-    text-align: right; }
+    text-align: right;
+    font: normal 16px/24px "Roboto", sans-serif;
+    letter-spacing: 0.4px;
+    color: rgba(0, 0, 0, 0.87); }
+  .order__total {
+    margin-top: -10px;
+    margin-bottom: 20px; }
   .order__name {
     font: normal 16px/24px "Roboto", sans-serif;
     letter-spacing: 0.15px;
@@ -881,6 +887,24 @@ body {
     @media (min-width: 992px) {
       .order__options::after, .order__payment::after, .order__doctor::after, .order__date::after, .order__select-outerwrap::after {
         width: 107%; } }
+  .order__doctor {
+    margin-bottom: 0px; }
+  .order__data-input::-webkit-input-placeholder {
+    color: black; }
+  .order__data-input::-moz-placeholder {
+    color: black; }
+  .order__data-input:-ms-input-placeholder {
+    color: black; }
+  .order__data-input::-ms-input-placeholder {
+    color: black; }
+  .order__data-input::placeholder {
+    color: black; }
+  .order__fieldset:disabled {
+    opacity: 0.5;
+    color: grey;
+    border-color: grey; }
+    .order__fieldset:disabled legend {
+      color: grey; }
 
 fieldset {
   padding: 45px 20px;

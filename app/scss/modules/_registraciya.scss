@@ -13,7 +13,7 @@
   @media (max-width: $desktop) {
     margin: 0 auto;
   }
-  
+
   &__wrap {
     flex: 1 0 auto;
   }
@@ -30,9 +30,9 @@
     margin: 55px auto;
   }
 
-  .forms .tab-group .active a {
-    background: #fff;
-    border-bottom: 2px solid #018786;
+  .tab-group .active a {
+    background: none;
+    border-bottom: 3px solid $green;
   }
 
   &__password {
@@ -157,34 +157,32 @@
 
 .account {
   font: 300 12px/14px $roboto;
-   color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.6);
   &__enter {
     color: $form;
   }
-  .account__t{
+  .account__t {
     text-align: center;
   }
-
 }
 
-.registr{
+.registr {
   text-align: center;
   padding-top: 20px;
   .registrac {
-  font: 500 14px/16px $roboto;
-  letter-spacing: 0.75px;
-  text-transform: uppercase;
-  color: $green;
-   text-decoration: none;
-}
-
+    font: 500 14px/16px $roboto;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    color: $green;
+    text-decoration: none;
+  }
 }
 .registr__hidden {
   display: none !important;
 }
 
-.services__icon{
+.services__icon {
   display: flex;
- justify-content: center;
+  justify-content: center;
   margin-top: 10px;
 }

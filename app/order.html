@@ -140,43 +140,47 @@
               <p class="order__amount">грн</p>
               <div class="order__options">
                 <h2 class="order__name">Грумінг</h2>
-                <div class="order__option">
-                  <label class="order__checkname"
-                    >Two
-                    <input type="checkbox" value="2" class="order__check" />
-                    <span class="order__checkmark"></span>
-                  </label>
-                </div>
-                <div class="order__option">
-                  <label class="order__checkname"
-                    >Three
-                    <input type="checkbox" value="3" class="order__check" />
-                    <span class="order__checkmark"></span>
-                  </label>
-                </div>
-                <div class="order__option">
-                  <label class="order__checkname"
-                    >Four
-                    <input type="checkbox" value="4" class="order__check" />
-                    <span class="order__checkmark"></span>
-                  </label>
+                <div class="order__option-wrap">
+                  <div class="order__option order__option-remove">
+                    <label class="order__checkname"
+                      >Миття
+                      <input type="checkbox" value="350" class="order__check" />
+                      <span class="order__checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="order__option order__option-remove">
+                    <label class="order__checkname"
+                      >Стрижка
+                      <input type="checkbox" value="450" class="order__check" />
+                      <span class="order__checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="order__option order__option-remove">
+                    <label class="order__checkname"
+                      >Чистка зубів
+                      <input type="checkbox" value="250" class="order__check" />
+                      <span class="order__checkmark"></span>
+                    </label>
+                  </div>
                 </div>
               </div>
               <div class="order__doctor">
                 <h2 class="order__name">Огляд ветеринара</h2>
-                <div class="order__option">
-                  <label class="order__checkname"
-                    >One
-                    <input type="checkbox" value="1" class="order__check" />
-                    <span class="order__checkmark"></span>
-                  </label>
-                </div>
-                <div class="order__option">
-                  <label class="order__checkname"
-                    >Two
-                    <input type="checkbox" value="2" class="order__check" />
-                    <span class="order__checkmark"></span>
-                  </label>
+                <div class="order__doctor-wrap">
+                  <div class="order__option order__option-remove">
+                    <label class="order__checkname"
+                      >Загальний
+                      <input type="checkbox" value="550" class="order__check" />
+                      <span class="order__checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="order__option order__option-remove">
+                    <label class="order__checkname"
+                      >Детальний
+                      <input type="checkbox" value="650" class="order__check" />
+                      <span class="order__checkmark"></span>
+                    </label>
+                  </div>
                 </div>
               </div>
               <p class="order__total">грн</p>
@@ -186,6 +190,83 @@
                   <input type="checkbox" value="0" class="order__check" />
                   <span class="order__checkmark"></span>
                 </label>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div
+          class="order__wrap col-12 offset-sm-4 col-sm-5 offset-md-0 col-md-4"
+        >
+          <h2 class="order__subtitle">
+            2. Заповніть дані про тварин
+          </h2>
+          <form action="#" class="order__form">
+            <fieldset class="order__fieldset" disabled>
+              <legend class="w-auto">
+                2. Заповніть дані про тварин
+              </legend>
+              <div class="order__select-outerwrap">
+                <div class="order__select-wrap">
+                  <select name="animal" class="order__select-city">
+                    <option value="dog">Собака</option>
+                    <option value="cat">Кіт</option>
+                  </select>
+                </div>
+              </div>
+              <div class="order__select-outerwrap">
+                <input
+                  type="text"
+                  placeholder="Вказати кличку"
+                  class="order__data-input order__select-city"
+                />
+              </div>
+              <div class="order__select-outerwrap">
+                <input
+                  type="text"
+                  placeholder="Вказати вік"
+                  class="order__data-input order__select-city"
+                />
+              </div>
+              <div class="order__select-outerwrap">
+                <div class="order__select-wrap">
+                  <select name="animal" class="order__select-city">
+                    <option selected="selected" disabled hidden
+                      >Обрати вагу</option
+                    >
+                    <option value="">Менше 4кг</option>
+                    <option value="">4-8кг</option>
+                    <option value="">9-13кг</option>
+                    <option value="">Більше 13кг</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div
+          class="order__wrap col-12 offset-sm-4 col-sm-5 offset-md-0 col-md-4"
+        >
+          <h2 class="order__subtitle">
+            3. Заповніть дані про власника
+          </h2>
+          <form action="#" class="order__form">
+            <fieldset class="order__fieldset" disabled>
+              <legend class="w-auto">
+                3. Заповніть дані про власника
+              </legend>
+              <div class="order__select-outerwrap">
+                <input
+                  type="text"
+                  placeholder="Ваше ім’я"
+                  class="order__data-input order__select-city"
+                />
+              </div>
+              <div class="order__select-outerwrap">
+                <input
+                  type="text"
+                  placeholder="Ваш номер телефону"
+                  class="order__data-input order__select-city"
+                />
               </div>
             </fieldset>
           </form>

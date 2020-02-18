@@ -82,6 +82,13 @@
   &__amount,
   &__total {
     text-align: right;
+    font: normal 16px/24px $roboto;
+    letter-spacing: 0.4px;
+    color: rgba(0, 0, 0, 0.87);
+  }
+  &__total {
+    margin-top: -10px;
+    margin-bottom: 20px;
   }
   &__name {
     font: normal 16px/24px $roboto;
@@ -117,7 +124,25 @@
       width: 107%;
     }
   }
+  &__doctor {
+    margin-bottom: 0px;
+  }
+  &__data-input::placeholder {
+    color: black;
+  }
+  &__fieldset {
+    &:disabled {
+      opacity: 0.5;
+      color: grey;
+      border-color: grey;
+
+      legend {
+        color: grey;
+      }
+    }
+  }
 }
+
 fieldset {
   padding: 45px 20px;
   border: 1px solid $form;
