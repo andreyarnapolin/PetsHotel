@@ -69,12 +69,12 @@
   &__animals {
     display: flex;
     background: $white;
-    display: flex;
     height: 100%;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12),
       0px 2px 4px rgba(0, 0, 0, 0.14);
     @media (max-width: $desktop) {
       margin-top: 15px;
+      position: relative;
     }
   }
 
@@ -124,7 +124,10 @@
   &__mobile {
     @media (max-width: $desktop) {
       margin: 20px 15px 15px 40px;
-    }
+      position: absolute;
+      top: 0px;
+      right: 10px;
+  }
     @media (min-width: $desktop) {
       display: none;
     }
@@ -133,12 +136,14 @@
   &__mobile__cat {
     @media (max-width: $desktop) {
       margin: 20px 15px 15px 40px;
+      position: absolute;
+      top: 5px;
+      right: 10px;
     }
   }
 
   &__plus {
     font: normal 18px/28px $roboto;
-
     a {
       text-decoration: none;
       color: $green;
@@ -153,14 +158,13 @@
       }
     }
   }
-  &__cat {
-    width: 100%;
-  }
+
   .cat {
     @media (min-width: $desktop) {
       margin-left: 6px;
     }
   }
+
   &__bottom {
     display: flex;
     justify-content: space-between;

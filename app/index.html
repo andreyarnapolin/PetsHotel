@@ -1,296 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Starter" />
-    <meta name="author" content="Admin" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-    />
-    <title>PetsHotel</title>
-    <link rel="icon" href="images/favicon.png" />
-    <!--build:css css/styles.min.css-->
-    <link rel="stylesheet" href="images/icon/icoomoon/style.css" />
-    <link rel="stylesheet" href="css/libs/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/libs/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="css/libs/daterangepicker.css" />
-    <link rel="stylesheet" href="css/global.min.css" />
-    <!--endbuild-->
 
-    <!--[if lt IE 9]>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Starter" />
+  <meta name="author" content="Admin" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <title>PetsHotel</title>
+  <link rel="icon" href="images/favicon.png" />
+  <!--build:css css/styles.min.css-->
+  <link rel="stylesheet" href="images/icon/icoomoon/style.css" />
+  <link rel="stylesheet" href="css/libs/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/libs/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="css/libs/daterangepicker.css" />
+  <link rel="stylesheet" href="css/global.min.css" />
+  <!--endbuild-->
+
+  <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body>
-    <header class="header">
-      <nav class="navigation">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 navigation__block">
-              <div class="navigation__wrap">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-secondary dropdown-toggle navigation__burger-menu"
-                    type="button"
-                    id="dropdownMenuButton"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    <i class="icon-burger"></i>
-                  </button>
-                  <div
-                    class="dropdown-menu navigation__burger-menu--item"
-                    aria-labelledby="dropdownMenuButton"
-                  >
-                    <a class="dropdown-item burger-item" href="index.html"
-                      >Головна</a
-                    >
-                    <a class="dropdown-item burger-item" href="registr.html"
-                      >Замовити послугу</a
-                    >
-                    <a class="dropdown-item burger-item" href="reviews.html"
-                      >Відгуки</a
-                    >
-                    <a class="dropdown-item burger-item" href="gallery.html"
-                      >Наші фото</a
-                    >
-                  </div>
-                </div>
-                <a href="#" class="logo">
-                  <p class="navigation__title">PetsHotel</p>
-                  <i class="icon-house"></i>
-                </a>
-              </div>
-              <div class="registration">
-                <ul class="menu">
-                  <li class="menu__item">
-                    <a href="index.html" class="menu__link">Головна</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="registr.html" class="menu__link"
-                      >Замовити послугу</a
-                    >
-                  </li>
-                  <li class="menu__item">
-                    <a href="reviews.html" class="menu__link">Відгуки</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="gallery.html" class="menu__link">Наші фото</a>
-                  </li>
-                </ul>
-                <ul class="menu-registr">
-                  <li class="menu__right">
-                    <a href="#" class="menu__link-link"
-                      ><i class="icon-mask"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+<body>
+  <header class="header">
+    <nav class="navigation">
       <div class="container">
-        <div class="form">
-          <div class="row">
-            <div class="form__wrap">
-              <h1 class="form__title">
-                Ми потурбуємося про ваших улюбленців
-              </h1>
-            </div>
-            <div class="form__info left col-lg-4">
-              <p>
-                Знаючи не з чуток про проблеми, що виникають коли всім членам
-                Вашої родини потрібно відлучитися на деякий час, а домашнього
-                вихованця залишити ніде, коли друзі не виявляють особливої
-                радості від майбутнього спілкування з твариною, нами був
-                відкритий готель для тварин.
-              </p>
-            </div>
-            <div class="form__info right col-12 col-lg-4 offset-lg-4">
-              <p>
-                Оберіть Ваше місто та перегляньте список доступних послуг у
-                Вашому регіоні:
-              </p>
-              <div class="form__control col-12">
-                <select
-                  name="text"
-                  class="form__input form__input--select col-12"
-                >
-                  <option
-                    value=""
-                    disabled="disabled"
-                    selected="selected"
-                    hidden
-                  >
-                    Оберіть ваше місто
-                  </option>
-                  <option value="poltava">Полтава</option>
-                  <option value="kyiv">Київ</option>
-                </select>
+        <div class="row">
+          <div class="col-12 navigation__block">
+            <div class="navigation__wrap">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle navigation__burger-menu" type="button"
+                  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="icon-burger"></i>
+                </button>
+                <div class="dropdown-menu navigation__burger-menu--item" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item burger-item" href="index.html">Головна</a>
+                  <a class="dropdown-item burger-item" href="registr.html">Замовити послугу</a>
+                  <a class="dropdown-item burger-item" href="reviews.html">Відгуки</a>
+                  <a class="dropdown-item burger-item" href="gallery.html">Наші фото</a>
+                </div>
               </div>
+              <a href="#" class="logo">
+                <p class="navigation__title">PetsHotel</p>
+                <i class="icon-house"></i>
+              </a>
             </div>
-            <div class="form__social col-lg-2 offset-10">
-              <ul class="form__social-icon">
-                <li>
-                  <a href="#" class="social__link"
-                    ><i class="icon-twitter"></i
-                  ></a>
+            <div class="registration">
+              <ul class="menu">
+                <li class="menu__item">
+                  <a href="index.html" class="menu__link">Головна</a>
                 </li>
-                <li>
-                  <a href="#" class="social__link"
-                    ><i class="icon-linkedin"></i
-                  ></a>
+                <li class="menu__item">
+                  <a href="registr.html" class="menu__link">Замовити послугу</a>
                 </li>
-                <li>
-                  <a href="#" class="social__link"
-                    ><i class="icon-google"></i
-                  ></a>
+                <li class="menu__item">
+                  <a href="reviews.html" class="menu__link">Відгуки</a>
+                </li>
+                <li class="menu__item">
+                  <a href="gallery.html" class="menu__link">Наші фото</a>
+                </li>
+              </ul>
+              <ul class="menu-registr">
+                <li class="menu__right">
+                  <a href="#" class="menu__link-link"><i class="icon-mask"></i></a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </header>
-
-    <section class="about-us container">
-      <div class="row">
-        <div class="about-us__wrap col-12">
-          <h1 class="about-us__title main-title">Про нас</h1>
-          <p class="about-us__info main-info">
-            Знаючи не з чуток про проблеми, що виникають коли всім членам Вашої
-            родини потрібно відлучитися на деякий час, а домашнього вихованця
-            залишити ніде, коли друзі не виявляють особливої радості від
-            майбутнього спілкування з твариною, нами був відкритий готель для
-            тварин.
-          </p>
+    </nav>
+    <div class="container">
+      <div class="form">
+        <div class="row">
+          <div class="form__wrap">
+            <h1 class="form__title">
+              Ми потурбуємося про ваших улюбленців
+            </h1>
+          </div>
+          <div class="form__info left col-lg-4">
+            <p>
+              Знаючи не з чуток про проблеми, що виникають коли всім членам
+              Вашої родини потрібно відлучитися на деякий час, а домашнього
+              вихованця залишити ніде, коли друзі не виявляють особливої
+              радості від майбутнього спілкування з твариною, нами був
+              відкритий готель для тварин.
+            </p>
+          </div>
+          <div class="form__info right col-12 col-lg-4 offset-lg-4">
+            <p>
+              Оберіть Ваше місто та перегляньте список доступних послуг у
+              Вашому регіоні:
+            </p>
+            <div class="form__control col-12">
+              <select name="text" class="form__input form__input--select col-12">
+                <option value="" disabled="disabled" selected="selected" hidden>
+                  Оберіть ваше місто
+                </option>
+                <option value="poltava">Полтава</option>
+                <option value="kyiv">Київ</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__social col-lg-2 offset-10">
+            <ul class="form__social-icon">
+              <li>
+                <a href="#" class="social__link"><i class="icon-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#" class="social__link"><i class="icon-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="#" class="social__link"><i class="icon-google"></i></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </section>
-
-    <section class="advantage container">
-      <h1 class="advantage__title main-title">Наші переваги</h1>
-      <div class="row">
-        <div class="advantage__wrap col-12 col-lg-3">
-          <h2 class="advantage__subtitle main-subtitle">
-            <i class="icon-heart"></i> індивідуальний підхід
-          </h2>
-          <p class="advantage__info main-info">
-            Всі наші гості розміщуються з урахуванням їх особливостей і побажань
-            господарів. Ми забезпечуємо догляд, враховуючи надану інформацію від
-            господарів про звички, поведінку та характер тварини. Організуємо
-            звичне домашнє харчування, вигул собак на обгородженій території в
-            компанії і без.
-          </p>
-        </div>
-        <div class="advantage__wrap col-12 offset-lg-1 col-lg-3">
-          <h2 class="advantage__subtitle main-subtitle">
-            <i class="icon-heart"></i> покращене проживання
-          </h2>
-          <p class="advantage__info main-info">
-            Готель передбачає окреме проживання кожного вихованця. Номери
-            оснащені вентиляцією і системою опалення з можливістю регулювання
-            температурного режиму. Регулярно проходить прибирання та
-            кварцування. Собаки і кішки міститися в різних корпусах. Для котів
-            передбачені лежанки, драбинки, когтеточки. У псів просторі вольєри.
-          </p>
-        </div>
-        <div class="advantage__wrap col-12 offset-lg-1 col-lg-3">
-          <h2 class="advantage__subtitle main-subtitle">
-            <i class="icon-heart"></i> контроль ветеринарів
-          </h2>
-          <p class="advantage__info main-info">
-            Під час перетримки, тварини знаходяться під наглядом кваліфікованих
-            ветеринарів, які щодня проводять огляди. При необхідності ветлікар
-            проведе всі необхідні процедури, якщо ваш вихованець знаходиться на
-            лікуванні.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <div class="mobile-dog">
-      <img
-        class="mobile-dog__image"
-        src="images/living_dog__mobile.jpg"
-        alt="living_dog__mobile"
-      />
     </div>
+  </header>
 
-    <section class="living container">
-      <div class="row">
-        <div class="living__head col-12">
-          <h1 class="living__title main-title">Умови заселення</h1>
-        </div>
-        <div class="living__text col-12 col-lg-5">
-          <p class="living__info main-info">
-            В умовах підвищеного попиту послуги під час відпусток влітку, а
-            також у святкові дати, ми рекомендуємо бронювати місця заздалегідь.
-          </p>
-          <p class="living__info main-info">
-            Перед заселенням, кожен гість проходить обов'язковий огляд у
-            ветеринара. Ми приймаємо в зооготелі тварин без інфекційних,
-            паразитних і грибкових захворювань. Вихованці повинні бути щеплені і
-            оброблені від ектопаразитів. Перед заселенням, тваринам необхідно
-            зробити вакцинацію з відміткою в ветпаспорт.
-          </p>
-          <p class="living__info main-info">
-            Отримати більш детальну консультацію по правилам заселення можна у
-            наших фахівців за телефоном, що вказаний нижче, або написавши на
-            нашу електронну пошту.
-          </p>
-        </div>
-        <div class="living__dog col-lg-7">
-          <img
-            class="living__image"
-            src="images/living_dog.jpg"
-            alt="living_dog"
-          />
-        </div>
+  <section class="about-us container">
+    <div class="row">
+      <div class="about-us__wrap col-12">
+        <h1 class="about-us__title main-title">Про нас</h1>
+        <p class="about-us__info main-info">
+          Знаючи не з чуток про проблеми, що виникають коли всім членам Вашої
+          родини потрібно відлучитися на деякий час, а домашнього вихованця
+          залишити ніде, коли друзі не виявляють особливої радості від
+          майбутнього спілкування з твариною, нами був відкритий готель для
+          тварин.
+        </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="services container">
-      <div class="row">
-        <div class="services__left col-lg-5">
-          <img src="images/services__cat.jpg" alt="cat" class="services__cat" />
-        </div>
+  <section class="advantage container">
+    <h1 class="advantage__title main-title">Наші переваги</h1>
+    <div class="row">
+      <div class="advantage__wrap col-12 col-lg-3">
+        <h2 class="advantage__subtitle main-subtitle">
+          <i class="icon-heart"></i> індивідуальний підхід
+        </h2>
+        <p class="advantage__info main-info">
+          Всі наші гості розміщуються з урахуванням їх особливостей і побажань
+          господарів. Ми забезпечуємо догляд, враховуючи надану інформацію від
+          господарів про звички, поведінку та характер тварини. Організуємо
+          звичне домашнє харчування, вигул собак на обгородженій території в
+          компанії і без.
+        </p>
+      </div>
+      <div class="advantage__wrap col-12 offset-lg-1 col-lg-3">
+        <h2 class="advantage__subtitle main-subtitle">
+          <i class="icon-heart"></i> покращене проживання
+        </h2>
+        <p class="advantage__info main-info">
+          Готель передбачає окреме проживання кожного вихованця. Номери
+          оснащені вентиляцією і системою опалення з можливістю регулювання
+          температурного режиму. Регулярно проходить прибирання та
+          кварцування. Собаки і кішки міститися в різних корпусах. Для котів
+          передбачені лежанки, драбинки, когтеточки. У псів просторі вольєри.
+        </p>
+      </div>
+      <div class="advantage__wrap col-12 offset-lg-1 col-lg-3">
+        <h2 class="advantage__subtitle main-subtitle">
+          <i class="icon-heart"></i> контроль ветеринарів
+        </h2>
+        <p class="advantage__info main-info">
+          Під час перетримки, тварини знаходяться під наглядом кваліфікованих
+          ветеринарів, які щодня проводять огляди. При необхідності ветлікар
+          проведе всі необхідні процедури, якщо ваш вихованець знаходиться на
+          лікуванні.
+        </p>
+      </div>
+    </div>
+  </section>
 
-        <div class="services__right col-12 col-lg-7">
-          <div class="row services__row">
-            <div class="services__head col-12">
-              <h1 class="services__title main-title">Перелік послуг</h1>
-              <div class="row">
-                <div class="services__city offset-2 col-8 col-lg-6 offset-lg-3">
-                  <p>
-                    Оберіть Ваше місто та перегляньте список доступних послуг у
-                    Вашому регіоні:
-                  </p>
-                  <div class="services__control col-12">
-                    <select name="text" class="services__input">
-                      <option
-                        value=""
-                        disabled="disabled"
-                        selected="selected"
-                        hidden
-                      >
-                        Оберіть ваше місто
-                      </option>
-                      <option value="poltava">Полтава</option>
-                      <option value="kyiv">Київ</option>
-                    </select>
-                  </div>
+  <div class="mobile-dog">
+    <img class="mobile-dog__image" src="images/living_dog__mobile.jpg" alt="living_dog__mobile" />
+  </div>
+
+  <section class="living container">
+    <div class="row">
+      <div class="living__head col-12">
+        <h1 class="living__title main-title">Умови заселення</h1>
+      </div>
+      <div class="living__text col-12 col-lg-5">
+        <p class="living__info main-info">
+          В умовах підвищеного попиту послуги під час відпусток влітку, а
+          також у святкові дати, ми рекомендуємо бронювати місця заздалегідь.
+        </p>
+        <p class="living__info main-info">
+          Перед заселенням, кожен гість проходить обов'язковий огляд у
+          ветеринара. Ми приймаємо в зооготелі тварин без інфекційних,
+          паразитних і грибкових захворювань. Вихованці повинні бути щеплені і
+          оброблені від ектопаразитів. Перед заселенням, тваринам необхідно
+          зробити вакцинацію з відміткою в ветпаспорт.
+        </p>
+        <p class="living__info main-info">
+          Отримати більш детальну консультацію по правилам заселення можна у
+          наших фахівців за телефоном, що вказаний нижче, або написавши на
+          нашу електронну пошту.
+        </p>
+      </div>
+      <div class="living__dog col-lg-7">
+        <img class="living__image" src="images/living_dog.jpg" alt="living_dog" />
+      </div>
+    </div>
+  </section>
+
+  <section class="services container">
+    <div class="row">
+      <div class="services__left col-lg-5">
+        <img src="images/services__cat.jpg" alt="cat" class="services__cat" />
+      </div>
+
+      <div class="services__right col-12 col-lg-7">
+        <div class="row services__row">
+          <div class="services__head col-12">
+            <h1 class="services__title main-title">Перелік послуг</h1>
+            <div class="row">
+              <div class="services__city offset-2 col-8 col-lg-6 offset-lg-3">
+                <p>
+                  Оберіть Ваше місто та перегляньте список доступних послуг у
+                  Вашому регіоні:
+                </p>
+                <div class="services__control col-12">
+                  <select name="text" class="services__input">
+                    <option value="" disabled="disabled" selected="selected" hidden>
+                      Оберіть ваше місто
+                    </option>
+                    <option value="poltava">Полтава</option>
+                    <option value="kyiv">Київ</option>
+                  </select>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="services__wrapper">
-            <!--<div class="services__section services__top">
+        <div class="services__wrapper">
+          <!--<div class="services__section services__top">
               <div class="row">
                 <p class="services__title-price col-9">Перетримка (котики)</p>
                 <p class="services__number services__number-1 col-3">грн</p>
@@ -336,80 +286,71 @@
               </div>
             </div> -->
 
-            <!--<div class="services__section services__bottom">
+          <!--<div class="services__section services__bottom">
               <div class="row">
                 <p class="services__subtitle col-12">
                   *ціна залежить від обраного міста
                 </p>
               </div>
             </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="services__lapu col-12 offset-lg-3 col-lg-7">
+        <div class="services__button">
+          <a href="#" class="services__button-link">перейти до замовлення</a>
+        </div>
+      </div>
+      <p class="services__subtitle col-8">
+        Ви можете переглянути фото з умовами, в яких будуть на перетримці ваші
+        вихованці за цією ссилкою
+      </p>
+      <a href="gallery.html" class="services__photo col-2">Наші фото</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrap">
+        <div class="footer__block footer__block-first">
+          <a href="mailto: petshotel@gmail.com" class="footer__link footer__email-first">petshotel@gmail.com</a>
+          <a href="mailto: hotel@gmail.com" class="footer__link footer__email-second">hotel@gmail.com</a>
+        </div>
+        <div class="footer__block footer__block-second">
+          <a href="#" class="footer__logo logo">
+            <p class="footer__title">PetsHotel</p>
+            <i class="icon-house"></i>
+          </a>
+        </div>
+        <div class="footer__block footer__block-third">
+          <a href="tel:+380953332216" class="footer__link footer__phone">+38 (095) 333 22 16</a>
+          <div class="footer__socials">
+            <a href="#"><i class="icon-twitter"></i></a>
+            <a href="#"><i class="icon-linkedin"></i></a>
+            <a href="#"><i class="icon-google"></i></a>
           </div>
         </div>
       </div>
+    </div>
+  </footer>
 
-      <div class="row">
-        <div class="services__lapu col-12 offset-lg-3 col-lg-7">
-          <div class="services__button">
-            <a href="#" class="services__button-link">перейти до замовлення</a>
-          </div>
-        </div>
-        <p class="services__subtitle col-8">
-          Ви можете переглянути фото з умовами, в яких будуть на перетримці ваші
-          вихованці за цією ссилкою
-        </p>
-        <a href="gallery.html" class="services__photo col-2">Наші фото</a>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__wrap">
-          <div class="footer__block footer__block-first">
-            <a
-              href="mailto: petshotel@gmail.com"
-              class="footer__link footer__email-first"
-              >petshotel@gmail.com</a
-            >
-            <a
-              href="mailto: hotel@gmail.com"
-              class="footer__link footer__email-second"
-              >hotel@gmail.com</a
-            >
-          </div>
-          <div class="footer__block footer__block-second">
-            <a href="#" class="footer__logo logo">
-              <p class="footer__title">PetsHotel</p>
-              <i class="icon-house"></i>
-            </a>
-          </div>
-          <div class="footer__block footer__block-third">
-            <a href="tel:+380953332216" class="footer__link footer__phone"
-              >+38 (095) 333 22 16</a
-            >
-            <div class="footer__socials">
-              <a href="#"><i class="icon-twitter"></i></a>
-              <a href="#"><i class="icon-linkedin"></i></a>
-              <a href="#"><i class="icon-google"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- <i class="icon-mask"></i>
+  <!-- <i class="icon-mask"></i>
 	<i class="icon-linkedin"></i>
 	<i class="icon-twitter"></i>
 	<i class="icon-google"></i>
 	<i class="icon-house"></i>
 	<i class="icon-burger"></i>-->
 
-    <!--build:js js/main.min.js -->
-    <script src="js/libs/jquery.min.js"></script>
-    <script src="js/libs/bootstrap.bundle.min.js"></script>
-    <script src="js/libs/jquery.fancybox.min.js"></script>
-    <script src="js/libs/moment.min.js"></script>
-    <script src="js/libs/daterangepicker.js"></script>
-    <script src="js/main.js"></script>
-    <!--endbuild-->
-  </body>
+  <!--build:js js/main.min.js -->
+  <script src="js/libs/jquery.min.js"></script>
+  <script src="js/libs/bootstrap.bundle.min.js"></script>
+  <script src="js/libs/jquery.fancybox.min.js"></script>
+  <script src="js/libs/moment.min.js"></script>
+  <script src="js/libs/daterangepicker.js"></script>
+  <script src="js/main.js"></script>
+  <!--endbuild-->
+</body>
+
 </html>

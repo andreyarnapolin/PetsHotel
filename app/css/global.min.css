@@ -1036,12 +1036,12 @@ fieldset {
     display: -webkit-box;
     display: flex;
     background: #fff;
-    display: flex;
     height: 100%;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14); }
     @media (max-width: 992px) {
       .account__animals {
-        margin-top: 15px; } }
+        margin-top: 15px;
+        position: relative; } }
   .account__animals-bottom {
     margin-top: -190px; }
     @media (max-width: 992px) {
@@ -1076,13 +1076,19 @@ fieldset {
         display: none; } }
   @media (max-width: 992px) {
     .account__mobile {
-      margin: 20px 15px 15px 40px; } }
+      margin: 20px 15px 15px 40px;
+      position: absolute;
+      top: 0px;
+      right: 10px; } }
   @media (min-width: 992px) {
     .account__mobile {
       display: none; } }
   @media (max-width: 992px) {
     .account__mobile__cat {
-      margin: 20px 15px 15px 40px; } }
+      margin: 20px 15px 15px 40px;
+      position: absolute;
+      top: 5px;
+      right: 10px; } }
   .account__plus {
     font: normal 18px/28px "Roboto", sans-serif; }
     .account__plus a {
@@ -1096,8 +1102,6 @@ fieldset {
         .account__plus a {
           margin-left: 30px;
           margin-top: 50px; } }
-  .account__cat {
-    width: 100%; }
   @media (min-width: 992px) {
     .account .cat {
       margin-left: 6px; } }
