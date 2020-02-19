@@ -61,13 +61,9 @@
     width: 100%;
   }
 
-  &__bottom {
-    margin-top: 45px;
-    display: flex;
-  }
-
   &__animals {
     display: flex;
+    justify-content: space-between;
     background: $white;
     height: 100%;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12),
@@ -115,7 +111,8 @@
   }
 
   &__dog {
-    margin-left: 147px;
+    display: flex;
+    margin-right: -15px;
     @media (max-width: $desktop) {
       display: none;
     }
@@ -127,7 +124,7 @@
       position: absolute;
       top: 0px;
       right: 10px;
-  }
+    }
     @media (min-width: $desktop) {
       display: none;
     }
@@ -168,22 +165,26 @@
   &__bottom {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     margin-top: 45px;
-    margin-left: 20px;
+
     @media (max-width: $desktop) {
       display: none;
     }
   }
   &__bottom-mobile {
     display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     @media (min-width: $desktop) {
       display: none;
     }
   }
   &__text {
+    width: 50%;
     font: normal 16px/24px $roboto;
     letter-spacing: 0.15px;
-    display: inline-block;
+    display: block;
   }
 
   &__plus-link {
@@ -198,7 +199,6 @@
     font: normal 12px/16px $roboto;
     letter-spacing: 0.4px;
     color: $green;
-    margin-left: 160px;
 
     &:hover {
       text-decoration: none;
