@@ -118,7 +118,6 @@
       function(start, end) {
         daysNumber =
           (Math.abs(moment(start).diff(moment(end), "days")) + 1) * 150;
-        console.log(daysNumber);
 
         $(".order__amount").text(daysNumber);
         callback();
@@ -296,7 +295,7 @@
           .val();
 
       $(".order__option-remove").remove();
-      $(".order__total").text("грн");
+      $(".order__total").text("Всього " + daysNumber + " грн.");
       for (let key in groom) {
         let priceGroom;
         switch (selectedCity) {
@@ -338,6 +337,48 @@
 
         $(blockDoctor).appendTo(".order__doctor");
       }
+    });
+    //ORDER FORM NEXT/SUBMIT BUTTON
+    $(".order__next-first").click(function() {
+      $(".order__fieldset-one").removeAttr("disabled");
+      $(".order__block-one").addClass("order__none");
+      $(".order__block-two").removeClass("order__none");
+    });
+    $(".order__next-second").click(function() {
+      $(".order__fieldset-two").removeAttr("disabled");
+      $(".order__block-two").addClass("order__none");
+      $(".order__block-three").removeClass("order__none");
+    });
+    $(".order__submit").click(function() {
+      let date = $(".order__date-input")
+        .data("daterangepicker")
+        .startDate.format("DD-MM");
+
+      let modal = `<div class="winmod">
+      <div class="winmod-block">
+        <p class="winmod-title">Ваше бронювання</p>
+        <p class="winmod-text">
+          Ваше замовлення отримано! Чекаємо на Вас та вашого вихованця ${date} в
+          будь-який зручний для Вас час.
+        </p>
+        <a href="#" class="winmod__link">OK <i class="icon-paw"></i></a>
+      </div>
+      <div class="winmod-catbox">
+      <img class="winmod-cat" src="images/order_cat.jpg" alt="order__cat" />
+    </div>
+    </div>`,
+        modalOverlay = document.createElement("div");
+
+      modalOverlay.className = "winmod-overlay";
+
+      document.body.append(modalOverlay);
+      $(modal).appendTo("body");
+
+      $(".winmod__link").click(function reviewClose() {
+        modalOverlay.remove();
+        $("winmod").remove();
+        window.location.href = "index.html";
+      });
     });
   });
 })(jQuery);

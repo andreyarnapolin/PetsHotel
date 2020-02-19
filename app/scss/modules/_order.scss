@@ -141,6 +141,32 @@
       }
     }
   }
+  &__next-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  &__next {
+    font: 500 14px/16px $roboto;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    color: $green;
+    background: none;
+  }
+  &__submit {
+    font: 500 14px/16px $roboto;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    color: #fff;
+    padding: 10px 30px;
+    background: $green;
+    border-radius: 200px;
+  }
+  &__none {
+    @media (max-width: calc( #{$mobile} + 100px)) {
+      display: none;
+    }
+  }
 }
 
 fieldset {
@@ -238,5 +264,84 @@ fieldset {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+  }
+}
+
+.winmod {
+  width: 486px;
+  background: $bg-color;
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(calc(-50% + 0.5px));
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+  font-size: 17px;
+  font-weight: 600;
+  //text-align: center;
+  @media (max-width: $desktop) {
+    top: 55px;
+  }
+  animation: good 0.5s 1;
+
+  &-block {
+    width: 280px;
+    padding: 20px 25px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    background: #fff;
+    font: normal 14px/20px $roboto;
+    color: rgba(0, 0, 0, 0.87);
+    letter-spacing: 0.25px;
+    position: relative;
+    left: 50%;
+    transform: translateX(calc(-50% + 0.5px));
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+  }
+  &-title {
+    font: 300 20px/23px $roboto;
+    letter-spacing: 0.15px;
+    margin-bottom: 30px;
+  }
+  &-text {
+    margin-bottom: 60px;
+  }
+
+  &-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  &__link {
+    color: $green;
+    display: flex;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font: 500 14px/16px $roboto;
+    letter-spacing: 0.75px;
+    text-align: center;
+
+    justify-content: center;
+
+    .icon-paw {
+      font-size: 18px;
+      margin-top: -1px;
+      margin-left: 4px;
+    }
+  }
+  &-catbox {
+    position: relative;
+    left: 40%;
+  }
+}
+
+@keyframes good {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 100px;
   }
 }

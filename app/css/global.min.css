@@ -905,6 +905,30 @@ body {
     border-color: grey; }
     .order__fieldset:disabled legend {
       color: grey; }
+  .order__next-wrap {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+            align-items: flex-end; }
+  .order__next {
+    font: 500 14px/16px "Roboto", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    color: #018786;
+    background: none; }
+  .order__submit {
+    font: 500 14px/16px "Roboto", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    color: #fff;
+    padding: 10px 30px;
+    background: #018786;
+    border-radius: 200px; }
+  @media (max-width: calc( 667px + 100px)) {
+    .order__none {
+      display: none; } }
 
 fieldset {
   padding: 45px 20px;
@@ -981,6 +1005,80 @@ fieldset {
     border-width: 0 2px 2px 0;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg); }
+
+.winmod {
+  width: 486px;
+  background: #e5f2f1;
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  -webkit-transform: translateX(calc(-50% + 0.5px));
+          transform: translateX(calc(-50% + 0.5px));
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+  font-size: 17px;
+  font-weight: 600;
+  -webkit-animation: good 0.5s 1;
+          animation: good 0.5s 1; }
+  @media (max-width: 992px) {
+    .winmod {
+      top: 55px; } }
+  .winmod-block {
+    width: 280px;
+    padding: 20px 25px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    background: #fff;
+    font: normal 14px/20px "Roboto", sans-serif;
+    color: rgba(0, 0, 0, 0.87);
+    letter-spacing: 0.25px;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(calc(-50% + 0.5px));
+            transform: translateX(calc(-50% + 0.5px));
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4); }
+  .winmod-title {
+    font: 300 20px/23px "Roboto", sans-serif;
+    letter-spacing: 0.15px;
+    margin-bottom: 30px; }
+  .winmod-text {
+    margin-bottom: 60px; }
+  .winmod-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0; }
+  .winmod__link {
+    color: #018786;
+    display: -webkit-box;
+    display: flex;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font: 500 14px/16px "Roboto", sans-serif;
+    letter-spacing: 0.75px;
+    text-align: center;
+    -webkit-box-pack: center;
+            justify-content: center; }
+    .winmod__link .icon-paw {
+      font-size: 18px;
+      margin-top: -1px;
+      margin-left: 4px; }
+  .winmod-catbox {
+    position: relative;
+    left: 40%; }
+
+@-webkit-keyframes good {
+  0% {
+    top: -100px; }
+  100% {
+    top: 100px; } }
+
+@keyframes good {
+  0% {
+    top: -100px; }
+  100% {
+    top: 100px; } }
 
 .account {
   margin-top: 80px;
