@@ -1,177 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="PetsHotel" />
+    <meta name="author" content="Admin" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <title>Наші фото</title>
+    <link rel="icon" href="images/favicon.png" />
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="images/icon/icoomoon/style.css" />
+    <link rel="stylesheet" href="css/libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/libs/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/libs/daterangepicker.css" />
+    <link rel="stylesheet" href="css/global.min.css" />
+    <!--endbuild-->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Starter" />
-  <meta name="author" content="Admin" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <title>PetsHotel - Gallery</title>
-  <link rel="icon" href="images/favicon.png" />
-  <!--build:css css/styles.min.css-->
-  <link rel="stylesheet" href="images/icon/icoomoon/style.css" />
-  <link rel="stylesheet" href="css/libs/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/libs/jquery.fancybox.min.css" />
-  <link rel="stylesheet" href="css/libs/daterangepicker.css" />
-  <link rel="stylesheet" href="css/global.min.css" />
-  <!--endbuild-->
-
-  <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-</head>
+  </head>
 
-<body>
-  <header class="header gallery__header">
-    <nav class="navigation">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 navigation__block">
-            <div class="navigation__wrap">
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle navigation__burger-menu" type="button"
-                  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="icon-burger"></i>
-                </button>
-                <div class="dropdown-menu navigation__burger-menu--item" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item burger-item" href="index.html">Головна</a>
-                  <a class="dropdown-item burger-item" href="order.html">Замовити послугу</a>
-                  <a class="dropdown-item burger-item" href="reviews.html">Відгуки</a>
-                  <a class="dropdown-item burger-item" href="gallery.html">Наші фото</a>
+  <body>
+    <header class="header gallery__header">
+      <nav class="navigation">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 navigation__block">
+              <div class="navigation__wrap">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle navigation__burger-menu"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i class="icon-burger"></i>
+                  </button>
+                  <div
+                    class="dropdown-menu navigation__burger-menu--item"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a class="dropdown-item burger-item" href="index.html"
+                      >Головна</a
+                    >
+                    <a class="dropdown-item burger-item" href="order.html"
+                      >Замовити послугу</a
+                    >
+                    <a class="dropdown-item burger-item" href="reviews.html"
+                      >Відгуки</a
+                    >
+                    <a class="dropdown-item burger-item" href="gallery.html"
+                      >Наші фото</a
+                    >
+                  </div>
                 </div>
+                <a href="#" class="logo">
+                  <p class="navigation__title">PetsHotel</p>
+                  <i class="icon-house"></i>
+                </a>
               </div>
-              <a href="#" class="logo">
-                <p class="navigation__title">PetsHotel</p>
-                <i class="icon-house"></i>
-              </a>
+              <div class="registration">
+                <ul class="menu">
+                  <li class="menu__item">
+                    <a href="index.html" class="menu__link">Головна</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="order.html" class="menu__link">Замовити послугу</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="reviews.html" class="menu__link">Відгуки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="gallery.html" class="menu__link">Наші фото</a>
+                  </li>
+                </ul>
+                <ul class="menu-registr">
+                  <li class="menu__right">
+                    <a href="registr.html" class="menu__link-link"
+                      ><i class="icon-mask"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="registration">
-              <ul class="menu">
-                <li class="menu__item">
-                  <a href="index.html" class="menu__link">Головна</a>
-                </li>
-                <li class="menu__item">
-                  <a href="order.html" class="menu__link">Замовити послугу</a>
-                </li>
-                <li class="menu__item">
-                  <a href="reviews.html" class="menu__link">Відгуки</a>
-                </li>
-                <li class="menu__item">
-                  <a href="gallery.html" class="menu__link">Наші фото</a>
-                </li>
-              </ul>
-              <ul class="menu-registr">
-                <li class="menu__right">
-                  <a href="registr.html" class="menu__link-link"><i class="icon-mask"></i></a>
-                </li>
-              </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="gallery">
+      <div class="container">
+        <div class="row gallery__photos no-gutters">
+          <div class="col-12 col-lg-6">
+            <a
+              data-fancybox="gallery"
+              href="images/gallery/1b.jpg"
+              class="photo"
+            >
+              <img src="images/gallery/1b.jpg" alt="Gallery photo" />
+            </a>
+          </div>
+          <div class="col-4 col-lg-3">
+            <a
+              data-fancybox="gallery"
+              href="images/gallery/2b.jpg"
+              class="photo"
+            >
+              <img src="images/gallery/2b.jpg" alt="Gallery photo" />
+            </a>
+          </div>
+          <div class="col-4 gallery__hidden">
+            <a
+              data-fancybox="gallery"
+              href="images/gallery/3m.jpg"
+              class="photo gallery__show"
+            >
+              <img src="images/gallery/3m.jpg" alt="Gallery photo" />
+            </a>
+          </div>
+          <div class="col-4 col-lg-3">
+            <a
+              data-fancybox="gallery"
+              href="images/gallery/3b.jpg"
+              class="photo"
+            >
+              <img src="images/gallery/3b.jpg" alt="Gallery photo" />
+            </a>
+          </div>
+          <div class="col-6 col-lg-6">
+            <a
+              data-fancybox="gallery"
+              href="images/gallery/4b.jpg"
+              class="photo"
+            >
+              <img src="images/gallery/4b.jpg" alt="Gallery photo" />
+            </a>
+          </div>
+          <div class="col-6 col-lg-6">
+            <a
+              data-fancybox="gallery"
+              href="images/gallery/5b.jpg"
+              class="photo"
+            >
+              <img src="images/gallery/5b.jpg" alt="Gallery photo" />
+            </a>
+          </div>
+          <div class="col-12 col-lg-8">
+            <a
+              data-fancybox="gallery"
+              href="images/gallery/6b.jpg"
+              class="photo"
+            >
+              <img src="images/gallery/6b.jpg" alt="Gallery photo" />
+            </a>
+          </div>
+          <div class="col-4 gallery__hidden">
+            <a
+              data-fancybox="gallery"
+              href="images/gallery/8m.jpg"
+              class="photo gallery__show"
+            >
+              <img src="images/gallery/8m.jpg" alt="Gallery photo" />
+            </a>
+          </div>
+          <div class="col-4 col-lg-4">
+            <a
+              data-fancybox="gallery"
+              href="images/gallery/7b.jpg"
+              class="photo"
+            >
+              <img src="images/gallery/7b.jpg" alt="Gallery photo" />
+            </a>
+          </div>
+          <div class="col-4 gallery__hidden">
+            <a
+              data-fancybox="gallery"
+              href="images/gallery/10m.jpg"
+              class="photo gallery__show"
+            >
+              <img src="images/gallery/10m.jpg" alt="Gallery photo" />
+            </a>
+          </div>
+          <div class="col-6 gallery__hidden">
+            <a
+              data-fancybox="gallery"
+              href="images/gallery/11m.jpg"
+              class="photo gallery__show"
+            >
+              <img src="images/gallery/11m.jpg" alt="Gallery photo" />
+            </a>
+          </div>
+          <div class="col-6 gallery__hidden">
+            <a
+              data-fancybox="gallery"
+              href="images/gallery/12m.jpg"
+              class="photo gallery__show"
+            >
+              <img src="images/gallery/12m.jpg" alt="Gallery photo" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrap">
+          <div class="footer__block footer__block-first">
+            <a
+              href="mailto:petshotel@gmail.com"
+              class="footer__link footer__email-first"
+              >petshotel@gmail.com</a
+            >
+            <a
+              href="mailto:hotel@gmail.com"
+              class="footer__link footer__email-second"
+              >hotel@gmail.com</a
+            >
+          </div>
+          <div class="footer__block footer__block-second">
+            <a href="#" class="footer__logo logo">
+              <p class="footer__title">PetsHotel</p>
+              <i class="icon-house"></i>
+            </a>
+          </div>
+          <div class="footer__block footer__block-third">
+            <a href="tel:+380953332216" class="footer__link footer__phone"
+              >+38 (095) 333 22 16</a
+            >
+            <div class="footer__socials">
+              <a href="#"><i class="icon-twitter"></i></a>
+              <a href="#"><i class="icon-linkedin"></i></a>
+              <a href="#"><i class="icon-google"></i></a>
             </div>
           </div>
         </div>
       </div>
-    </nav>
-  </header>
+    </footer>
 
-  <section class="gallery">
-    <div class="container">
-      <div class="row gallery__photos no-gutters">
-        <div class="col-12 col-lg-6">
-          <a data-fancybox="gallery" href="images/gallery/1b.jpg" class="photo">
-            <img src="images/gallery/1b.jpg" alt="Gallery photo" />
-          </a>
-        </div>
-        <div class="col-4 col-lg-3">
-          <a data-fancybox="gallery" href="images/gallery/2b.jpg" class="photo">
-            <img src="images/gallery/2b.jpg" alt="Gallery photo" />
-          </a>
-        </div>
-        <div class="col-4 gallery__hidden">
-          <a data-fancybox="gallery" href="images/gallery/3m.jpg" class="photo gallery__show">
-            <img src="images/gallery/3m.jpg" alt="Gallery photo" />
-          </a>
-        </div>
-        <div class="col-4 col-lg-3">
-          <a data-fancybox="gallery" href="images/gallery/3b.jpg" class="photo">
-            <img src="images/gallery/3b.jpg" alt="Gallery photo" />
-          </a>
-        </div>
-        <div class="col-6 col-lg-6">
-          <a data-fancybox="gallery" href="images/gallery/4b.jpg" class="photo">
-            <img src="images/gallery/4b.jpg" alt="Gallery photo" />
-          </a>
-        </div>
-        <div class="col-6 col-lg-6">
-          <a data-fancybox="gallery" href="images/gallery/5b.jpg" class="photo">
-            <img src="images/gallery/5b.jpg" alt="Gallery photo" />
-          </a>
-        </div>
-        <div class="col-12 col-lg-8">
-          <a data-fancybox="gallery" href="images/gallery/6b.jpg" class="photo">
-            <img src="images/gallery/6b.jpg" alt="Gallery photo" />
-          </a>
-        </div>
-        <div class="col-4 gallery__hidden">
-          <a data-fancybox="gallery" href="images/gallery/8m.jpg" class="photo gallery__show">
-            <img src="images/gallery/8m.jpg" alt="Gallery photo" />
-          </a>
-        </div>
-        <div class="col-4 col-lg-4">
-          <a data-fancybox="gallery" href="images/gallery/7b.jpg" class="photo">
-            <img src="images/gallery/7b.jpg" alt="Gallery photo" />
-          </a>
-        </div>
-        <div class="col-4 gallery__hidden">
-          <a data-fancybox="gallery" href="images/gallery/10m.jpg" class="photo gallery__show">
-            <img src="images/gallery/10m.jpg" alt="Gallery photo" />
-          </a>
-        </div>
-        <div class="col-6 gallery__hidden">
-          <a data-fancybox="gallery" href="images/gallery/11m.jpg" class="photo gallery__show">
-            <img src="images/gallery/11m.jpg" alt="Gallery photo" />
-          </a>
-        </div>
-        <div class="col-6 gallery__hidden">
-          <a data-fancybox="gallery" href="images/gallery/12m.jpg" class="photo gallery__show">
-            <img src="images/gallery/12m.jpg" alt="Gallery photo" />
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__wrap">
-        <div class="footer__block footer__block-first">
-          <a href="mailto:petshotel@gmail.com" class="footer__link footer__email-first">petshotel@gmail.com</a>
-          <a href="mailto:hotel@gmail.com" class="footer__link footer__email-second">hotel@gmail.com</a>
-        </div>
-        <div class="footer__block footer__block-second">
-          <a href="#" class="footer__logo logo">
-            <p class="footer__title">PetsHotel</p>
-            <i class="icon-house"></i>
-          </a>
-        </div>
-        <div class="footer__block footer__block-third">
-          <a href="tel:+380953332216" class="footer__link footer__phone">+38 (095) 333 22 16</a>
-          <div class="footer__socials">
-            <a href="#"><i class="icon-twitter"></i></a>
-            <a href="#"><i class="icon-linkedin"></i></a>
-            <a href="#"><i class="icon-google"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!--build:js js/main.min.js -->
-  <script src="js/libs/jquery.min.js"></script>
-  <script src="js/libs/bootstrap.bundle.min.js"></script>
-  <script src="js/libs/jquery.fancybox.min.js"></script>
-  <script src="js/libs/moment.min.js"></script>
-  <script src="js/libs/daterangepicker.js"></script>
-  <script src="js/main.js"></script>
-  <!--endbuild-->
-</body>
-
+    <!--build:js js/main.min.js -->
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/bootstrap.bundle.min.js"></script>
+    <script src="js/libs/jquery.fancybox.min.js"></script>
+    <script src="js/libs/moment.min.js"></script>
+    <script src="js/libs/daterangepicker.js"></script>
+    <script src="js/main.js"></script>
+    <!--endbuild-->
+  </body>
 </html>
