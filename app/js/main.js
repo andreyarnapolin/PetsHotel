@@ -214,7 +214,11 @@
     //REGISTRATION
     $(".services__button-reg").click(function(e) {
       let passOne = $(".input-pass-reg"),
-        passTwo = $(".input-pass_again-reg");
+        passTwo = $(".input-pass_again-reg"),
+        name = $(".input-name-reg"),
+        email = $(".input-email-reg"),
+        phone = $(".input-phone-reg"),
+        regCheck = true;
 
       $(passTwo).removeClass("error-val");
 
@@ -225,10 +229,20 @@
         return;
       }
 
-      $(".registr__hidden").click();
+      let empty = false;
+      $("form#signup :input").each(function() {
+        if ($(this).val() == "") {
+          empty = true;
+          return false;
+        }
+      });
 
-      localStorage.setItem("phone", $(".input-phone-reg").val());
-      localStorage.setItem("pass", $(".input-pass-reg").val());
+      if (empty == false) {
+        localStorage.setItem("phone", phone.val());
+        localStorage.setItem("pass", passOne.val());
+        localStorage.setItem("check", regCheck);
+      }
+      $(".registr__hidden").click();
 
       //$(".forms__tab-login").click();
     });
@@ -244,6 +258,8 @@
       $(".input-pass").removeClass("error-val");
 
       if (userPhone == storedPhone && userPass == storedPass) {
+        //let regCheck = true;
+        //localStorage.setItem("check", regCheck);
         window.location.href = "account.html";
       } else if (userPhone != storedPhone && userPass != storedPass) {
         $(".input-phone").addClass("error-val");
@@ -379,6 +395,25 @@
         $("winmod").remove();
         window.location.href = "index.html";
       });
+    });
+    //REGISTRATION CHECK
+    //.services__button-link .menu__link-link .registration__check
+
+    $(".registration__check").click(function() {
+      let validate = localStorage.getItem("check");
+      if (!validate) {
+        window.location.href = "registr.html";
+      } else {
+        window.location.href = "order.html";
+      }
+    });
+    $(".menu__link-link").click(function() {
+      let validate = localStorage.getItem("check");
+      if (validate == "true") {
+        window.location.href = "account.html";
+      } else {
+        window.location.href = "registr.html";
+      }
     });
   });
 })(jQuery);
