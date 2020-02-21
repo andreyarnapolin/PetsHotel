@@ -21,6 +21,7 @@
 
     //Fancybox
     $(".photo").fancybox({});
+
     //remove or add attribute when screen is different width
     $(document).ready(function() {
       if (window.innerWidth > 1024) {
@@ -36,8 +37,8 @@
         });
       }
     });
-    //REVIEW WINDOW
 
+    //REVIEW WINDOW
     $(".review__link").click(function reviewWindow() {
       const clonedReviewWrap = $(this.closest(".review__wrap")).clone();
       const clonedReviewImage = $(this.closest(".review__wrap"))
@@ -141,9 +142,6 @@
       $(this).val("Обрати дату*");
     });
 
-    //$(".order__date-input").val("");
-    //$(".order__date-input").attr("placeholder", "Оберіть дату");
-
     //FORM PRICE CALCULATION
     $(".order__form").on("click", ".order__check", function() {
       callback();
@@ -170,6 +168,7 @@
         field.attr("type", "password");
       }, 1000);
     });
+
     //PRICE LIST
     $("select.form__input, select.services__input").change(function() {
       let cities = {
@@ -207,7 +206,7 @@
         selectedCountry = $(this)
           .children("option:selected")
           .val();
-
+      $("select.form__input, select.services__input").val(selectedCountry);
       $(".services__section").remove();
       for (let key in cities) {
         let price;
@@ -231,6 +230,12 @@
         $(block).appendTo(".services__wrapper");
       }
     });
+
+    $("select.form__input").change(function() {
+      let servicePos = $("#services__pos").offset().top;
+      $(window).scrollTop(servicePos - 100);
+    });
+
     //REGISTRATION
     $(".services__button-reg").click(function(e) {
       let passOne = $(".input-pass-reg"),
@@ -266,6 +271,7 @@
 
       //$(".forms__tab-login").click();
     });
+
     //LOGIN
     $(".services__button-log").click(function() {
       let storedPhone = localStorage.getItem("phone");
@@ -290,6 +296,7 @@
         $(".input-pass").addClass("error-val");
       }
     });
+
     //ORDER FORM CITY SELECTION
     $("#order__city").change(function() {
       let groom = {
@@ -374,6 +381,7 @@
         $(blockDoctor).appendTo(".order__doctor");
       }
     });
+
     //ORDER FORM NEXT/SUBMIT BUTTON
     $(".order__next-first").click(function() {
       if ($(".order__date-input").val() === "Обрати дату*") {
@@ -400,7 +408,7 @@
     $(".order__submit").click(function() {
       let date = $(".order__date-input")
         .data("daterangepicker")
-        .startDate.format("DD-MM");
+        .startDate.format("DD-MM-YYYY");
 
       let modal = `<div class="winmod">
           <div class="winmod-block">
@@ -437,6 +445,7 @@
         window.location.href = "index.html";
       });
     });
+
     //REGISTRATION CHECK
     $(".registration__check").click(function() {
       let validate = localStorage.getItem("check");

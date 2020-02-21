@@ -799,6 +799,9 @@ body {
   text-align: center;
   font: bold 15px/18px "Roboto", sans-serif; }
 
+.registration__icons {
+  display: none; }
+
 .order {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -1212,8 +1215,7 @@ fieldset {
     .account .cat {
       margin-left: 6px; } }
   .account__bottom {
-    display: -webkit-box;
-    display: flex;
+    display: none;
     -webkit-box-pack: justify;
             justify-content: space-between;
     -webkit-box-align: baseline;
@@ -1223,8 +1225,7 @@ fieldset {
       .account__bottom {
         display: none; } }
   .account__bottom-mobile {
-    display: -webkit-box;
-    display: flex;
+    display: none;
     -webkit-box-pack: justify;
             justify-content: space-between;
     -webkit-box-align: baseline;
