@@ -86,6 +86,8 @@
     //DATE
     $(".order__date-input").daterangepicker(
       {
+        autoUpdateInput: false,
+        minDate: moment().add(1, "days"),
         locale: {
           format: "DD/MM/YYYY",
           separator: " - ",
@@ -111,9 +113,9 @@
             "Грудень"
           ],
           firstDay: 1
-        },
-        startDate: "14/02/2020",
-        endDate: "14/02/2020"
+        }
+        //startDate: "20/02/2020",
+        //endDate: "20/02/2020"
       },
       function(start, end) {
         daysNumber =
@@ -123,6 +125,24 @@
         callback();
       }
     );
+
+    $(".order__date-input").on("apply.daterangepicker", function(ev, picker) {
+      $(this).val(
+        picker.startDate.format("DD/MM/YYYY") +
+          " - " +
+          picker.endDate.format("DD/MM/YYYY")
+      );
+    });
+
+    $(".order__date-input").on("cancel.daterangepicker", function(ev, picker) {
+      daysNumber = 0;
+      $(".order__amount").text(daysNumber);
+      callback();
+      $(this).val("Обрати дату*");
+    });
+
+    //$(".order__date-input").val("");
+    //$(".order__date-input").attr("placeholder", "Оберіть дату");
 
     //FORM PRICE CALCULATION
     $(".order__form").on("click", ".order__check", function() {
@@ -356,14 +376,26 @@
     });
     //ORDER FORM NEXT/SUBMIT BUTTON
     $(".order__next-first").click(function() {
-      $(".order__fieldset-one").removeAttr("disabled");
-      $(".order__block-one").addClass("order__none");
-      $(".order__block-two").removeClass("order__none");
+      if ($(".order__date-input").val() === "Обрати дату*") {
+        return;
+      } else {
+        $(".order__fieldset-one").removeAttr("disabled");
+        $(".order__block-one").addClass("order__none");
+        $(".order__block-two").removeClass("order__none");
+      }
     });
     $(".order__next-second").click(function() {
-      $(".order__fieldset-two").removeAttr("disabled");
-      $(".order__block-two").addClass("order__none");
-      $(".order__block-three").removeClass("order__none");
+      if (
+        $(".order__two-2").val() === "" ||
+        $(".order__two-3").val() === "" ||
+        $(".order__two-4").val() !== "right"
+      ) {
+        return;
+      } else {
+        $(".order__fieldset-two").removeAttr("disabled");
+        $(".order__block-two").addClass("order__none");
+        $(".order__block-three").removeClass("order__none");
+      }
     });
     $(".order__submit").click(function() {
       let date = $(".order__date-input")
@@ -371,24 +403,33 @@
         .startDate.format("DD-MM");
 
       let modal = `<div class="winmod">
-      <div class="winmod-block">
-        <p class="winmod-title">Ваше бронювання</p>
-        <p class="winmod-text">
-          Ваше замовлення отримано! Чекаємо на Вас та вашого вихованця ${date} в
-          будь-який зручний для Вас час.
-        </p>
-        <a href="#" class="winmod__link">OK <i class="icon-paw"></i></a>
-      </div>
-      <div class="winmod-catbox">
-      <img class="winmod-cat" src="images/order_cat.jpg" alt="order__cat" />
-    </div>
-    </div>`,
+          <div class="winmod-block">
+            <p class="winmod-title">Ваше бронювання</p>
+            <p class="winmod-text">
+              Ваше замовлення отримано! Чекаємо на Вас та вашого вихованця ${date} в
+              будь-який зручний для Вас час.
+            </p>
+            <a href="#" class="winmod__link">OK <i class="icon-paw"></i></a>
+            </div>
+          <div class="winmod-catbox">
+          <img class="winmod-cat" src="images/order_cat.jpg" alt="order__cat" />
+          </div>
+          </div>`,
         modalOverlay = document.createElement("div");
 
       modalOverlay.className = "winmod-overlay";
 
-      document.body.append(modalOverlay);
-      $(modal).appendTo("body");
+      // document.body.append(modalOverlay);
+
+      if (
+        $(".order__three-1").val() === "" ||
+        $(".order__three-2").val() === ""
+      ) {
+        return;
+      } else {
+        $(modalOverlay).appendTo("body");
+        $(modal).appendTo("body");
+      }
 
       $(".winmod__link").click(function reviewClose() {
         modalOverlay.remove();
@@ -397,8 +438,6 @@
       });
     });
     //REGISTRATION CHECK
-    //.services__button-link .menu__link-link .registration__check
-
     $(".registration__check").click(function() {
       let validate = localStorage.getItem("check");
       if (!validate) {

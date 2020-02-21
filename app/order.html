@@ -136,12 +136,12 @@
                     type="text"
                     name="daterange"
                     class="order__date-input"
-                    placeholder="Обрати дату"
+                    value="Обрати дату*"
                   />
                   <i class="icon-fill order__date-icon"></i>
                 </div>
               </div>
-              <p class="order__amount">грн</p>
+              <p class="order__amount">0</p>
               <div class="order__options">
                 <h2 class="order__name">Грумінг</h2>
                 <div class="order__option-wrap">
@@ -187,7 +187,7 @@
                   </div>
                 </div>
               </div>
-              <p class="order__total">грн</p>
+              <p class="order__total">Всього 0 грн.</p>
               <div class="order__payment">
                 <label class="order__checkname order__checkname-payment"
                   >Сплатити онлайн
@@ -225,27 +225,27 @@
               <div class="order__select-outerwrap">
                 <input
                   type="text"
-                  placeholder="Вказати кличку"
-                  class="order__data-input order__select-city"
+                  placeholder="Вказати кличку*"
+                  class="order__data-input order__select-city order__two-2"
                 />
               </div>
               <div class="order__select-outerwrap">
                 <input
                   type="text"
-                  placeholder="Вказати вік"
-                  class="order__data-input order__select-city"
+                  placeholder="Вказати вік*"
+                  class="order__data-input order__select-city order__two-3"
                 />
               </div>
               <div class="order__select-outerwrap">
                 <div class="order__select-wrap">
-                  <select name="animal" class="order__select-city">
-                    <option selected="selected" disabled hidden
-                      >Обрати вагу</option
+                  <select name="animal" class="order__select-city order__two-4">
+                    <option selected="selected" value="" disabled hidden
+                      >Обрати вагу*</option
                     >
-                    <option value="">Менше 4кг</option>
-                    <option value="">4-8кг</option>
-                    <option value="">9-13кг</option>
-                    <option value="">Більше 13кг</option>
+                    <option value="right">Менше 4кг</option>
+                    <option value="right">4-8кг</option>
+                    <option value="right">9-13кг</option>
+                    <option value="right">Більше 13кг</option>
                   </select>
                 </div>
               </div>
@@ -272,14 +272,15 @@
                 <input
                   type="text"
                   placeholder="Ваше ім’я"
-                  class="order__data-input order__select-city"
+                  class="order__data-input order__select-city order__three-1"
                 />
               </div>
               <div class="order__select-outerwrap">
                 <input
-                  type="text"
+                  type="tel"
+                  pattern="\(\d{3}\)[ ]?\d{3}[-]?\d{4}"
                   placeholder="Ваш номер телефону"
-                  class="order__data-input order__select-city"
+                  class="order__data-input order__select-city order__three-2"
                 />
               </div>
               <div class="order__next-wrap">

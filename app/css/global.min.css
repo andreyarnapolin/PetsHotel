@@ -512,6 +512,10 @@ body {
   @media (min-width: 992px) {
     .gallery__hidden {
       display: none; } }
+  @media (min-width: 992px) {
+    .gallery__photos {
+      margin: 0 auto;
+      width: 100vh; } }
 
 .photo img {
   height: 100%;
