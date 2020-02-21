@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Starter" />
+    <meta name="description" content="PetsHotel" />
     <meta name="author" content="Admin" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
     />
-    <title>PetsHotel - Review</title>
+    <title>Замовити послугу</title>
     <link rel="icon" href="images/favicon.png" />
     <link rel="stylesheet" href="css/styles.min.css">
 
@@ -42,7 +42,9 @@
                     <a class="dropdown-item burger-item" href="index.html"
                       >Головна</a
                     >
-                    <a class="dropdown-item burger-item" href="#"
+                    <a
+                      class="dropdown-item burger-item registration__check"
+                      href="#"
                       >Замовити послугу</a
                     >
                     <a class="dropdown-item burger-item" href="reviews.html"
@@ -53,7 +55,7 @@
                     >
                   </div>
                 </div>
-                <a href="#" class="logo">
+                <a href="index.html" class="logo">
                   <p class="navigation__title">PetsHotel</p>
                   <i class="icon-house"></i>
                 </a>
@@ -64,13 +66,15 @@
                     <a href="index.html" class="menu__link">Головна</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#order" class="menu__link">Замовити послугу</a>
+                    <a href="#" class="menu__link registration__check"
+                      >Замовити послугу</a
+                    >
                   </li>
                   <li class="menu__item">
-                    <a href="#reviews" class="menu__link">Відгуки</a>
+                    <a href="reviews.html" class="menu__link">Відгуки</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#foto" class="menu__link">Наші фото</a>
+                    <a href="gallery.html" class="menu__link">Наші фото</a>
                   </li>
                 </ul>
                 <ul class="menu-registr">
@@ -96,7 +100,7 @@
 
       <div class="row">
         <div
-          class="order__wrap col-12 offset-sm-4 col-sm-5 offset-md-0 col-md-4"
+          class="order__wrap order__block-one col-12 offset-sm-4 col-sm-5 offset-md-0 col-md-4"
         >
           <h2 class="order__subtitle">
             1. Заповніть дані про бажані послуги
@@ -126,60 +130,157 @@
                     type="text"
                     name="daterange"
                     class="order__date-input"
-                    placeholder="Обрати дату"
+                    value="Обрати дату*"
                   />
                   <i class="icon-fill order__date-icon"></i>
                 </div>
               </div>
-              <p class="order__amount">грн</p>
+              <p class="order__amount">0</p>
               <div class="order__options">
                 <h2 class="order__name">Грумінг</h2>
-                <div class="order__option">
-                  <label class="order__checkname"
-                    >Two
-                    <input type="checkbox" value="2" class="order__check" />
-                    <span class="order__checkmark"></span>
-                  </label>
-                </div>
-                <div class="order__option">
-                  <label class="order__checkname"
-                    >Three
-                    <input type="checkbox" value="3" class="order__check" />
-                    <span class="order__checkmark"></span>
-                  </label>
-                </div>
-                <div class="order__option">
-                  <label class="order__checkname"
-                    >Four
-                    <input type="checkbox" value="4" class="order__check" />
-                    <span class="order__checkmark"></span>
-                  </label>
+                <div class="order__option-wrap">
+                  <div class="order__option order__option-remove">
+                    <label class="order__checkname"
+                      >Миття
+                      <input type="checkbox" value="350" class="order__check" />
+                      <span class="order__checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="order__option order__option-remove">
+                    <label class="order__checkname"
+                      >Стрижка
+                      <input type="checkbox" value="450" class="order__check" />
+                      <span class="order__checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="order__option order__option-remove">
+                    <label class="order__checkname"
+                      >Чистка зубів
+                      <input type="checkbox" value="250" class="order__check" />
+                      <span class="order__checkmark"></span>
+                    </label>
+                  </div>
                 </div>
               </div>
               <div class="order__doctor">
                 <h2 class="order__name">Огляд ветеринара</h2>
-                <div class="order__option">
-                  <label class="order__checkname"
-                    >One
-                    <input type="checkbox" value="1" class="order__check" />
-                    <span class="order__checkmark"></span>
-                  </label>
-                </div>
-                <div class="order__option">
-                  <label class="order__checkname"
-                    >Two
-                    <input type="checkbox" value="2" class="order__check" />
-                    <span class="order__checkmark"></span>
-                  </label>
+                <div class="order__doctor-wrap">
+                  <div class="order__option order__option-remove">
+                    <label class="order__checkname"
+                      >Загальний
+                      <input type="checkbox" value="550" class="order__check" />
+                      <span class="order__checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="order__option order__option-remove">
+                    <label class="order__checkname"
+                      >Детальний
+                      <input type="checkbox" value="650" class="order__check" />
+                      <span class="order__checkmark"></span>
+                    </label>
+                  </div>
                 </div>
               </div>
-              <p class="order__total">грн</p>
+              <p class="order__total">Всього 0 грн.</p>
               <div class="order__payment">
                 <label class="order__checkname order__checkname-payment"
                   >Сплатити онлайн
                   <input type="checkbox" value="0" class="order__check" />
                   <span class="order__checkmark"></span>
                 </label>
+              </div>
+              <div class="order__next-wrap">
+                <button type="button" class="order__next-first order__next">
+                  Далі
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div
+          class="order__wrap order__block-two order__none col-12 offset-sm-4 col-sm-5 offset-md-0 col-md-4"
+        >
+          <h2 class="order__subtitle">
+            2. Заповніть дані про тварин
+          </h2>
+          <form action="#" class="order__form">
+            <fieldset class="order__fieldset order__fieldset-one" disabled>
+              <legend class="w-auto">
+                2. Заповніть дані про тварин
+              </legend>
+              <div class="order__select-outerwrap">
+                <div class="order__select-wrap">
+                  <select name="animal" class="order__select-city">
+                    <option value="dog">Собака</option>
+                    <option value="cat">Кіт</option>
+                  </select>
+                </div>
+              </div>
+              <div class="order__select-outerwrap">
+                <input
+                  type="text"
+                  placeholder="Вказати кличку*"
+                  class="order__data-input order__select-city order__two-2"
+                />
+              </div>
+              <div class="order__select-outerwrap">
+                <input
+                  type="text"
+                  placeholder="Вказати вік*"
+                  class="order__data-input order__select-city order__two-3"
+                />
+              </div>
+              <div class="order__select-outerwrap">
+                <div class="order__select-wrap">
+                  <select name="animal" class="order__select-city order__two-4">
+                    <option selected="selected" value="" disabled hidden
+                      >Обрати вагу*</option
+                    >
+                    <option value="right">Менше 4кг</option>
+                    <option value="right">4-8кг</option>
+                    <option value="right">9-13кг</option>
+                    <option value="right">Більше 13кг</option>
+                  </select>
+                </div>
+              </div>
+              <div class="order__next-wrap">
+                <button type="button" class="order__next-second order__next">
+                  Далі
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div
+          class="order__wrap order__block-three order__none col-12 offset-sm-4 col-sm-5 offset-md-0 col-md-4"
+        >
+          <h2 class="order__subtitle">
+            3. Заповніть дані про власника
+          </h2>
+          <form action="#" class="order__form">
+            <fieldset class="order__fieldset order__fieldset-two" disabled>
+              <legend class="w-auto">
+                3. Заповніть дані про власника
+              </legend>
+              <div class="order__select-outerwrap">
+                <input
+                  type="text"
+                  placeholder="Ваше ім’я"
+                  class="order__data-input order__select-city order__three-1"
+                />
+              </div>
+              <div class="order__select-outerwrap">
+                <input
+                  type="tel"
+                  pattern="\(\d{3}\)[ ]?\d{3}[-]?\d{4}"
+                  placeholder="Ваш номер телефону"
+                  class="order__data-input order__select-city order__three-2"
+                />
+              </div>
+              <div class="order__next-wrap">
+                <button type="button" class="order__submit">
+                  Замовити
+                </button>
               </div>
             </fieldset>
           </form>
@@ -192,12 +293,12 @@
         <div class="footer__wrap">
           <div class="footer__block footer__block-first">
             <a
-              href="mailto: petshotel@gmail.com"
+              href="mailto:petshotel@gmail.com"
               class="footer__link footer__email-first"
               >petshotel@gmail.com</a
             >
             <a
-              href="mailto: hotel@gmail.com"
+              href="mailto:hotel@gmail.com"
               class="footer__link footer__email-second"
               >hotel@gmail.com</a
             >

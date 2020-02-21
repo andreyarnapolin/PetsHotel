@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Starter" />
+    <meta name="description" content="PetsHotel" />
     <meta name="author" content="Admin" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
     />
-    <title>PetsHotel - Gallery</title>
+    <title>Наші фото</title>
     <link rel="icon" href="images/favicon.png" />
     <link rel="stylesheet" href="css/styles.min.css">
 
@@ -42,7 +42,9 @@
                     <a class="dropdown-item burger-item" href="index.html"
                       >Головна</a
                     >
-                    <a class="dropdown-item burger-item" href="#"
+                    <a
+                      class="dropdown-item burger-item registration__check"
+                      href="#"
                       >Замовити послугу</a
                     >
                     <a class="dropdown-item burger-item" href="reviews.html"
@@ -53,7 +55,7 @@
                     >
                   </div>
                 </div>
-                <a href="#" class="logo">
+                <a href="index.html" class="logo">
                   <p class="navigation__title">PetsHotel</p>
                   <i class="icon-house"></i>
                 </a>
@@ -64,13 +66,15 @@
                     <a href="index.html" class="menu__link">Головна</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#order" class="menu__link">Замовити послугу</a>
+                    <a href="#" class="menu__link registration__check"
+                      >Замовити послугу</a
+                    >
                   </li>
                   <li class="menu__item">
-                    <a href="#reviews" class="menu__link">Відгуки</a>
+                    <a href="reviews.html" class="menu__link">Відгуки</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#foto" class="menu__link">Наші фото</a>
+                    <a href="gallery.html" class="menu__link">Наші фото</a>
                   </li>
                 </ul>
                 <ul class="menu-registr">
@@ -90,7 +94,7 @@
     <section class="gallery">
       <div class="container">
         <div class="row gallery__photos no-gutters">
-          <div class="col-12 col-lg-6">
+          <div class="col-12 col-lg-12">
             <a
               data-fancybox="gallery"
               href="images/gallery/1b.jpg"
@@ -99,7 +103,7 @@
               <img src="images/gallery/1b.jpg" alt="Gallery photo" />
             </a>
           </div>
-          <div class="col-4 col-lg-3">
+          <div class="col-4 col-lg-4">
             <a
               data-fancybox="gallery"
               href="images/gallery/2b.jpg"
@@ -108,22 +112,23 @@
               <img src="images/gallery/2b.jpg" alt="Gallery photo" />
             </a>
           </div>
-          <div class="col-4 gallery__hidden">
-            <a
-              data-fancybox="gallery"
-              href="images/gallery/3m.jpg"
-              class="photo gallery__show"
-            >
-              <img src="images/gallery/3m.jpg" alt="Gallery photo" />
-            </a>
-          </div>
-          <div class="col-4 col-lg-3">
+
+          <div class="col-4 col-lg-4">
             <a
               data-fancybox="gallery"
               href="images/gallery/3b.jpg"
               class="photo"
             >
               <img src="images/gallery/3b.jpg" alt="Gallery photo" />
+            </a>
+          </div>
+          <div class="col-4 col-lg-4">
+            <a
+              data-fancybox="gallery"
+              href="images/gallery/7b.jpg"
+              class="photo"
+            >
+              <img src="images/gallery/7b.jpg" alt="Gallery photo" />
             </a>
           </div>
           <div class="col-6 col-lg-6">
@@ -144,58 +149,13 @@
               <img src="images/gallery/5b.jpg" alt="Gallery photo" />
             </a>
           </div>
-          <div class="col-12 col-lg-8">
+          <div class="col-12 col-lg-12">
             <a
               data-fancybox="gallery"
               href="images/gallery/6b.jpg"
               class="photo"
             >
               <img src="images/gallery/6b.jpg" alt="Gallery photo" />
-            </a>
-          </div>
-          <div class="col-4 gallery__hidden">
-            <a
-              data-fancybox="gallery"
-              href="images/gallery/8m.jpg"
-              class="photo gallery__show"
-            >
-              <img src="images/gallery/8m.jpg" alt="Gallery photo" />
-            </a>
-          </div>
-          <div class="col-4 col-lg-4">
-            <a
-              data-fancybox="gallery"
-              href="images/gallery/7b.jpg"
-              class="photo"
-            >
-              <img src="images/gallery/7b.jpg" alt="Gallery photo" />
-            </a>
-          </div>
-          <div class="col-4 gallery__hidden">
-            <a
-              data-fancybox="gallery"
-              href="images/gallery/10m.jpg"
-              class="photo gallery__show"
-            >
-              <img src="images/gallery/10m.jpg" alt="Gallery photo" />
-            </a>
-          </div>
-          <div class="col-6 gallery__hidden">
-            <a
-              data-fancybox="gallery"
-              href="images/gallery/11m.jpg"
-              class="photo gallery__show"
-            >
-              <img src="images/gallery/11m.jpg" alt="Gallery photo" />
-            </a>
-          </div>
-          <div class="col-6 gallery__hidden">
-            <a
-              data-fancybox="gallery"
-              href="images/gallery/12m.jpg"
-              class="photo gallery__show"
-            >
-              <img src="images/gallery/12m.jpg" alt="Gallery photo" />
             </a>
           </div>
         </div>
@@ -207,12 +167,12 @@
         <div class="footer__wrap">
           <div class="footer__block footer__block-first">
             <a
-              href="mailto: petshotel@gmail.com"
+              href="mailto:petshotel@gmail.com"
               class="footer__link footer__email-first"
               >petshotel@gmail.com</a
             >
             <a
-              href="mailto: hotel@gmail.com"
+              href="mailto:hotel@gmail.com"
               class="footer__link footer__email-second"
               >hotel@gmail.com</a
             >
